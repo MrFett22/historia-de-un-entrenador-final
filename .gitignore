@@ -1,0 +1,20 @@
+# entornos y cachés
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+_cache/
+
+# datos de StatsBomb (licenciados; nunca al repositorio)
+cache_events/
+events_*.json
+frames_*.json
+matches_*.json
+.env
+
+# salidas de los scripts del análisis inicial (se regeneran)
+analisis_inicial/*.npz
+analisis_inicial/*.jsonl
+analisis_inicial/*.pkl

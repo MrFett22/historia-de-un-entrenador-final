@@ -1,0 +1,8 @@
+requests
+pandas
+numpy
+scipy
+statsmodels
+matplotlib
+torch
+lifelines

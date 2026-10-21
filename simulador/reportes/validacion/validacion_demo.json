@@ -1,0 +1,607 @@
+{
+ "modo": "MODO_SINTETICO",
+ "calibracion": {
+  "n_partidos": 918,
+  "dentro_de_muestra": true,
+  "rps_motor": 0.21671560475647791,
+  "rps_base": 0.23483963907518948,
+  "rps_vigente": 0.21728478107830282,
+  "dif_motor_base_ic95": [
+   -0.025238066646047143,
+   -0.010881820541782982
+  ],
+  "dif_motor_vigente_ic95": [
+   -0.004317608051069374,
+   0.003153769661090509
+  ],
+  "puntos_reales": 2534,
+  "xpts_motor": 2532.4389860919327,
+  "error_xpts": -0.0006160275880296995,
+  "goles_reales": 2638.0,
+  "goles_esperados": 2670.4101690794823,
+  "empates_reales": 0.23965141612200436,
+  "empates_motor": 0.24135185291153288,
+  "cumple_rps": true,
+  "cumple_xpts": true
+ },
+ "independencia": {
+  "autocorrelacion_lag1": -0.007720929385295008,
+  "autocorrelacion_ic95": [
+   -0.06092549983040976,
+   0.04149070687482369
+  ],
+  "pendiente_descanso_por_dia": 0.0,
+  "pendiente_ic95": [
+   0.0,
+   0.0
+  ],
+  "n_pares": 1728,
+  "n_descanso": 1818
+ },
+ "recuperacion": {
+  "n_pares": 15,
+  "fraccion_dentro": 1.0,
+  "detalle": [
+   {
+    "tecnico": "Técnico 01",
+    "club": "América",
+    "partidos": 68,
+    "simulada": [
+     0.4838,
+     0.2146,
+     0.3016
+    ],
+    "observada": [
+     0.4944,
+     0.2115,
+     0.2941
+    ],
+    "rango95": [
+     [
+      0.4791,
+      0.2008,
+      0.2808
+     ],
+     [
+      0.5095,
+      0.2212,
+      0.3073
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 02",
+    "club": "Club 02",
+    "partidos": 102,
+    "simulada": [
+     0.4406,
+     0.2576,
+     0.3017
+    ],
+    "observada": [
+     0.4418,
+     0.2617,
+     0.2965
+    ],
+    "rango95": [
+     [
+      0.4273,
+      0.2519,
+      0.284
+     ],
+     [
+      0.4558,
+      0.2724,
+      0.3094
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 03",
+    "club": "Club 03",
+    "partidos": 68,
+    "simulada": [
+     0.3533,
+     0.2276,
+     0.4191
+    ],
+    "observada": [
+     0.3434,
+     0.2361,
+     0.4205
+    ],
+    "rango95": [
+     [
+      0.3227,
+      0.2245,
+      0.401
+     ],
+     [
+      0.3646,
+      0.2488,
+      0.4414
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 04",
+    "club": "Club 04",
+    "partidos": 76,
+    "simulada": [
+     0.28,
+     0.1888,
+     0.5312
+    ],
+    "observada": [
+     0.2788,
+     0.1879,
+     0.5333
+    ],
+    "rango95": [
+     [
+      0.2657,
+      0.1796,
+      0.5167
+     ],
+     [
+      0.2911,
+      0.1959,
+      0.5505
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 10",
+    "club": "Club 16",
+    "partidos": 68,
+    "simulada": [
+     0.4908,
+     0.2238,
+     0.2854
+    ],
+    "observada": [
+     0.4957,
+     0.2249,
+     0.2794
+    ],
+    "rango95": [
+     [
+      0.4768,
+      0.2135,
+      0.2643
+     ],
+     [
+      0.5144,
+      0.236,
+      0.2947
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 11",
+    "club": "Club 06",
+    "partidos": 51,
+    "simulada": [
+     0.4328,
+     0.2528,
+     0.3144
+    ],
+    "observada": [
+     0.4429,
+     0.2526,
+     0.3044
+    ],
+    "rango95": [
+     [
+      0.4238,
+      0.2402,
+      0.2862
+     ],
+     [
+      0.4631,
+      0.2657,
+      0.3232
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 12",
+    "club": "Club 12",
+    "partidos": 85,
+    "simulada": [
+     0.4117,
+     0.2242,
+     0.364
+    ],
+    "observada": [
+     0.4043,
+     0.2271,
+     0.3686
+    ],
+    "rango95": [
+     [
+      0.3906,
+      0.2193,
+      0.3543
+     ],
+     [
+      0.4179,
+      0.2359,
+      0.3825
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 13",
+    "club": "Club 13",
+    "partidos": 59,
+    "simulada": [
+     0.4206,
+     0.246,
+     0.3334
+    ],
+    "observada": [
+     0.4099,
+     0.2488,
+     0.3413
+    ],
+    "rango95": [
+     [
+      0.3936,
+      0.2351,
+      0.3253
+     ],
+     [
+      0.4262,
+      0.2625,
+      0.3587
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 15",
+    "club": "Club 14",
+    "partidos": 51,
+    "simulada": [
+     0.355,
+     0.2128,
+     0.4322
+    ],
+    "observada": [
+     0.3532,
+     0.2071,
+     0.4396
+    ],
+    "rango95": [
+     [
+      0.3315,
+      0.1941,
+      0.4157
+     ],
+     [
+      0.3743,
+      0.2212,
+      0.4623
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 15",
+    "club": "Club 15",
+    "partidos": 51,
+    "simulada": [
+     0.417,
+     0.2158,
+     0.3672
+    ],
+    "observada": [
+     0.4148,
+     0.218,
+     0.3673
+    ],
+    "rango95": [
+     [
+      0.3923,
+      0.2078,
+      0.3498
+     ],
+     [
+      0.4359,
+      0.2291,
+      0.3869
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 16",
+    "club": "Club 10",
+    "partidos": 51,
+    "simulada": [
+     0.4203,
+     0.2289,
+     0.3508
+    ],
+    "observada": [
+     0.4279,
+     0.2362,
+     0.3358
+    ],
+    "rango95": [
+     [
+      0.4062,
+      0.2234,
+      0.3137
+     ],
+     [
+      0.4501,
+      0.2492,
+      0.3584
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 17",
+    "club": "Club 17",
+    "partidos": 102,
+    "simulada": [
+     0.3632,
+     0.2194,
+     0.4174
+    ],
+    "observada": [
+     0.3534,
+     0.2197,
+     0.4269
+    ],
+    "rango95": [
+     [
+      0.3391,
+      0.2112,
+      0.4124
+     ],
+     [
+      0.3675,
+      0.2279,
+      0.4414
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 18",
+    "club": "Club 18",
+    "partidos": 68,
+    "simulada": [
+     0.4087,
+     0.2346,
+     0.3567
+    ],
+    "observada": [
+     0.4017,
+     0.235,
+     0.3634
+    ],
+    "rango95": [
+     [
+      0.3854,
+      0.2246,
+      0.3475
+     ],
+     [
+      0.4175,
+      0.2449,
+      0.3801
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 27",
+    "club": "Club 09",
+    "partidos": 51,
+    "simulada": [
+     0.3679,
+     0.2205,
+     0.4116
+    ],
+    "observada": [
+     0.3682,
+     0.2188,
+     0.413
+    ],
+    "rango95": [
+     [
+      0.3502,
+      0.206,
+      0.3905
+     ],
+     [
+      0.3861,
+      0.2307,
+      0.4344
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Técnico 29",
+    "club": "Club 11",
+    "partidos": 68,
+    "simulada": [
+     0.4054,
+     0.2481,
+     0.3465
+    ],
+    "observada": [
+     0.4005,
+     0.2474,
+     0.3521
+    ],
+    "rango95": [
+     [
+      0.3835,
+      0.2374,
+      0.3361
+     ],
+     [
+      0.4188,
+      0.2579,
+      0.3671
+     ]
+    ],
+    "dentro": true
+   }
+  ]
+ },
+ "sobol": {
+  "N": 1024,
+  "evaluaciones": 11264,
+  "puntos_media": 30.32514686323027,
+  "puntos_sd": 1.3480565887443459,
+  "puntos_rango": [
+   25.49848435729205,
+   33.670593366313824
+  ],
+  "tabla": [
+   {
+    "perilla": "rival_elaborada",
+    "S1": 0.6976266820641286,
+    "S1_ic": 0.0601300082720454,
+    "ST": 0.7330278879935094,
+    "ST_ic": 0.056882051980835784
+   },
+   {
+    "perilla": "rival_directa",
+    "S1": 0.1224879837233112,
+    "S1_ic": 0.032757385879593134,
+    "ST": 0.1580391306869569,
+    "ST_ic": 0.019188456334361257
+   },
+   {
+    "perilla": "mezcla_directa",
+    "S1": 0.11871046957839085,
+    "S1_ic": 0.02768999291962338,
+    "ST": 0.12288503200047289,
+    "ST_ic": 0.01369510930189268
+   },
+   {
+    "perilla": "mezcla_elaborada",
+    "S1": 0.020909629515228897,
+    "S1_ic": 0.014596924087611462,
+    "ST": 0.027285052294054892,
+    "ST_ic": 0.003663358678982357
+   },
+   {
+    "perilla": "reaccion_marcador",
+    "S1": 0.0,
+    "S1_ic": 0.0,
+    "ST": 0.0,
+    "ST_ic": 0.0
+   },
+   {
+    "perilla": "reaccion_rival",
+    "S1": 0.0,
+    "S1_ic": 0.0,
+    "ST": 0.0,
+    "ST_ic": 0.0
+   },
+   {
+    "perilla": "balon_parado",
+    "S1": 0.0,
+    "S1_ic": 0.0,
+    "ST": 0.0,
+    "ST_ic": 0.0
+   },
+   {
+    "perilla": "cambios_momento",
+    "S1": 0.0,
+    "S1_ic": 0.0,
+    "ST": 0.0,
+    "ST_ic": 0.0
+   },
+   {
+    "perilla": "cambios_tipo",
+    "S1": 0.0,
+    "S1_ic": 0.0,
+    "ST": 0.0,
+    "ST_ic": 0.0
+   }
+  ],
+  "solo_estilo": [
+   "balon_parado",
+   "cambios_momento",
+   "cambios_tipo",
+   "reaccion_marcador",
+   "reaccion_rival"
+  ],
+  "umbral_ST": 0.05
+ },
+ "placebo": {
+  "componentes_tecnico": [
+   "int_at[Directa]",
+   "int_co[Ataque elaborado]",
+   "l_co",
+   "alpha",
+   "gamma"
+  ],
+  "placebos": [
+   {
+    "placebo": "Técnico 01",
+    "celdas": 6,
+    "media": -0.06344645287619766,
+    "int95": [
+     -0.46601238936384587,
+     0.23835492564981137
+    ],
+    "contiene_cero": true,
+    "veredicto": "igual"
+   },
+   {
+    "placebo": "Técnico 02",
+    "celdas": 6,
+    "media": 0.06679773058007431,
+    "int95": [
+     -0.24479747932295248,
+     0.7279110681650636
+    ],
+    "contiene_cero": true,
+    "veredicto": "igual"
+   },
+   {
+    "placebo": "Técnico 06",
+    "celdas": 6,
+    "media": 0.11752013747115378,
+    "int95": [
+     -0.3070836924542746,
+     0.5886595809483417
+    ],
+    "contiene_cero": true,
+    "veredicto": "igual"
+   }
+  ],
+  "todos_contienen_cero": true
+ },
+ "rendimiento": {
+  "partido_ms": 2.49278799998865,
+  "torneo_rapido_s": 3.7152154999930644,
+  "torneo_preciso_s": 205.19031980000727,
+  "costo_replica_s": 0.033986414579014405,
+  "costo_torneo_interno_s": 4.640434210504234e-05,
+  "sigma_b2_liguilla": 0.008094635297700626,
+  "sigma_w2_liguilla": 0.13675778894472362,
+  "S_optimo": 111.23738160845224,
+  "arranque_servicio_s": 0.11579019999771845,
+  "replica_s": 0.034450458000064826
+ }
+}

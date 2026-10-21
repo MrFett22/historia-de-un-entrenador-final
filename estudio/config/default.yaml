@@ -1,0 +1,170 @@
+# dtcoach v2 — ÚNICO lugar donde viven los parámetros. Cada uno con su porqué.
+proyecto: dtcoach
+seed: 20260924
+
+rutas:
+  raw_events: data/raw/statsbomb/events        # <match_id>.json.gz del API
+  raw_matches: data/raw/statsbomb/matches      # <comp>_<season>.json.gz
+  raw_frames: data/raw/statsbomb/frames        # 360 (scripts/descargar/descargar_360.py)
+  eventos_parquet: data/interim/events         # salida de `dtcoach aplanar`
+  eventos_extra: data/interim/eventos_extra.parquet   # `dtcoach extra`: centros, técnica, asistencias (G0)
+  partidos: data/interim/partidos.parquet
+  dt_partido: data/interim/dt_por_partido.parquet
+  eras_dir: data/referencia/eras_api_v2           # eras VERIFICADAS del proyecto viejo
+  exclusiones: data/referencia/eras_api_v2/absorbidos.csv
+  transiciones: data/processed/transitions.parquet
+  mezcla_dir: data/processed/mezcla
+  elo: data/processed/elo.parquet
+  reportes: reports
+
+pitch: {nx: 5, ny: 4, length: 120.0, width: 80.0}
+
+# ADR-v2-03: la fase de origen SALE del estado. Una sola "fase" => 20 zonas + 4
+# absorbentes. El origen (play_pattern) queda en la tabla como covariable de
+# los pesos de la mezcla (semana 2), con el mapeo de `origen`.
+phase_order: [all]
+phases:
+  all: [Regular Play, From Counter, From Keeper, From Goal Kick, From Throw In,
+        From Kick Off, From Corner, From Free Kick, Other]
+phase_default: all
+
+# COPIAR aquí el mapeo `phases` del config viejo si difiere: ese es el que
+# está validado. Este es el provisional.
+origen:
+  open: [Regular Play, Other]
+  transition: [From Counter, From Keeper]
+  restart: [From Goal Kick, From Throw In, From Kick Off]
+  set_piece: [From Corner, From Free Kick]
+
+possession:
+  moving_types: [Pass, Carry, Shot]
+  pass_loss_outcomes: [Incomplete, Pass Offside, Unknown, Injury Clearance]
+  min_actions: 1              # ADR-v2-11: las posesiones de UNA accion son parte del vocabulario
+  min_actions_defense: 1      # solo aplica con --club; en liga no se usa
+  min_carry_length: 0.0       # COPIAR el valor del config viejo (ADR-13)
+
+context:
+  score_bins: [-99, 0, 99]
+  score_labels: [losing, drawing, winning]
+
+defense:
+  pressure_flag: under_pressure
+
+mezcla:
+  k_grid: [1, 2, 3, 4, 5, 6, 7, 8]
+  lam: 100.0          # encogimiento de cada P^k hacia la liga; se revisa con CV (semana 1)
+  paso_inicial: true  # ADR-v2-29: matriz propia para la primera acción
+  lam0: null          # encogimiento de P0 (null = igual que lam)
+  a0: 1.0             # encogimiento de mu^k
+  n_init: 10          # solo para init=kmeans (contraste); el default es la escalera
+  n_corto: 25         # iteraciones de EM por candidato a partir en la escalera (ADR-v2-17)
+  n_init_cv: 2        # arranques dentro de la CV (costo)
+  max_iter: 1000
+  tol: 1.0e-7
+  folds: 5            # POR PARTIDO (ADR-v2-04)
+  frac_partidos_cv: 0.5
+
+bondad:
+  t_min: 1            # = possession.min_actions (truncamiento C3)
+  kmax: 80
+
+# ---------------------------------------------------------------- fase 2
+foco:
+  coach: Guillermo Almada     # técnico que expone la historia; nombre EXACTO como en las eras
+
+fase2:
+  K: 3
+  familias: [Directa, Circulación estéril, Ataque elaborado]   # orden = tipo 1, 2, 3 (por E[T]); ADR-v2-20, confirmados en v3 (10_RESULTADOS §16)
+  ref: 1                      # familia de referencia del logit (0-based): Circulación estéril
+  n_boot: 2000
+  n_sim: 1000
+  alpha: 0.05
+
+elo:
+  K_grid: [8, 12, 16, 20, 24, 28, 32, 40]
+  h_grid: [0, 20, 40, 60, 80, 100, 120, 150]
+  inicial: 1500
+  burn_in: 150
+
+# ---------------------------------------------------------------- fase 1 v3
+mallado:                     # ADR-v2-32: calibración por validación cruzada en densidad
+  candidatos: [4x3, 5x4, 6x4, 6x5, 8x5, 8x6, 10x6, 12x8]
+  fina: [12, 8]              # celdas de 10 × 10 m para la agregación contigua
+  folds: 5
+  lam_grid: [1, 10, 100, 1000]
+  lam_agregacion: 10.0
+  R_min: 4
+
+# ---------------------------------------------------------------- experimento 360 (ADR-v2-36)
+# Estado zona × nivel de presión desde los freeze frames. APAGADO aquí: el
+# experimento corre con `--config config/presion.yaml` y escribe en rutas propias.
+voronoi:
+  activo: false
+  rasgos: data/interim/rasgos_360.parquet     # `dtcoach voronoi`
+  transiciones_origen: data/processed/transitions.parquet   # las de la malla (una fase)
+  transiciones_base: data/processed/presion/base/transitions.parquet  # misma muestra, L = 1
+  R: 10.0             # radio del disco de la celda de Voronoi local (m): espacio usable en ~1 s
+  r_presion: 5.0      # rivales "encima" (m)
+  min_visible: 0.25   # fracción mínima del disco visible por la cámara; si no, área = NaN
+  min_cobertura: 0.9  # partidos con menos acciones con frame salen completos
+  candidatos: ["cuantiles:2", "cuantiles:3", "cuantiles:4", "kmeans:2", "kmeans:3", "kmeans:4", "kmeans:5"]
+  folds: 5
+  lam_grid: [1, 10, 100, 1000]
+  hilos: 4
+
+# ---------------------------------------------------------------- experimento dirección (ADR-v2-37)
+# Estado zona × dirección de la acción que trajo el balón. APAGADO aquí: corre con
+# `--config config/direccion.yaml`. No necesita 360: usa toda la muestra.
+direccion:
+  activo: false
+  transiciones_origen: data/processed/transitions.parquet
+  # x3:ε = adelante / lateral / atrás con umbral ε metros en x; cuad4 y oct8 por ángulo;
+  # previa = zona anterior completa (REFERENCIA de la memoria de la v3; no es candidato a vocabulario)
+  candidatos: ["x3:2", "x3:5", "x3:10", "cuad4", "oct8", "previa"]
+  folds: 5
+  lam_grid: [1, 10, 100, 1000]
+
+# ---------------------------------------------------------------- capa de fútbol (fases B–F, 03_FRAMEWORK §5)
+futbol:
+  tabla: data/processed/futbol/equipo_partido.parquet     # todas las métricas, toda la liga
+  bloque: data/interim/bloque_360.parquet                 # `dtcoach geometria`
+  saques: data/interim/saques_360.parquet      # frame 360 del saque a balón parado (G5)
+  prog_min_m: 10.0        # progresiva: termina ≥ 10 m más cerca del centro del arco...
+  prog_frac: 0.75         # ...y a ≤ 75 % de la distancia inicial
+  saque_corto_m: 35.0     # saque de meta "en corto"
+  ventana_perdida: 5      # s: recuperar tras perder (contrapresión)
+  ventana_recuperar: 10   # s: xG tras recuperar (transición ofensiva)
+  presion_m: 2.0          # 360: "presionado" = un rival a ≤ 2 m
+  min_defensores: 6       # 360: defensores visibles mínimos para medir el bloque
+  tl_min_x: 60.0          # tiro libre en campo rival
+  lateral_min_x: 80.0     # lateral en zona de peligro (definición pre-registrada de la fase G: no cambiar)
+  lateral_cuarto_x: 90.0  # 5.4: lateral en el último cuarto de la cancha
+  lateral_octavo_x: 105.0 # 5.4: lateral en el último octavo
+  ventana_bp: 15.0        # s: desenlace de una jugada a balón parado (cortada en la siguiente reanudación)
+  contacto_s: 5.0         # s: plazo del primer contacto tras el saque
+  cobertura_min: 0.8      # 360: fracción del área visible para contar jugadores en un saque
+  xd_folds: 5             # xDefense: validación cruzada por partido
+  xd_lam: 1.0             # xDefense: penalización L2 de los logits
+  largo_m: 30.0           # pase largo
+  cambio_m: 35.0          # cambio de orientación: |Δy| ≥ 35 m
+  ancho_min: 70.0         # 360: frames con ≥ 70 m de ancho visible (control del encuadre del bloque)
+  ventana_shift: 3        # min: reacomodo que acompaña a un cambio
+  min_partidos_era: 30    # técnico-club mínimo para percentiles y fiabilidad
+  min_partidos_club: 7    # club del foco que se reporta por separado
+  n_boot: 1000
+  lam_llegada: 10.0       # encogimiento de la cadena del grupo hacia la liga
+  min_acciones_jugador: 150
+  ventana_cambio: 10      # min antes y después del primer cambio del 2º tiempo
+  n_perm: 200             # permutaciones del reconocimiento
+  lam_logit: 1.0
+  sim_rep: 10000
+  sim_a: 200.0            # pseudo-secuencias de encogimiento del simulador
+  sim_validacion_rep: 2000
+
+# ---------------------------------------------------------------- proyección (G6)
+proyeccion:
+  n_pre: 17               # partidos del club antes de la llegada: "el plantel que encontró"
+  n_post: 17              # partidos con el técnico para medir el efecto de una llegada (un torneo)
+  n_sim: 10000            # torneos simulados
+  directos: 6             # lugares a liguilla directa
+  play_in: [7, 10]        # lugares de play-in

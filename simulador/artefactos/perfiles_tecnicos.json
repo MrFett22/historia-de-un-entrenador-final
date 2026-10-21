@@ -1,0 +1,2074 @@
+{
+ "version": 1,
+ "n_referencia": 37,
+ "min_partidos": 30,
+ "definiciones": {
+  "presion": "PPDA: pases del rival con x ≤ 80 entre acciones defensivas propias (Pressure, Duel, Interception, Foul Committed) con x ≥ 40; menos = presiona más",
+  "recuperacion": "% de pérdidas en las que el equipo recupera el balón en 10 s",
+  "linea": "altura de la línea defensiva (120 − x máxima del último defensor) en los cuadros 360",
+  "compacidad": "área del casco convexo de los defensores en los cuadros 360; menos área = más junto",
+  "pp_favor": "remates por partido que vienen de tiro de esquina o tiro libre a favor",
+  "pp_contra": "remates por partido que vienen de tiro de esquina o tiro libre en contra"
+ },
+ "tecnicos": {
+  "Andre Jardine": {
+   "partidos": 183,
+   "metricas": {
+    "presion": {
+     "valor": 2.7392,
+     "pct": 20.3
+    },
+    "recuperacion": {
+     "valor": 0.2079,
+     "pct": 28.4
+    },
+    "linea": {
+     "valor": 50.9231,
+     "pct": 44.6
+    },
+    "compacidad": {
+     "valor": 595.0311,
+     "pct": 44.6
+    },
+    "pp_favor": {
+     "valor": 4.3224,
+     "pct": 55.4
+    },
+    "pp_contra": {
+     "valor": 4.0328,
+     "pct": 66.2
+    }
+   }
+  },
+  "Jorge Guillermo Almada Alves": {
+   "partidos": 159,
+   "metricas": {
+    "presion": {
+     "valor": 2.1683,
+     "pct": 93.2
+    },
+    "recuperacion": {
+     "valor": 0.2299,
+     "pct": 71.6
+    },
+    "linea": {
+     "valor": 51.7759,
+     "pct": 60.8
+    },
+    "compacidad": {
+     "valor": 562.3747,
+     "pct": 95.9
+    },
+    "pp_favor": {
+     "valor": 4.9434,
+     "pct": 87.8
+    },
+    "pp_contra": {
+     "valor": 3.7296,
+     "pct": 79.7
+    }
+   }
+  },
+  "Nicolas Ricardo Larcamon": {
+   "partidos": 155,
+   "metricas": {
+    "presion": {
+     "valor": 2.2279,
+     "pct": 87.8
+    },
+    "recuperacion": {
+     "valor": 0.2226,
+     "pct": 58.1
+    },
+    "linea": {
+     "valor": 52.5258,
+     "pct": 77.0
+    },
+    "compacidad": {
+     "valor": 603.5957,
+     "pct": 25.7
+    },
+    "pp_favor": {
+     "valor": 5.0968,
+     "pct": 93.2
+    },
+    "pp_contra": {
+     "valor": 4.1677,
+     "pct": 55.4
+    }
+   }
+  },
+  "Fernando Ortiz": {
+   "partidos": 116,
+   "metricas": {
+    "presion": {
+     "valor": 2.4216,
+     "pct": 55.4
+    },
+    "recuperacion": {
+     "valor": 0.2225,
+     "pct": 55.4
+    },
+    "linea": {
+     "valor": 52.6207,
+     "pct": 79.7
+    },
+    "compacidad": {
+     "valor": 588.0884,
+     "pct": 58.1
+    },
+    "pp_favor": {
+     "valor": 4.5345,
+     "pct": 74.3
+    },
+    "pp_contra": {
+     "valor": 3.6983,
+     "pct": 85.1
+    }
+   }
+  },
+  "Marcos Ignacio Ambriz Espinoza": {
+   "partidos": 116,
+   "metricas": {
+    "presion": {
+     "valor": 2.6022,
+     "pct": 33.8
+    },
+    "recuperacion": {
+     "valor": 0.23,
+     "pct": 77.0
+    },
+    "linea": {
+     "valor": 49.2751,
+     "pct": 25.7
+    },
+    "compacidad": {
+     "valor": 578.8719,
+     "pct": 82.4
+    },
+    "pp_favor": {
+     "valor": 4.5776,
+     "pct": 77.0
+    },
+    "pp_contra": {
+     "valor": 5.2155,
+     "pct": 9.5
+    }
+   }
+  },
+  "Miguel Ernesto Herrera Aguirre": {
+   "partidos": 107,
+   "metricas": {
+    "presion": {
+     "valor": 2.3263,
+     "pct": 68.9
+    },
+    "recuperacion": {
+     "valor": 0.2445,
+     "pct": 93.2
+    },
+    "linea": {
+     "valor": 52.0647,
+     "pct": 74.3
+    },
+    "compacidad": {
+     "valor": 616.3058,
+     "pct": 14.9
+    },
+    "pp_favor": {
+     "valor": 4.7757,
+     "pct": 85.1
+    },
+    "pp_contra": {
+     "valor": 3.8879,
+     "pct": 74.3
+    }
+   }
+  },
+  "Diego Martin Cocca Pera": {
+   "partidos": 100,
+   "metricas": {
+    "presion": {
+     "valor": 2.4345,
+     "pct": 52.7
+    },
+    "recuperacion": {
+     "valor": 0.2095,
+     "pct": 31.1
+    },
+    "linea": {
+     "valor": 50.2557,
+     "pct": 33.8
+    },
+    "compacidad": {
+     "valor": 579.9954,
+     "pct": 79.7
+    },
+    "pp_favor": {
+     "valor": 4.21,
+     "pct": 47.3
+    },
+    "pp_contra": {
+     "valor": 4.28,
+     "pct": 44.6
+    }
+   }
+  },
+  "Victor Manuel Vucetich Rojas": {
+   "partidos": 97,
+   "metricas": {
+    "presion": {
+     "valor": 2.5359,
+     "pct": 44.6
+    },
+    "recuperacion": {
+     "valor": 0.2141,
+     "pct": 41.9
+    },
+    "linea": {
+     "valor": 50.9646,
+     "pct": 47.3
+    },
+    "compacidad": {
+     "valor": 627.1749,
+     "pct": 12.2
+    },
+    "pp_favor": {
+     "valor": 4.4639,
+     "pct": 71.6
+    },
+    "pp_contra": {
+     "valor": 3.9897,
+     "pct": 68.9
+    }
+   }
+  },
+  "Antonio Ricardo Mohamed Matijevich": {
+   "partidos": 90,
+   "metricas": {
+    "presion": {
+     "valor": 2.3331,
+     "pct": 66.2
+    },
+    "recuperacion": {
+     "valor": 0.2326,
+     "pct": 79.7
+    },
+    "linea": {
+     "valor": 51.8602,
+     "pct": 66.2
+    },
+    "compacidad": {
+     "valor": 587.0226,
+     "pct": 63.5
+    },
+    "pp_favor": {
+     "valor": 5.1111,
+     "pct": 95.9
+    },
+    "pp_contra": {
+     "valor": 3.7,
+     "pct": 82.4
+    }
+   }
+  },
+  "Eduardo Fentanes Orozco": {
+   "partidos": 86,
+   "metricas": {
+    "presion": {
+     "valor": 2.6216,
+     "pct": 31.1
+    },
+    "recuperacion": {
+     "valor": 0.212,
+     "pct": 36.5
+    },
+    "linea": {
+     "valor": 48.7516,
+     "pct": 17.6
+    },
+    "compacidad": {
+     "valor": 583.1997,
+     "pct": 68.9
+    },
+    "pp_favor": {
+     "valor": 4.2442,
+     "pct": 50.0
+    },
+    "pp_contra": {
+     "valor": 5.4884,
+     "pct": 1.4
+    }
+   }
+  },
+  "Mauro Nestor Gerk Larrea": {
+   "partidos": 86,
+   "metricas": {
+    "presion": {
+     "valor": 2.8382,
+     "pct": 17.6
+    },
+    "recuperacion": {
+     "valor": 0.2048,
+     "pct": 17.6
+    },
+    "linea": {
+     "valor": 47.5829,
+     "pct": 1.4
+    },
+    "compacidad": {
+     "valor": 580.8518,
+     "pct": 77.0
+    },
+    "pp_favor": {
+     "valor": 3.9302,
+     "pct": 28.4
+    },
+    "pp_contra": {
+     "valor": 5.0233,
+     "pct": 17.6
+    }
+   }
+  },
+  "Robert Dante Siboldi Badiola": {
+   "partidos": 82,
+   "metricas": {
+    "presion": {
+     "valor": 2.3246,
+     "pct": 71.6
+    },
+    "recuperacion": {
+     "valor": 0.2364,
+     "pct": 87.8
+    },
+    "linea": {
+     "valor": 50.9738,
+     "pct": 50.0
+    },
+    "compacidad": {
+     "valor": 588.1573,
+     "pct": 55.4
+    },
+    "pp_favor": {
+     "valor": 3.8293,
+     "pct": 17.6
+    },
+    "pp_contra": {
+     "valor": 4.4024,
+     "pct": 39.2
+    }
+   }
+  },
+  "Rolando Hernan Cristante Mandarino": {
+   "partidos": 75,
+   "metricas": {
+    "presion": {
+     "valor": 2.5546,
+     "pct": 39.2
+    },
+    "recuperacion": {
+     "valor": 0.2162,
+     "pct": 50.0
+    },
+    "linea": {
+     "valor": 50.5824,
+     "pct": 41.9
+    },
+    "compacidad": {
+     "valor": 592.5781,
+     "pct": 50.0
+    },
+    "pp_favor": {
+     "valor": 4.4,
+     "pct": 63.5
+    },
+    "pp_contra": {
+     "valor": 4.08,
+     "pct": 63.5
+    }
+   }
+  },
+  "Andres Luciano Lillini": {
+   "partidos": 74,
+   "metricas": {
+    "presion": {
+     "valor": 2.3456,
+     "pct": 63.5
+    },
+    "recuperacion": {
+     "valor": 0.2146,
+     "pct": 44.6
+    },
+    "linea": {
+     "valor": 51.1979,
+     "pct": 52.7
+    },
+    "compacidad": {
+     "valor": 601.6482,
+     "pct": 31.1
+    },
+    "pp_favor": {
+     "valor": 4.2973,
+     "pct": 52.7
+    },
+    "pp_contra": {
+     "valor": 4.1486,
+     "pct": 58.1
+    }
+   }
+  },
+  "Veljko Paunovic": {
+   "partidos": 71,
+   "metricas": {
+    "presion": {
+     "valor": 2.2561,
+     "pct": 79.7
+    },
+    "recuperacion": {
+     "valor": 0.2379,
+     "pct": 90.5
+    },
+    "linea": {
+     "valor": 51.7858,
+     "pct": 63.5
+    },
+    "compacidad": {
+     "valor": 581.1539,
+     "pct": 74.3
+    },
+    "pp_favor": {
+     "valor": 4.3521,
+     "pct": 58.1
+    },
+    "pp_contra": {
+     "valor": 4.4507,
+     "pct": 33.8
+    }
+   }
+  },
+  "Benjamin Mora Mendivil": {
+   "partidos": 68,
+   "metricas": {
+    "presion": {
+     "valor": 2.9364,
+     "pct": 9.5
+    },
+    "recuperacion": {
+     "valor": 0.194,
+     "pct": 4.1
+    },
+    "linea": {
+     "valor": 48.1771,
+     "pct": 12.2
+    },
+    "compacidad": {
+     "valor": 590.7893,
+     "pct": 52.7
+    },
+    "pp_favor": {
+     "valor": 3.7353,
+     "pct": 9.5
+    },
+    "pp_contra": {
+     "valor": 5.1471,
+     "pct": 12.2
+    }
+   }
+  },
+  "Domenec Torrent": {
+   "partidos": 67,
+   "metricas": {
+    "presion": {
+     "valor": 2.6562,
+     "pct": 25.7
+    },
+    "recuperacion": {
+     "valor": 0.2134,
+     "pct": 39.2
+    },
+    "linea": {
+     "valor": 50.3702,
+     "pct": 39.2
+    },
+    "compacidad": {
+     "valor": 600.4008,
+     "pct": 36.5
+    },
+    "pp_favor": {
+     "valor": 3.9254,
+     "pct": 25.7
+    },
+    "pp_contra": {
+     "valor": 4.194,
+     "pct": 52.7
+    }
+   }
+  },
+  "Benat San Jose": {
+   "partidos": 62,
+   "metricas": {
+    "presion": {
+     "valor": 2.5398,
+     "pct": 41.9
+    },
+    "recuperacion": {
+     "valor": 0.1991,
+     "pct": 12.2
+    },
+    "linea": {
+     "valor": 49.1265,
+     "pct": 23.0
+    },
+    "compacidad": {
+     "valor": 569.1532,
+     "pct": 85.1
+    },
+    "pp_favor": {
+     "valor": 3.8871,
+     "pct": 23.0
+    },
+    "pp_contra": {
+     "valor": 4.6452,
+     "pct": 25.7
+    }
+   }
+  },
+  "Martin Varini Di Zioli": {
+   "partidos": 56,
+   "metricas": {
+    "presion": {
+     "valor": 2.5605,
+     "pct": 36.5
+    },
+    "recuperacion": {
+     "valor": 0.1944,
+     "pct": 6.8
+    },
+    "linea": {
+     "valor": 51.5524,
+     "pct": 58.1
+    },
+    "compacidad": {
+     "valor": 606.361,
+     "pct": 23.0
+    },
+    "pp_favor": {
+     "valor": 3.4821,
+     "pct": 4.1
+    },
+    "pp_contra": {
+     "valor": 4.3929,
+     "pct": 41.9
+    }
+   }
+  },
+  "Renato Paiva": {
+   "partidos": 56,
+   "metricas": {
+    "presion": {
+     "valor": 2.6565,
+     "pct": 23.0
+    },
+    "recuperacion": {
+     "valor": 0.2246,
+     "pct": 63.5
+    },
+    "linea": {
+     "valor": 51.8862,
+     "pct": 68.9
+    },
+    "compacidad": {
+     "valor": 585.8903,
+     "pct": 66.2
+    },
+    "pp_favor": {
+     "valor": 4.3571,
+     "pct": 60.8
+    },
+    "pp_contra": {
+     "valor": 3.8571,
+     "pct": 77.0
+    }
+   }
+  },
+  "Guido Hernan Pizarro Demestri": {
+   "partidos": 52,
+   "metricas": {
+    "presion": {
+     "valor": 2.3509,
+     "pct": 60.8
+    },
+    "recuperacion": {
+     "valor": 0.2337,
+     "pct": 85.1
+    },
+    "linea": {
+     "valor": 53.9963,
+     "pct": 87.8
+    },
+    "compacidad": {
+     "valor": 598.283,
+     "pct": 41.9
+    },
+    "pp_favor": {
+     "valor": 5.0385,
+     "pct": 90.5
+    },
+    "pp_contra": {
+     "valor": 3.6538,
+     "pct": 87.8
+    }
+   }
+  },
+  "Efrain Valdez": {
+   "partidos": 50,
+   "metricas": {
+    "presion": {
+     "valor": 2.9374,
+     "pct": 6.8
+    },
+    "recuperacion": {
+     "valor": 0.1961,
+     "pct": 9.5
+    },
+    "linea": {
+     "valor": 48.5997,
+     "pct": 14.9
+    },
+    "compacidad": {
+     "valor": 581.4621,
+     "pct": 71.6
+    },
+    "pp_favor": {
+     "valor": 3.36,
+     "pct": 1.4
+    },
+    "pp_contra": {
+     "valor": 5.34,
+     "pct": 6.8
+    }
+   }
+  },
+  "Fernando Ruben Gago": {
+   "partidos": 49,
+   "metricas": {
+    "presion": {
+     "valor": 2.1973,
+     "pct": 90.5
+    },
+    "recuperacion": {
+     "valor": 0.2336,
+     "pct": 82.4
+    },
+    "linea": {
+     "valor": 53.3131,
+     "pct": 85.1
+    },
+    "compacidad": {
+     "valor": 627.6371,
+     "pct": 9.5
+    },
+    "pp_favor": {
+     "valor": 4.1224,
+     "pct": 44.6
+    },
+    "pp_contra": {
+     "valor": 3.6122,
+     "pct": 90.5
+    }
+   }
+  },
+  "Jaime Arturo Lozano Espin": {
+   "partidos": 49,
+   "metricas": {
+    "presion": {
+     "valor": 2.2382,
+     "pct": 85.1
+    },
+    "recuperacion": {
+     "valor": 0.206,
+     "pct": 20.3
+    },
+    "linea": {
+     "valor": 51.4869,
+     "pct": 55.4
+    },
+    "compacidad": {
+     "valor": 556.1427,
+     "pct": 98.6
+    },
+    "pp_favor": {
+     "valor": 3.8367,
+     "pct": 20.3
+    },
+    "pp_contra": {
+     "valor": 4.5714,
+     "pct": 28.4
+    }
+   }
+  },
+  "Gustavo Alberto Lema": {
+   "partidos": 48,
+   "metricas": {
+    "presion": {
+     "valor": 2.3946,
+     "pct": 58.1
+    },
+    "recuperacion": {
+     "valor": 0.2157,
+     "pct": 47.3
+    },
+    "linea": {
+     "valor": 52.6311,
+     "pct": 82.4
+    },
+    "compacidad": {
+     "valor": 602.7056,
+     "pct": 28.4
+    },
+    "pp_favor": {
+     "valor": 4.4583,
+     "pct": 66.2
+    },
+    "pp_contra": {
+     "valor": 4.125,
+     "pct": 60.8
+    }
+   }
+  },
+  "Ricardo Ferretti": {
+   "partidos": 48,
+   "metricas": {
+    "presion": {
+     "valor": 2.9046,
+     "pct": 14.9
+    },
+    "recuperacion": {
+     "valor": 0.203,
+     "pct": 14.9
+    },
+    "linea": {
+     "valor": 48.1012,
+     "pct": 9.5
+    },
+    "compacidad": {
+     "valor": 567.5842,
+     "pct": 90.5
+    },
+    "pp_favor": {
+     "valor": 3.5625,
+     "pct": 6.8
+    },
+    "pp_contra": {
+     "valor": 4.2083,
+     "pct": 50.0
+    }
+   }
+  },
+  "Martin Anselmi": {
+   "partidos": 47,
+   "metricas": {
+    "presion": {
+     "valor": 2.2485,
+     "pct": 82.4
+    },
+    "recuperacion": {
+     "valor": 0.2477,
+     "pct": 95.9
+    },
+    "linea": {
+     "valor": 56.7884,
+     "pct": 98.6
+    },
+    "compacidad": {
+     "valor": 587.1077,
+     "pct": 60.8
+    },
+    "pp_favor": {
+     "valor": 4.766,
+     "pct": 82.4
+    },
+    "pp_contra": {
+     "valor": 2.6596,
+     "pct": 98.6
+    }
+   }
+  },
+  "Manuel Eduardo Berizzo": {
+   "partidos": 42,
+   "metricas": {
+    "presion": {
+     "valor": 2.6524,
+     "pct": 28.4
+    },
+    "recuperacion": {
+     "valor": 0.1873,
+     "pct": 1.4
+    },
+    "linea": {
+     "valor": 49.7745,
+     "pct": 31.1
+    },
+    "compacidad": {
+     "valor": 607.3979,
+     "pct": 17.6
+    },
+    "pp_favor": {
+     "valor": 4.0,
+     "pct": 35.1
+    },
+    "pp_contra": {
+     "valor": 4.5238,
+     "pct": 31.1
+    }
+   }
+  },
+  "Gabriel Alejandro Milito": {
+   "partidos": 40,
+   "metricas": {
+    "presion": {
+     "valor": 2.5271,
+     "pct": 47.3
+    },
+    "recuperacion": {
+     "valor": 0.2109,
+     "pct": 33.8
+    },
+    "linea": {
+     "valor": 55.0908,
+     "pct": 93.2
+    },
+    "compacidad": {
+     "valor": 655.161,
+     "pct": 6.8
+    },
+    "pp_favor": {
+     "valor": 5.225,
+     "pct": 98.6
+    },
+    "pp_contra": {
+     "valor": 2.9,
+     "pct": 95.9
+    }
+   }
+  },
+  "Gustavo Leal": {
+   "partidos": 39,
+   "metricas": {
+    "presion": {
+     "valor": 3.2418,
+     "pct": 1.4
+    },
+    "recuperacion": {
+     "valor": 0.2174,
+     "pct": 52.7
+    },
+    "linea": {
+     "valor": 47.6785,
+     "pct": 6.8
+    },
+    "compacidad": {
+     "valor": 562.9166,
+     "pct": 93.2
+    },
+    "pp_favor": {
+     "valor": 4.6667,
+     "pct": 79.7
+    },
+    "pp_contra": {
+     "valor": 3.8974,
+     "pct": 71.6
+    }
+   }
+  },
+  "Martin Gaston Demichelis": {
+   "partidos": 39,
+   "metricas": {
+    "presion": {
+     "valor": 2.3175,
+     "pct": 77.0
+    },
+    "recuperacion": {
+     "valor": 0.2299,
+     "pct": 74.3
+    },
+    "linea": {
+     "valor": 54.0754,
+     "pct": 90.5
+    },
+    "compacidad": {
+     "valor": 594.7701,
+     "pct": 47.3
+    },
+    "pp_favor": {
+     "valor": 4.4615,
+     "pct": 68.9
+    },
+    "pp_contra": {
+     "valor": 3.2821,
+     "pct": 93.2
+    }
+   }
+  },
+  "Ariel Enrique Holan": {
+   "partidos": 38,
+   "metricas": {
+    "presion": {
+     "valor": 2.3207,
+     "pct": 74.3
+    },
+    "recuperacion": {
+     "valor": 0.2264,
+     "pct": 66.2
+    },
+    "linea": {
+     "valor": 50.3175,
+     "pct": 36.5
+    },
+    "compacidad": {
+     "valor": 606.8429,
+     "pct": 20.3
+    },
+    "pp_favor": {
+     "valor": 4.0263,
+     "pct": 40.5
+    },
+    "pp_contra": {
+     "valor": 4.6579,
+     "pct": 23.0
+    }
+   }
+  },
+  "Juan Maximo Reynoso Guzman": {
+   "partidos": 38,
+   "metricas": {
+    "presion": {
+     "valor": 2.4883,
+     "pct": 50.0
+    },
+    "recuperacion": {
+     "valor": 0.2061,
+     "pct": 23.0
+    },
+    "linea": {
+     "valor": 49.0742,
+     "pct": 20.3
+    },
+    "compacidad": {
+     "valor": 568.4378,
+     "pct": 87.8
+    },
+    "pp_favor": {
+     "valor": 4.0263,
+     "pct": 40.5
+    },
+    "pp_contra": {
+     "valor": 4.6842,
+     "pct": 20.3
+    }
+   }
+  },
+  "Washington Sebastian Abreu Gallo": {
+   "partidos": 37,
+   "metricas": {
+    "presion": {
+     "valor": 2.9774,
+     "pct": 4.1
+    },
+    "recuperacion": {
+     "valor": 0.2071,
+     "pct": 25.7
+    },
+    "linea": {
+     "valor": 47.5848,
+     "pct": 4.1
+    },
+    "compacidad": {
+     "valor": 669.5605,
+     "pct": 4.1
+    },
+    "pp_favor": {
+     "valor": 4.0,
+     "pct": 35.1
+    },
+    "pp_contra": {
+     "valor": 4.2703,
+     "pct": 47.3
+    }
+   }
+  },
+  "Ismael Rescalvo": {
+   "partidos": 32,
+   "metricas": {
+    "presion": {
+     "valor": 2.9239,
+     "pct": 12.2
+    },
+    "recuperacion": {
+     "valor": 0.2284,
+     "pct": 68.9
+    },
+    "linea": {
+     "valor": 49.3853,
+     "pct": 28.4
+    },
+    "compacidad": {
+     "valor": 599.203,
+     "pct": 39.2
+    },
+    "pp_favor": {
+     "valor": 3.8125,
+     "pct": 14.9
+    },
+    "pp_contra": {
+     "valor": 5.0625,
+     "pct": 14.9
+    }
+   }
+  },
+  "Juan Carlos Osorio Arbelaez": {
+   "partidos": 32,
+   "metricas": {
+    "presion": {
+     "valor": 1.8968,
+     "pct": 98.6
+    },
+    "recuperacion": {
+     "valor": 0.2698,
+     "pct": 98.6
+    },
+    "linea": {
+     "valor": 55.4248,
+     "pct": 95.9
+    },
+    "compacidad": {
+     "valor": 680.0365,
+     "pct": 1.4
+    },
+    "pp_favor": {
+     "valor": 3.75,
+     "pct": 12.2
+    },
+    "pp_contra": {
+     "valor": 4.4062,
+     "pct": 36.5
+    }
+   }
+  },
+  "Pablo Adrian Guede Barriero": {
+   "partidos": 32,
+   "metricas": {
+    "presion": {
+     "valor": 2.1002,
+     "pct": 95.9
+    },
+    "recuperacion": {
+     "valor": 0.2231,
+     "pct": 60.8
+    },
+    "linea": {
+     "valor": 51.9211,
+     "pct": 71.6
+    },
+    "compacidad": {
+     "valor": 600.8406,
+     "pct": 33.8
+    },
+    "pp_favor": {
+     "valor": 3.9375,
+     "pct": 31.1
+    },
+    "pp_contra": {
+     "valor": 5.375,
+     "pct": 4.1
+    }
+   }
+  }
+ },
+ "perilla_defensa": {
+  "nombre": "¿Qué tanto presiona?",
+  "decision": "relación clara",
+  "correlaciones": [
+   {
+    "componente": "int_co[Directa]",
+    "metrica": "PPDA",
+    "n": 37,
+    "rho": -0.28449502133712656,
+    "ic95": [
+     -0.5864163365015701,
+     0.07703232707392481
+    ],
+    "p_bootstrap": 0.10975,
+    "p_bh": 0.10975,
+    "clara": false
+   },
+   {
+    "componente": "int_co[Directa]",
+    "metrica": "recuperación en 10 s",
+    "n": 37,
+    "rho": 0.4670459933617828,
+    "ic95": [
+     0.12445506427807293,
+     0.7237371190589572
+    ],
+    "p_bootstrap": 0.00525,
+    "p_bh": 0.007,
+    "clara": true
+   },
+   {
+    "componente": "u_co[Directa]",
+    "metrica": "PPDA",
+    "n": 37,
+    "rho": 0.5995732574679943,
+    "ic95": [
+     0.33982349576482795,
+     0.7696668659205318
+    ],
+    "p_bootstrap": 0.00025,
+    "p_bh": 0.001,
+    "clara": true
+   },
+   {
+    "componente": "u_co[Directa]",
+    "metrica": "recuperación en 10 s",
+    "n": 37,
+    "rho": -0.44973921289710755,
+    "ic95": [
+     -0.6799819653382598,
+     -0.15685167577846434
+    ],
+    "p_bootstrap": 0.00475,
+    "p_bh": 0.007,
+    "clara": true
+   }
+  ],
+  "regla": "IC 95 % del bootstrap de técnicos sin el 0 y p corregido por Benjamini-Hochberg (4 pruebas) < 0.05"
+ },
+ "efecto_sin_perilla": {
+  "ritmo del ataque y de la defensa": {
+   "componentes": [
+    "l_at",
+    "l_co"
+   ],
+   "delta_menos_1sd": 0.081,
+   "delta_mas_1sd": -0.084,
+   "justificada": true
+  },
+  "qué tanto remata con sus jugadas": {
+   "componentes": [
+    "u_at[Directa]",
+    "u_at[Circulación estéril]",
+    "u_at[Ataque elaborado]"
+   ],
+   "delta_menos_1sd": -0.608,
+   "delta_mas_1sd": 0.625,
+   "justificada": true
+  },
+  "qué tan peligrosos son sus remates": {
+   "componentes": [
+    "w_at[Directa]",
+    "w_at[Circulación estéril]",
+    "w_at[Ataque elaborado]"
+   ],
+   "delta_menos_1sd": -0.421,
+   "delta_mas_1sd": 0.433,
+   "justificada": true
+  },
+  "remates que concede (sin las jugadas directas)": {
+   "componentes": [
+    "u_co[Circulación estéril]",
+    "u_co[Ataque elaborado]"
+   ],
+   "delta_menos_1sd": 0.195,
+   "delta_mas_1sd": -0.201,
+   "justificada": true
+  },
+  "qué tan peligrosos son los remates que concede": {
+   "componentes": [
+    "w_co[Directa]",
+    "w_co[Circulación estéril]",
+    "w_co[Ataque elaborado]"
+   ],
+   "delta_menos_1sd": 0.406,
+   "delta_mas_1sd": -0.419,
+   "justificada": true
+  }
+ },
+ "azar_pm": 7.0,
+ "efecto_perillas": {
+  "ataca": {
+   "delta": -0.054,
+   "nivel": "nada",
+   "pts_extremos": [
+    25.94,
+    25.89
+   ]
+  },
+  "defiende": {
+   "delta": 0.657,
+   "nivel": "nada",
+   "pts_extremos": [
+    25.56,
+    26.22
+   ]
+  },
+  "pp_contra": {
+   "delta": 0.129,
+   "nivel": "nada",
+   "pts_extremos": [
+    25.85,
+    25.98
+   ]
+  },
+  "pp_favor": {
+   "delta": 0.225,
+   "nivel": "nada",
+   "pts_extremos": [
+    25.81,
+    26.03
+   ]
+  }
+ },
+ "efecto_regla": "mucho si |Δ| ≥ 3.0 puntos por torneo, algo si ≥ 1.0, nada si menos; Δ = puntos con la perilla en su extremo alto menos en el bajo, técnico promedio, modo preciso",
+ "tipos_fuente": {
+  "archivo": "mezcla_K3.npz",
+  "pi": [
+   0.3543113159675108,
+   0.2631046121154509,
+   0.3825840719170383
+  ],
+  "toques": [
+   3.470383561981351,
+   6.703407852382309,
+   9.172047178737882
+  ],
+  "remate": [
+   14.020551288935067,
+   2.550581518852755,
+   12.236439317687672
+  ],
+  "goles100": [
+   1.3744618759869383,
+   0.3713517232727037,
+   1.195824415960486
+  ]
+ },
+ "dispersion": {
+  "var_real": {
+   "valor": 60.921568627450974,
+   "ic95": [
+    47.82765522875817,
+    67.84260620915033
+   ]
+  },
+  "var_azar": {
+   "valor": 27.806108264807264,
+   "ic95": [
+    27.67925516042703,
+    27.92657198689047
+   ]
+  },
+  "sd_fuerza_real": {
+   "valor": 5.754603406199571,
+   "ic95": [
+    4.46538055171206,
+    6.332527012958896
+   ]
+  },
+  "sd_fuerza_modelo": {
+   "valor": 3.786738100016595,
+   "ic95": [
+    3.365679118262008,
+    3.963394969340972
+   ]
+  },
+  "r": {
+   "valor": 1.5196729359694434,
+   "ic95": [
+    1.2318255272730958,
+    1.6969087682702226
+   ],
+   "p_h0": 0.0,
+   "rechaza_h0": true
+  },
+  "azar_sobre_real": {
+   "valor": 0.4564246931139912,
+   "ic95": [
+    0.40888032511542255,
+    0.5827840563012735
+   ]
+  },
+  "piso_en_cero": false,
+  "n_torneos": 10,
+  "n_equipo_torneo": 180,
+  "n_boot": 2000,
+  "metodo": "bootstrap estratificado por torneo (equipos remuestreados dentro de cada torneo); Var_azar de las probabilidades de cada partido del motor; p de H0 = proporción de réplicas con r ≤ 1",
+  "consistente_con_pendiente": true,
+  "pendiente_ic95": [
+   1.295383789809907,
+   1.712936248420203
+  ],
+  "pendiente": 1.504160019115055,
+  "torneos": [
+   "Apertura 2021",
+   "Apertura 2022",
+   "Apertura 2023",
+   "Apertura 2024",
+   "Apertura 2025",
+   "Clausura 2022",
+   "Clausura 2023",
+   "Clausura 2024",
+   "Clausura 2025",
+   "Clausura 2026"
+  ]
+ },
+ "calificacion": {
+  "modo": "rapido",
+  "referencia": "estilo neutro (θ = 0) con el plantel del América",
+  "tecnicos": {
+   "Andre Jardine": {
+    "delta": 0.5745,
+    "ic90": [
+     -1.4888,
+     2.5968
+    ]
+   },
+   "Andres Luciano Lillini": {
+    "delta": -0.4599,
+    "ic90": [
+     -1.4908,
+     0.6234
+    ]
+   },
+   "Antonio Ricardo Mohamed Matijevich": {
+    "delta": 0.7467,
+    "ic90": [
+     -0.3871,
+     1.9091
+    ]
+   },
+   "Ariel Enrique Holan": {
+    "delta": 0.0026,
+    "ic90": [
+     -0.7859,
+     1.2706
+    ]
+   },
+   "Benat San Jose": {
+    "delta": -0.451,
+    "ic90": [
+     -1.5106,
+     0.6281
+    ]
+   },
+   "Benjamin Mora Mendivil": {
+    "delta": -0.2943,
+    "ic90": [
+     -1.1227,
+     0.4953
+    ]
+   },
+   "Diego Martin Cocca Pera": {
+    "delta": -0.0025,
+    "ic90": [
+     -0.9499,
+     0.9571
+    ]
+   },
+   "Domenec Torrent": {
+    "delta": -0.2347,
+    "ic90": [
+     -1.0825,
+     0.6344
+    ]
+   },
+   "Eduardo Fentanes Orozco": {
+    "delta": 0.1569,
+    "ic90": [
+     -0.713,
+     1.1944
+    ]
+   },
+   "Efrain Valdez": {
+    "delta": -0.4452,
+    "ic90": [
+     -1.6666,
+     1.0352
+    ]
+   },
+   "Fernando Ortiz": {
+    "delta": 2.3379,
+    "ic90": [
+     0.0723,
+     4.3427
+    ]
+   },
+   "Fernando Ruben Gago": {
+    "delta": 0.532,
+    "ic90": [
+     -0.4594,
+     1.3384
+    ]
+   },
+   "Gabriel Alejandro Milito": {
+    "delta": 0.8812,
+    "ic90": [
+     -0.2461,
+     2.2265
+    ]
+   },
+   "Guido Hernan Pizarro Demestri": {
+    "delta": 0.1386,
+    "ic90": [
+     -1.0655,
+     1.3763
+    ]
+   },
+   "Gustavo Alberto Lema": {
+    "delta": 0.1674,
+    "ic90": [
+     -0.9053,
+     1.1502
+    ]
+   },
+   "Gustavo Leal": {
+    "delta": 0.1645,
+    "ic90": [
+     -1.2504,
+     1.2194
+    ]
+   },
+   "Ismael Rescalvo": {
+    "delta": 0.2068,
+    "ic90": [
+     -0.9497,
+     1.4783
+    ]
+   },
+   "Jaime Arturo Lozano Espin": {
+    "delta": 0.0691,
+    "ic90": [
+     -1.0302,
+     1.0872
+    ]
+   },
+   "Jorge Guillermo Almada Alves": {
+    "delta": 0.571,
+    "ic90": [
+     -0.415,
+     1.4538
+    ]
+   },
+   "Juan Carlos Osorio Arbelaez": {
+    "delta": -0.2613,
+    "ic90": [
+     -1.5104,
+     0.9621
+    ]
+   },
+   "Juan Maximo Reynoso Guzman": {
+    "delta": -0.1122,
+    "ic90": [
+     -1.2814,
+     1.0068
+    ]
+   },
+   "Manuel Eduardo Berizzo": {
+    "delta": -0.4948,
+    "ic90": [
+     -1.9232,
+     0.6984
+    ]
+   },
+   "Marcos Ignacio Ambriz Espinoza": {
+    "delta": -1.1807,
+    "ic90": [
+     -2.2315,
+     -0.1019
+    ]
+   },
+   "Martin Anselmi": {
+    "delta": 1.0452,
+    "ic90": [
+     -0.1479,
+     2.4986
+    ]
+   },
+   "Martin Gaston Demichelis": {
+    "delta": 0.0438,
+    "ic90": [
+     -0.9862,
+     1.3598
+    ]
+   },
+   "Martin Varini Di Zioli": {
+    "delta": -0.4228,
+    "ic90": [
+     -1.3216,
+     0.6699
+    ]
+   },
+   "Mauro Nestor Gerk Larrea": {
+    "delta": -0.5693,
+    "ic90": [
+     -1.8005,
+     0.6114
+    ]
+   },
+   "Miguel Ernesto Herrera Aguirre": {
+    "delta": 0.5811,
+    "ic90": [
+     -0.3211,
+     1.5676
+    ]
+   },
+   "Nicolas Ricardo Larcamon": {
+    "delta": 0.7283,
+    "ic90": [
+     -0.5064,
+     1.6266
+    ]
+   },
+   "Pablo Adrian Guede Barriero": {
+    "delta": -0.095,
+    "ic90": [
+     -1.4951,
+     1.2244
+    ]
+   },
+   "Renato Paiva": {
+    "delta": 0.2089,
+    "ic90": [
+     -0.9065,
+     1.515
+    ]
+   },
+   "Ricardo Ferretti": {
+    "delta": -0.8987,
+    "ic90": [
+     -1.8833,
+     0.2036
+    ]
+   },
+   "Robert Dante Siboldi Badiola": {
+    "delta": -0.4573,
+    "ic90": [
+     -1.5429,
+     0.5792
+    ]
+   },
+   "Rolando Hernan Cristante Mandarino": {
+    "delta": 0.0339,
+    "ic90": [
+     -1.1011,
+     1.2342
+    ]
+   },
+   "Veljko Paunovic": {
+    "delta": -0.0035,
+    "ic90": [
+     -1.012,
+     0.8752
+    ]
+   },
+   "Victor Manuel Vucetich Rojas": {
+    "delta": 1.1237,
+    "ic90": [
+     0.03,
+     2.0562
+    ]
+   },
+   "Washington Sebastian Abreu Gallo": {
+    "delta": -0.0608,
+    "ic90": [
+     -1.313,
+     0.8331
+    ]
+   }
+  },
+  "regla": "percentil entre los técnicos reales dentro de cada lado del cero; 5 = igual al neutro; rango = mismo cálculo con el IC 90 % del Δ"
+ },
+ "liga": {
+  "n_tecnicos": 37,
+  "min_partidos": 30,
+  "metricas": {
+   "presion": {
+    "media": 2.508,
+    "sd": 0.2883,
+    "mediana": 2.4883,
+    "n": 37,
+    "mayor_es_mas": false
+   },
+   "recuperacion": {
+    "media": 0.219,
+    "sd": 0.017,
+    "mediana": 0.2162,
+    "n": 37,
+    "mayor_es_mas": true
+   },
+   "pp_favor": {
+    "media": 4.2575,
+    "sd": 0.4769,
+    "mediana": 4.2442,
+    "n": 37,
+    "mayor_es_mas": true
+   },
+   "pp_contra": {
+    "media": 4.2638,
+    "sd": 0.6518,
+    "mediana": 4.2083,
+    "n": 37,
+    "mayor_es_mas": false
+   }
+  }
+ },
+ "exigencia": {
+  "modo": "rapido",
+  "top": 4,
+  "k_ee": 2.0,
+  "referencia": "plantel del América; cada técnico real con su posterior completa",
+  "tecnicos": {
+   "Andre Jardine": {
+    "p_liguilla": {
+     "media": 0.6467,
+     "ee": 0.01180998977924446
+    },
+    "p_top": {
+     "media": 0.3235,
+     "ee": 0.01166915557866943
+    }
+   },
+   "Andres Luciano Lillini": {
+    "p_liguilla": {
+     "media": 0.5657,
+     "ee": 0.016357900509873173
+    },
+    "p_top": {
+     "media": 0.2632,
+     "ee": 0.013728890131486385
+    }
+   },
+   "Antonio Ricardo Mohamed Matijevich": {
+    "p_liguilla": {
+     "media": 0.6495,
+     "ee": 0.014909406562315082
+    },
+    "p_top": {
+     "media": 0.3412,
+     "ee": 0.015414986804464617
+    }
+   },
+   "Ariel Enrique Holan": {
+    "p_liguilla": {
+     "media": 0.6007,
+     "ee": 0.015004548132031987
+    },
+    "p_top": {
+     "media": 0.2879,
+     "ee": 0.014100859634229482
+    }
+   },
+   "Benat San Jose": {
+    "p_liguilla": {
+     "media": 0.5652,
+     "ee": 0.014731591834550604
+    },
+    "p_top": {
+     "media": 0.2621,
+     "ee": 0.013028558375097888
+    }
+   },
+   "Benjamin Mora Mendivil": {
+    "p_liguilla": {
+     "media": 0.5791,
+     "ee": 0.014375972518705852
+    },
+    "p_top": {
+     "media": 0.2723,
+     "ee": 0.013025115598858857
+    }
+   },
+   "Diego Martin Cocca Pera": {
+    "p_liguilla": {
+     "media": 0.6042,
+     "ee": 0.01452422567000153
+    },
+    "p_top": {
+     "media": 0.2843,
+     "ee": 0.01401748907615055
+    }
+   },
+   "Domenec Torrent": {
+    "p_liguilla": {
+     "media": 0.5858,
+     "ee": 0.015155210458466226
+    },
+    "p_top": {
+     "media": 0.2801,
+     "ee": 0.014148915795276263
+    }
+   },
+   "Eduardo Fentanes Orozco": {
+    "p_liguilla": {
+     "media": 0.6105,
+     "ee": 0.014697883445509348
+    },
+    "p_top": {
+     "media": 0.3028,
+     "ee": 0.014221963381482966
+    }
+   },
+   "Efrain Valdez": {
+    "p_liguilla": {
+     "media": 0.5716,
+     "ee": 0.015023026097671305
+    },
+    "p_top": {
+     "media": 0.2631,
+     "ee": 0.013015682071946125
+    }
+   },
+   "Fernando Ortiz": {
+    "p_liguilla": {
+     "media": 0.7492,
+     "ee": 0.012947976714919634
+    },
+    "p_top": {
+     "media": 0.4406,
+     "ee": 0.015441528683417586
+    }
+   },
+   "Fernando Ruben Gago": {
+    "p_liguilla": {
+     "media": 0.6365,
+     "ee": 0.014192311903693392
+    },
+    "p_top": {
+     "media": 0.3198,
+     "ee": 0.01394504365085468
+    }
+   },
+   "Gabriel Alejandro Milito": {
+    "p_liguilla": {
+     "media": 0.6606,
+     "ee": 0.013666903176076228
+    },
+    "p_top": {
+     "media": 0.3437,
+     "ee": 0.014053041656452164
+    }
+   },
+   "Guido Hernan Pizarro Demestri": {
+    "p_liguilla": {
+     "media": 0.6101,
+     "ee": 0.01530926635615294
+    },
+    "p_top": {
+     "media": 0.3013,
+     "ee": 0.013664563770216121
+    }
+   },
+   "Gustavo Alberto Lema": {
+    "p_liguilla": {
+     "media": 0.6102,
+     "ee": 0.015037985573241187
+    },
+    "p_top": {
+     "media": 0.2993,
+     "ee": 0.014021812012761122
+    }
+   },
+   "Gustavo Leal": {
+    "p_liguilla": {
+     "media": 0.6123,
+     "ee": 0.014612748688813624
+    },
+    "p_top": {
+     "media": 0.3008,
+     "ee": 0.01429464828867677
+    }
+   },
+   "Ismael Rescalvo": {
+    "p_liguilla": {
+     "media": 0.6113,
+     "ee": 0.015141524281780802
+    },
+    "p_top": {
+     "media": 0.3002,
+     "ee": 0.014347758773347905
+    }
+   },
+   "Jaime Arturo Lozano Espin": {
+    "p_liguilla": {
+     "media": 0.6068,
+     "ee": 0.014174154883684129
+    },
+    "p_top": {
+     "media": 0.2964,
+     "ee": 0.01337457258828079
+    }
+   },
+   "Jorge Guillermo Almada Alves": {
+    "p_liguilla": {
+     "media": 0.6421,
+     "ee": 0.014918157196564667
+    },
+    "p_top": {
+     "media": 0.3245,
+     "ee": 0.015288058983230915
+    }
+   },
+   "Juan Carlos Osorio Arbelaez": {
+    "p_liguilla": {
+     "media": 0.5816,
+     "ee": 0.015696438507450724
+    },
+    "p_top": {
+     "media": 0.2781,
+     "ee": 0.013903487681044987
+    }
+   },
+   "Juan Maximo Reynoso Guzman": {
+    "p_liguilla": {
+     "media": 0.5947,
+     "ee": 0.01421512567583551
+    },
+    "p_top": {
+     "media": 0.2822,
+     "ee": 0.013626756211530491
+    }
+   },
+   "Manuel Eduardo Berizzo": {
+    "p_liguilla": {
+     "media": 0.5671,
+     "ee": 0.016307211641330702
+    },
+    "p_top": {
+     "media": 0.2635,
+     "ee": 0.014043493047304755
+    }
+   },
+   "Marcos Ignacio Ambriz Espinoza": {
+    "p_liguilla": {
+     "media": 0.5213,
+     "ee": 0.01412259097182864
+    },
+    "p_top": {
+     "media": 0.2169,
+     "ee": 0.011528353277590398
+    }
+   },
+   "Martin Anselmi": {
+    "p_liguilla": {
+     "media": 0.6673,
+     "ee": 0.01472087434271964
+    },
+    "p_top": {
+     "media": 0.3551,
+     "ee": 0.01592437620680187
+    }
+   },
+   "Martin Gaston Demichelis": {
+    "p_liguilla": {
+     "media": 0.6054,
+     "ee": 0.01521125314437381
+    },
+    "p_top": {
+     "media": 0.2948,
+     "ee": 0.014379053227426752
+    }
+   },
+   "Martin Varini Di Zioli": {
+    "p_liguilla": {
+     "media": 0.5754,
+     "ee": 0.014653864936451327
+    },
+    "p_top": {
+     "media": 0.2646,
+     "ee": 0.012759959469236791
+    }
+   },
+   "Mauro Nestor Gerk Larrea": {
+    "p_liguilla": {
+     "media": 0.5607,
+     "ee": 0.016164717158307498
+    },
+    "p_top": {
+     "media": 0.2613,
+     "ee": 0.013690411744625278
+    }
+   },
+   "Miguel Ernesto Herrera Aguirre": {
+    "p_liguilla": {
+     "media": 0.6407,
+     "ee": 0.013715179970243251
+    },
+    "p_top": {
+     "media": 0.3228,
+     "ee": 0.013948013145501072
+    }
+   },
+   "Nicolas Ricardo Larcamon": {
+    "p_liguilla": {
+     "media": 0.6525,
+     "ee": 0.013656962556243107
+    },
+    "p_top": {
+     "media": 0.3349,
+     "ee": 0.013812960536679993
+    }
+   },
+   "Pablo Adrian Guede Barriero": {
+    "p_liguilla": {
+     "media": 0.5956,
+     "ee": 0.015407147757459912
+    },
+    "p_top": {
+     "media": 0.2878,
+     "ee": 0.013703630721436379
+    }
+   },
+   "Renato Paiva": {
+    "p_liguilla": {
+     "media": 0.615,
+     "ee": 0.015388241608383325
+    },
+    "p_top": {
+     "media": 0.3039,
+     "ee": 0.014270047036511212
+    }
+   },
+   "Ricardo Ferretti": {
+    "p_liguilla": {
+     "media": 0.5385,
+     "ee": 0.015038250892274336
+    },
+    "p_top": {
+     "media": 0.2347,
+     "ee": 0.012268424610529358
+    }
+   },
+   "Robert Dante Siboldi Badiola": {
+    "p_liguilla": {
+     "media": 0.5687,
+     "ee": 0.015276346673101121
+    },
+    "p_top": {
+     "media": 0.2617,
+     "ee": 0.012755711733109283
+    }
+   },
+   "Rolando Hernan Cristante Mandarino": {
+    "p_liguilla": {
+     "media": 0.6038,
+     "ee": 0.01465824827270443
+    },
+    "p_top": {
+     "media": 0.292,
+     "ee": 0.013534840937074924
+    }
+   },
+   "Veljko Paunovic": {
+    "p_liguilla": {
+     "media": 0.6002,
+     "ee": 0.015291761827794067
+    },
+    "p_top": {
+     "media": 0.289,
+     "ee": 0.014222971886807951
+    }
+   },
+   "Victor Manuel Vucetich Rojas": {
+    "p_liguilla": {
+     "media": 0.6783,
+     "ee": 0.013371955426159328
+    },
+    "p_top": {
+     "media": 0.3586,
+     "ee": 0.014577566825278302
+    }
+   },
+   "Washington Sebastian Abreu Gallo": {
+    "p_liguilla": {
+     "media": 0.6012,
+     "ee": 0.014668925445900044
+    },
+    "p_top": {
+     "media": 0.2858,
+     "ee": 0.012815063737097003
+    }
+   }
+  },
+  "actual": {
+   "nombre": "Jorge Guillermo Almada Alves",
+   "p_liguilla": {
+    "media": 0.6421,
+    "ee": 0.014918157196564667
+   },
+   "p_top": {
+    "media": 0.3245,
+    "ee": 0.015288058983230915
+   }
+  },
+  "contadores": {
+   "corner": {
+    "real": 4.833921222810112,
+    "simulado": 4.82527924750147,
+    "ee_simulado": 0.01446451707320456,
+    "dif_pct": -0.17877774399513058,
+    "ok": true
+   },
+   "tiro_libre_area": {
+    "real": 2.028512639623751,
+    "simulado": 2.029247501469725,
+    "ee_simulado": 0.01104426572991521,
+    "dif_pct": 0.03622663382124439,
+    "ok": true
+   },
+   "lateral_largo": {
+    "real": 1.3253968253968254,
+    "simulado": 1.3306290417401514,
+    "ee_simulado": 0.013592628977326182,
+    "dif_pct": 0.3947660235084322,
+    "ok": true
+   },
+   "tiro_libre_directo": {
+    "real": 0.5346854791299236,
+    "simulado": 0.5562316284538505,
+    "ee_simulado": 0.004887960212930206,
+    "dif_pct": 4.0296866410115175,
+    "ok": true
+   },
+   "penal": {
+    "real": 0.18753674309229865,
+    "simulado": 0.18480305702527927,
+    "ee_simulado": 0.002383260766747835,
+    "dif_pct": -1.4576802507836857,
+    "ok": true
+   }
+  },
+  "contadores_umbral_pct": 5.0
+ },
+ "variacion_graficas": {
+  "barras_se_quedan": true,
+  "umbral_rel": 0.05,
+  "n_reales": 37,
+  "n_extremos": 8,
+  "real": {
+   "zonas_pp": 0.10676968447436153,
+   "zonas_rel": 0.021585228223327653,
+   "goles_zona_pp": 1.8019100970633555,
+   "goles_zona_rel": 0.4023309996395135,
+   "barras_rel": 0.40233099963951335,
+   "quien_barras": "Fernando Ortiz"
+  },
+  "extremo": {
+   "zonas_pp": 0.038133971025661184,
+   "zonas_rel": 0.010482362477865766,
+   "goles_zona_pp": 1.5225879964113398,
+   "goles_zona_rel": 0.19285980461603708,
+   "barras_rel": 0.5242851784720359,
+   "quien_barras": "extremo pp_favor máx"
+  }
+ }
+}

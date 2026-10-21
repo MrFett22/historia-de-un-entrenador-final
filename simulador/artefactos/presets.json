@@ -1,0 +1,1061 @@
+[
+ {
+  "nombre": "Andre Jardine",
+  "partidos": 183,
+  "clubes": [
+   "América",
+   "Atlético San Luis"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33581294280252644,
+    0.3790174293324586
+   ],
+   "rival": [
+    0.33244539255491584,
+    0.37888630773085674
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 41,
+   "cambios_momento": 53,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": true,
+  "rol": "antecesor",
+  "rasgos": [
+   {
+    "componente": "w_at[Circulación estéril]",
+    "signo": 1,
+    "z": 1.026728403455057
+   },
+   {
+    "componente": "l_at",
+    "signo": -1,
+    "z": -0.7696528351059432
+   }
+  ],
+  "representa": 1
+ },
+ {
+  "nombre": "Jorge Guillermo Almada Alves",
+  "partidos": 159,
+  "clubes": [
+   "Pachuca",
+   "Santos Laguna"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3347173819341489,
+    0.3812675742686544
+   ],
+   "rival": [
+    0.3454784231223747,
+    0.36530871151635674
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 57,
+   "cambios_momento": 69,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": true,
+  "rol": "vigente",
+  "rasgos": [
+   {
+    "componente": "s_marcador",
+    "signo": -1,
+    "z": -1.6178876694085371
+   },
+   {
+    "componente": "rho[corner]",
+    "signo": 1,
+    "z": 1.389394628314511
+   }
+  ],
+  "representa": 1
+ },
+ {
+  "nombre": "Nicolas Ricardo Larcamon",
+  "partidos": 155,
+  "clubes": [
+   "Cruz Azul",
+   "León",
+   "Necaxa",
+   "Puebla"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33527801120971035,
+    0.3800057527345575
+   ],
+   "rival": [
+    0.34469341442002627,
+    0.3612385688598185
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 62,
+   "cambios_momento": 23,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Fernando Ortiz",
+  "partidos": 116,
+  "clubes": [
+   "América",
+   "Monterrey",
+   "Santos Laguna"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3327100211883014,
+    0.38417396643968116
+   ],
+   "rival": [
+    0.34108593243345026,
+    0.36670955935021937
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Poco",
+   "balon_parado": 40,
+   "cambios_momento": 39,
+   "cambios_tipo": "Buscar el gol"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Marcos Ignacio Ambriz Espinoza",
+  "partidos": 116,
+  "clubes": [
+   "León",
+   "Santos Laguna",
+   "Toluca"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33068169661968666,
+    0.3798577516648763
+   ],
+   "rival": [
+    0.3322088203987291,
+    0.3778203339417552
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 34,
+   "cambios_momento": 47,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": true,
+  "rol": "medoide",
+  "rasgos": [
+   {
+    "componente": "u_co[Directa]",
+    "signo": 1,
+    "z": 1.6559354522931589
+   },
+   {
+    "componente": "int_at[Directa]",
+    "signo": -1,
+    "z": -1.21411626997812
+   }
+  ],
+  "representa": 1
+ },
+ {
+  "nombre": "Miguel Ernesto Herrera Aguirre",
+  "partidos": 107,
+  "clubes": [
+   "Tigres UANL",
+   "Tijuana"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33071834531847044,
+    0.38395794254688137
+   ],
+   "rival": [
+    0.34113372736122616,
+    0.3689795858226979
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Poco",
+   "balon_parado": 52,
+   "cambios_momento": 73,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": true,
+  "rol": "medoide",
+  "rasgos": [
+   {
+    "componente": "rho[corner]",
+    "signo": 1,
+    "z": 0.9327916787442649
+   },
+   {
+    "componente": "nu_co[corner]",
+    "signo": -1,
+    "z": -0.8870344022575037
+   }
+  ],
+  "representa": 4
+ },
+ {
+  "nombre": "Diego Martin Cocca Pera",
+  "partidos": 100,
+  "clubes": [
+   "Atlas",
+   "Tigres UANL"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.333371166775761,
+    0.38002801995943014
+   ],
+   "rival": [
+    0.3406758246187423,
+    0.36831894835983664
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 54,
+   "cambios_momento": 78,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Victor Manuel Vucetich Rojas",
+  "partidos": 97,
+  "clubes": [
+   "Guadalajara",
+   "Mazatlán",
+   "Monterrey"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3326483574962807,
+    0.38107891905210106
+   ],
+   "rival": [
+    0.3377503200419892,
+    0.370908073478917
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 50,
+   "cambios_momento": 15,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Antonio Ricardo Mohamed Matijevich",
+  "partidos": 90,
+  "clubes": [
+   "Pumas UNAM",
+   "Toluca"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33446037037559684,
+    0.3787339300629494
+   ],
+   "rival": [
+    0.34122231592178404,
+    0.36720433036310385
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 59,
+   "cambios_momento": 39,
+   "cambios_tipo": "Cuidar el resultado"
+  },
+  "lista_corta": true,
+  "rol": "medoide",
+  "rasgos": [
+   {
+    "componente": "u_co[Directa]",
+    "signo": -1,
+    "z": -1.0141958585271005
+   },
+   {
+    "componente": "nu_at[tiro_libre_area]",
+    "signo": 1,
+    "z": 0.9474354577928712
+   }
+  ],
+  "representa": 4
+ },
+ {
+  "nombre": "Eduardo Fentanes Orozco",
+  "partidos": 86,
+  "clubes": [
+   "Necaxa",
+   "Santos Laguna"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3372925496882776,
+    0.37691758819194093
+   ],
+   "rival": [
+    0.3341977439866948,
+    0.3794424821408254
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Poco",
+   "balon_parado": 38,
+   "cambios_momento": 44,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Mauro Nestor Gerk Larrea",
+  "partidos": 86,
+  "clubes": [
+   "Querétaro"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3338435299437678,
+    0.37935459111574915
+   ],
+   "rival": [
+    0.3403474101500071,
+    0.37110340614748905
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Poco",
+   "balon_parado": 46,
+   "cambios_momento": 48,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": true,
+  "rol": "medoide",
+  "rasgos": [
+   {
+    "componente": "nu_at[corner]",
+    "signo": 1,
+    "z": 0.8844601238133661
+   },
+   {
+    "componente": "s_rival",
+    "signo": -1,
+    "z": -0.8535459979980162
+   }
+  ],
+  "representa": 7
+ },
+ {
+  "nombre": "Robert Dante Siboldi Badiola",
+  "partidos": 82,
+  "clubes": [
+   "Mazatlán",
+   "Tigres UANL",
+   "Tijuana"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33322409429085414,
+    0.3816008906210384
+   ],
+   "rival": [
+    0.33944022893400116,
+    0.36963403752785456
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Poco",
+   "balon_parado": 38,
+   "cambios_momento": 22,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Rolando Hernan Cristante Mandarino",
+  "partidos": 75,
+  "clubes": [
+   "Juárez",
+   "Puebla",
+   "Querétaro",
+   "Toluca"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3292606753273447,
+    0.38247013939737473
+   ],
+   "rival": [
+    0.34199770772092075,
+    0.36680778619340043
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 48,
+   "cambios_momento": 75,
+   "cambios_tipo": "Cuidar el resultado"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Andres Luciano Lillini",
+  "partidos": 74,
+  "clubes": [
+   "Necaxa",
+   "Pumas UNAM"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3337552177842371,
+    0.38009295863830833
+   ],
+   "rival": [
+    0.3339753012952563,
+    0.3720334611573463
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 46,
+   "cambios_momento": 67,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Veljko Paunovic",
+  "partidos": 71,
+  "clubes": [
+   "Guadalajara",
+   "Tigres UANL"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33462666410988484,
+    0.37957147565320287
+   ],
+   "rival": [
+    0.34171962743831297,
+    0.3693173337613343
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 45,
+   "cambios_momento": 29,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Benjamin Mora Mendivil",
+  "partidos": 68,
+  "clubes": [
+   "Atlas",
+   "Querétaro"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3341875936670271,
+    0.38146599293226163
+   ],
+   "rival": [
+    0.33391503797889477,
+    0.3766440856382968
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 45,
+   "cambios_momento": 44,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Domenec Torrent",
+  "partidos": 67,
+  "clubes": [
+   "Atlético San Luis",
+   "Monterrey"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33210661205203007,
+    0.38123116739637286
+   ],
+   "rival": [
+    0.33813980131822097,
+    0.3730991534125226
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 46,
+   "cambios_momento": 75,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Benat San Jose",
+  "partidos": 62,
+  "clubes": [
+   "Atlas",
+   "Mazatlán"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3341632533069524,
+    0.37672604488970235
+   ],
+   "rival": [
+    0.3345000666870341,
+    0.3753244493242126
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 63,
+   "cambios_momento": 23,
+   "cambios_tipo": "Cuidar el resultado"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Martin Varini Di Zioli",
+  "partidos": 56,
+  "clubes": [
+   "Juárez",
+   "Necaxa"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3313119544871042,
+    0.3824577821942788
+   ],
+   "rival": [
+    0.337071560017663,
+    0.37100657341643595
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 61,
+   "cambios_momento": 74,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Renato Paiva",
+  "partidos": 56,
+  "clubes": [
+   "León",
+   "Toluca"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3300748279237386,
+    0.38432538543674416
+   ],
+   "rival": [
+    0.3386745726607654,
+    0.3708855861064732
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 48,
+   "cambios_momento": 48,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Guido Hernan Pizarro Demestri",
+  "partidos": 52,
+  "clubes": [
+   "Tigres UANL"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3331163555457234,
+    0.3812012639222048
+   ],
+   "rival": [
+    0.3446818938204291,
+    0.3672604586539742
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 54,
+   "cambios_momento": 68,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Efrain Valdez",
+  "partidos": 50,
+  "clubes": [
+   "Pumas UNAM"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33328999102784623,
+    0.38153716891477646
+   ],
+   "rival": [
+    0.33932528086990266,
+    0.3749585488812797
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 37,
+   "cambios_momento": 39,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Fernando Ruben Gago",
+  "partidos": 49,
+  "clubes": [
+   "Guadalajara",
+   "Necaxa"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3318178165898149,
+    0.38295667546700773
+   ],
+   "rival": [
+    0.3386443286878579,
+    0.3702988681328704
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 56,
+   "cambios_momento": 79,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Jaime Arturo Lozano Espin",
+  "partidos": 49,
+  "clubes": [
+   "Necaxa",
+   "Pachuca"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.331710370085395,
+    0.38191205645271503
+   ],
+   "rival": [
+    0.3407338617147462,
+    0.3671509619274282
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 51,
+   "cambios_momento": 46,
+   "cambios_tipo": "Cuidar el resultado"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Gustavo Alberto Lema",
+  "partidos": 48,
+  "clubes": [
+   "Pumas UNAM"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3332439317455697,
+    0.38141618598515425
+   ],
+   "rival": [
+    0.33815038736140973,
+    0.3714571164201228
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 62,
+   "cambios_momento": 46,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Ricardo Ferretti",
+  "partidos": 48,
+  "clubes": [
+   "Cruz Azul",
+   "Juárez"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3313805324478876,
+    0.3802665456835037
+   ],
+   "rival": [
+    0.33016175306945533,
+    0.3826760238325343
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 51,
+   "cambios_momento": 96,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Martin Anselmi",
+  "partidos": 47,
+  "clubes": [
+   "Cruz Azul"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3283533653908017,
+    0.3869676784920818
+   ],
+   "rival": [
+    0.34541014615805293,
+    0.3612844919443031
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 42,
+   "cambios_momento": 27,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Manuel Eduardo Berizzo",
+  "partidos": 42,
+  "clubes": [
+   "León"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33338936899378774,
+    0.3802676758934398
+   ],
+   "rival": [
+    0.33245819487426337,
+    0.3755051605811171
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 57,
+   "cambios_momento": 73,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Gabriel Alejandro Milito",
+  "partidos": 40,
+  "clubes": [
+   "Guadalajara"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3321065850453131,
+    0.38198156409428013
+   ],
+   "rival": [
+    0.3424366898384062,
+    0.3682330176114234
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 56,
+   "cambios_momento": 27,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Gustavo Leal",
+  "partidos": 39,
+  "clubes": [
+   "Atlético San Luis"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33198527929828064,
+    0.38276871092992765
+   ],
+   "rival": [
+    0.3382930726553885,
+    0.37510362093704236
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 65,
+   "cambios_momento": 33,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Martin Gaston Demichelis",
+  "partidos": 39,
+  "clubes": [
+   "Monterrey"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3308370648014498,
+    0.38382410343381645
+   ],
+   "rival": [
+    0.3428003679838081,
+    0.3661316730687638
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 56,
+   "cambios_momento": 44,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Ariel Enrique Holan",
+  "partidos": 38,
+  "clubes": [
+   "León"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33217591645255007,
+    0.3815406851915402
+   ],
+   "rival": [
+    0.3399765641344872,
+    0.3696318211373758
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 54,
+   "cambios_momento": 75,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Juan Maximo Reynoso Guzman",
+  "partidos": 38,
+  "clubes": [
+   "Cruz Azul"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33199505990178874,
+    0.3824807291175973
+   ],
+   "rival": [
+    0.339399298983455,
+    0.3692113975094476
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Poco",
+   "balon_parado": 34,
+   "cambios_momento": 22,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Washington Sebastian Abreu Gallo",
+  "partidos": 37,
+  "clubes": [
+   "Tijuana"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3342535906223649,
+    0.37871006472375607
+   ],
+   "rival": [
+    0.33223732762243774,
+    0.3798559920945819
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 59,
+   "cambios_momento": 44,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Ismael Rescalvo",
+  "partidos": 32,
+  "clubes": [
+   "Mazatlán"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.3336331011997163,
+    0.3811570769232011
+   ],
+   "rival": [
+    0.3408102175002185,
+    0.36961695276644496
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Poco",
+   "balon_parado": 38,
+   "cambios_momento": 87,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Juan Carlos Osorio Arbelaez",
+  "partidos": 32,
+  "clubes": [
+   "Tijuana"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33007488230398363,
+    0.3847036355456196
+   ],
+   "rival": [
+    0.34757618939427315,
+    0.3607087561128894
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Como la mayoría",
+   "balon_parado": 45,
+   "cambios_momento": 22,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ },
+ {
+  "nombre": "Pablo Adrian Guede Barriero",
+  "partidos": 32,
+  "clubes": [
+   "Necaxa",
+   "Puebla"
+  ],
+  "perillas": {
+   "mezcla": [
+    0.33229493830224455,
+    0.3833360405432845
+   ],
+   "rival": [
+    0.3394250505780138,
+    0.37064335757152994
+   ],
+   "reaccion_marcador": "Como la mayoría",
+   "reaccion_rival": "Bastante",
+   "balon_parado": 36,
+   "cambios_momento": 70,
+   "cambios_tipo": "Mismo puesto"
+  },
+  "lista_corta": false,
+  "rol": null,
+  "rasgos": [],
+  "representa": 0
+ }
+]

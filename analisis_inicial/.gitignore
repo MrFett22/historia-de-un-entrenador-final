@@ -1,0 +1,26 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+tools/
+
+# Datos de StatsBomb (uso exclusivo de la competencia, no se comparten via git)
+# y archivos derivados grandes -- cada quien los regenera localmente con sus
+# credenciales corriendo los scripts en orden (ver README.md / PLAN.md)
+cache_events/
+*.jsonl
+matches_*.json
+competitions_test.json
+events_test.json
+frames_test.json
+fase0_transiciones.json
+fase0_secuencias.json
+fase0_full_qa.json
+fase0_v2_qa.json
+fase0_por_partido.json
+
+# artefactos binarios regenerables (modelos entrenados, matrices numpy)
+*.pt
+*.npy
+*.npz

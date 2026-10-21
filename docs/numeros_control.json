@@ -1,0 +1,119 @@
+{
+ "arranque_s": 0.17497089999960735,
+ "modo_datos": "MODO_REAL_PIPELINE",
+ "almada": {
+  "tecnico": "Jorge Guillermo Almada Alves",
+  "puntos_esperados": 26.541736720991164,
+  "p_liguilla": 0.66838,
+  "delta_vs_neutro": 0.6187275275070524,
+  "delta_ic90": [
+   -0.4236331264036801,
+   1.7251368933933087
+  ],
+  "veredicto": "igual",
+  "segundos": 8.196614399988903
+ },
+ "tarjetas": [
+  {
+   "id": "goles",
+   "chi2": 1.4928752052324947,
+   "gl": 5,
+   "p": 0.9138905466239018,
+   "n": 3402,
+   "peor_bin": "3",
+   "pasa": true
+  },
+  {
+   "id": "puntos",
+   "pendiente": 1.5041600191150546,
+   "intercepto": -11.844755368764957,
+   "r2": 0.5317489127390681,
+   "n": 180,
+   "error_xpts": 0.004278820710888587,
+   "contiene_1": false,
+   "pasa": false
+  },
+  {
+   "id": "calibracion",
+   "p_min": 1.8835961055240634e-10,
+   "pasa": false
+  },
+  {
+   "id": "independencia",
+   "rho": -0.008967545646663076,
+   "pendiente": -0.014553171361855008,
+   "n_pares": 3222,
+   "pasa": true
+  },
+  {
+   "id": "placebo",
+   "k": 3,
+   "n": 3,
+   "n_componentes": 32,
+   "pasa": true
+  },
+  {
+   "id": "recuperacion",
+   "fraccion": 0.9333333333333333,
+   "k": 14,
+   "n": 15,
+   "umbral": 0.85,
+   "pasa": true
+  },
+  {
+   "id": "retro",
+   "n": 35,
+   "mae": 0.3712869107847463,
+   "mae_inercia": 0.3805651365323885,
+   "rmse": 0.4578118081621197,
+   "rmse_inercia": 0.5164653906831748,
+   "dm": 0.8703059317155943,
+   "p": 0.19511828046275737,
+   "mejor": true,
+   "pasa": false
+  },
+  {
+   "id": "partido",
+   "p": 0.5101366657173727,
+   "chi2": 23.163965091231553,
+   "gl": 24,
+   "n": 5000,
+   "pasa": true
+  }
+ ],
+ "validacion_E": {
+  "error_xpts": 0.004278820710888587,
+  "autocorrelacion_lag1": -0.008967545646663076,
+  "autocorrelacion_ic95": [
+   -0.05002634748789878,
+   0.030323960153207066
+  ],
+  "placebo_limpio": true,
+  "recuperacion": 0.9333333333333333,
+  "dm_p": 0.19511828046275737
+ },
+ "escala": {
+  "suerte": 5.273149747997611,
+  "suerte_ic": [
+   5.261107788330042,
+   5.284559772288556
+  ],
+  "jugadores": 5.754603406199571,
+  "jugadores_ic": [
+   4.46538055171206,
+   6.332527012958896
+  ],
+  "tecnico": 0.6402585026926783,
+  "tecnico_ic": [
+   0.422155015688752,
+   0.8347909652400705
+  ],
+  "n_tecnicos": 37,
+  "r": 1.5196729359694434,
+  "r_ic": [
+   1.2318255272730958,
+   1.6969087682702226
+  ],
+  "azar_sobre_real": 0.4564246931139912
+ }
+}

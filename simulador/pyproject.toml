@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simdt"
+version = "1.0.0"
+description = "Simulador de técnico para el Club América (Liga MX)"
+requires-python = ">=3.10"
+# Versiones fijadas (las del entorno en que se construyó y probó la v1)
+dependencies = [
+  "numpy==2.5.3",
+  "scipy==1.18.1",
+  "pandas==3.0.6",
+  "pyarrow==25.0.1",
+  "PyYAML==6.0.3",
+  "pymc==6.3.2",
+  "pytensor==3.3.3",
+  "numpyro==0.22.0",
+  "jax==0.11.2",
+  "jaxlib==0.11.2",
+  "arviz==1.3.0",
+  "scikit-learn==1.9.1",
+  "SALib==1.6.0",
+  "plotly==7.1.0",
+  "streamlit==1.65.0",
+  "statsmodels==0.15.0",
+  "orjson==3.13.0",
+  "pytest==9.1.1",
+  "numba==0.67.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+simdt = ["app/*.css"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["lento: pruebas que tardan más de un minuto", "requiere_datos: necesita datos de dtcoach (SIMDT_DATOS_DTCOACH); se salta sin ellos", "asincrono: usa la simulación en segundo plano de verdad (sin esperar al hilo)"]

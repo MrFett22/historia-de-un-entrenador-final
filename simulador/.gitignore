@@ -1,0 +1,8 @@
+.venv/
+_cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+# la raíz ignora *.npz; aquí se permiten los artefactos agregados
+!artefactos/*.npz

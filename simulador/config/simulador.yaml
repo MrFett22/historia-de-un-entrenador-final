@@ -1,0 +1,202 @@
+# Configuración ÚNICA del simulador. Cada número lleva su fuente.
+# Fuentes: [spec] = especificación original del simulador, [ctx] = 01_CONTEXTO.md, [D-xxx] = reportes/DECISIONES.md,
+# [datos] = medido en la calibración (artefactos/), [cfg-repo] = dtcoach config/default.yaml.
+
+semilla: 20261008                      # [spec 02]
+
+datos:
+  # Rutas relativas a la raíz del repositorio (solo lectura)       [D-003]
+  eventos_dir: analisis_inicial/cache_events            # events_<match_id>.json de StatsBomb (junto a los scripts del análisis inicial)
+  partidos_glob: "analisis_inicial/matches_[0-9]*.json" # un archivo por temporada StatsBomb
+  cache_dir: simulador/_cache          # derivados a nivel de secuencia (no se suben) [spec 00]
+
+torneo:
+  nombre: "Apertura 2026"              # [spec 02]
+  temporada_statsbomb: "2026/2027"     # matches_351.json: 153 partidos, 17 jornadas [datos]
+  club_foco: "América"                 # [spec 02]
+  corte_antes_de_inicio: true          # la estimación solo usa partidos anteriores al inicio del torneo objetivo [D-050]
+  equipos: 18
+  jornadas: 17
+  # Formato: la prensa (abril 2026) reporta que el play-in se eliminó; clasifican los 8
+  # primeros de la tabla general. [D-004]
+  liguilla_directa: 8
+  play_in: 0
+  # Desempates: puntos, diferencia de goles, goles a favor, sorteo (fallback del spec) [D-005]
+  desempates: [puntos, dif_goles, goles_favor, sorteo]
+
+malla: {nx: 5, ny: 4, largo: 120.0, ancho: 80.0}   # [ctx] [cfg-repo]
+absorbentes: [GOL, REMATE, PERDIDA, FUERA, INTERRUPCION]   # [ctx] ADR-v2-72
+
+familias:
+  nombres: [Directa, Circulación estéril, Ataque elaborado]   # [cfg-repo fase2.familias]
+  ref: 1                               # referencia del logit = Circulación estéril [cfg-repo]
+  # valores de [ctx] usados SOLO en modo sintético y como arranque
+  pi: [0.354, 0.263, 0.383]
+  p_remate: [0.14, 0.025, 0.12]
+  largo: [3.5, 6.7, 9.2]
+
+mezcla:                                # EM-MAP de dtcoach [cfg-repo mezcla]
+  lam: 100.0
+  a0: 1.0
+  max_iter: 1000                       # [cfg-repo mezcla.max_iter]
+  tol: 1.0e-7
+  n_corto: 25
+  n_arranques: 8                       # el EM corre desde N semillas (la global, la de dtcoach 20260924 y derivadas) y se queda con la de mayor J [D-049]
+  n_jobs: 4                            # procesos en paralelo para los arranques (spawn; 1 = en serie)
+  submuestra: 0                        # 0 = todas las secuencias (80 s con las 461 mil) [D-008]
+  ajustar_con_balon_parado: true       # el vocabulario se ajusta con TODAS las secuencias, como el repo [D-025]
+
+partido:
+  minutos: 90                          # minutos nominales; la reposición se suma al último minuto del tramo [D-009]
+  tramos: [0, 15, 30, 45, 60, 75, 90]  # 6 tramos [spec 04 §1]
+  G: 15                                # goles máximos por equipo; el spec dice 10 [D-018]
+  max_goles_minuto: 15                 # sin truncamiento por minuto (= G); el spec dice 3 [D-017]
+  tolerancia_masa: 1.0e-6              # T-P2 [spec 07]
+  # «Ver un partido» a nivel de jugadas [D-073]. Ninguno de los dos cambia la ley de los goles: solo la forma del peligro que se dibuja y lo parejo del suavizado.
+  jugadas:
+    concentracion_peligro: 5.0         # concentración de la Beta del peligro de cada remate (media = la del modelo); se eligió a ojo y la ley de goles no depende de ella (prueba)
+    vida_media_momentum: 3.0           # minutos: vida media del suavizado exponencial del peligro América − rival [D-073] (la v7; la app de la v10 ya no lo dibuja)
+    vida_media_presion: 4.0            # minutos: vida media de la media móvil exponencial de la presión de cada equipo y del dominio M(t) (3 a 5 minutos) [D-093, D-096]
+    peso_sorpresa: 0.25                # P = T + s (Y − T): fracción s de la sorpresa de los remates que entra a la presión (0 = solo amenaza esperada, 1 = solo remates) [D-093]
+    minimo_visible: 0.03               # una barra «se ve» si mide al menos 3 % del eje [D-093]
+    percentil_eje: 95                  # el tope del eje simétrico es este percentil de |M| del partido [D-093, D-096]
+    margen_eje: 2.0                    # el marco llega hasta el pico del partido, a lo más tope · (1 + margen): solo lo que pase de ahí se recorta (con su valor en el cursor) [D-093]
+
+balon_parado:
+  tipos: [corner, tiro_libre_area, lateral_largo, tiro_libre_directo, penal]
+  # penal: no está entre los 4 tipos del spec; se agrega como tipo de liga fijo para que
+  # M1 + M4 cierren el xG total (T-P6) [D-010]
+  con_capa1: [corner, tiro_libre_area, lateral_largo]   # q̄ = 1 para directo y penal [spec 04 §1]
+  # Definición operativa de origen [D-011]
+  area_x: 102.0
+  area_y: [18.0, 62.0]
+  lateral_largo_min_x: 80.0            # saque de banda que cae en el último cuarto
+
+elo:
+  K: 20                                # [ctx] (K = 20, h = 60)
+  h: 60
+  inicial: 1500
+
+estimacion:
+  min_partidos_celda: 8                # [spec 04 §2]
+  # [D-012] Factor sobre la VARIANZA de la etapa 1. D-055 (inflación por familia de la fuente, un dict {familia: f} sobre el ERROR ESTÁNDAR,
+  # varianza × f²: 4.94 / 1.68 / 1.12 de docs/experimentos/RESUMEN.md) NO SE ADOPTÓ en la publicación v2: con ella la recuperación de estilos
+  # cae de 93 % a 40 % (D-055, D-059). El código acepta ambas formas; aquí queda la de E.
+  inflacion_etapa1: 1.10
+  min_partidos_preset: 30              # [spec 04 §6]
+  umbral_f_theta: 0.05                 # regla de atribución pre-registrada [spec 04 §2]; desde D-051 solo etiqueta
+  atribucion: continua                 # continua = todas las componentes se mueven con la posterior completa de θ [D-051]; binaria = la regla del 0.05 decide
+  mcmc: {chains: 4, tune: 1000, draws: 1000, target_accept: 0.95, sampler: numpyro}  # [spec 04 §2]
+  rhat_max: 1.01
+  ess_min: 400
+  n_muestras_fichas: 1000              # muestras posteriores guardadas por equipo
+
+lista_corta:                           # técnicos que ofrece la app (D-053): vigente + antecesor en el club foco + medoides de los elegibles
+  min_partidos: 60                     # elegibles: partidos dirigidos en la liga
+  min_celdas: 3                        # elegibles: celdas técnico × club × temporada en la fase A
+  n_medoides: 4                        # k-medoides (PAM) sobre θ̄ / σ_θ de las 32 componentes
+  semilla: 20261008                    # solo ordena los desempates de PAM (el algoritmo es determinista)
+  min_partidos_antecesor: 10           # un interino con menos partidos no cuenta como antecesor
+  n_rasgos: 2                          # rasgos de la etiqueta de cada técnico
+
+componentes:                           # [spec 04 §2]; las que dependen de r_sk se inflan en etapa 1
+  dependen_de_r: [int_at, int_co, s_marcador, s_rival, u_at, u_co, w_at, w_co]
+
+simulacion:
+  rapido: {R: 100, S: 100}             # [spec 02] 10,000 torneos (la app: «Rápida»)
+  preciso: {R: 1000, S: 50}            # spec 02; S* medido = 36 con el núcleo compilado (validacion/VALIDACION.md) [D-042]. Lo usan las pruebas de validación y los scripts de la publicación; la app ya no lo ofrece
+  profundo: {R: 1000, S: 1000}         # 1,000,000 de torneos (la app: «Profunda», antes «Alta»): más torneos internos por versión bajan el término de Monte Carlo interno [D-095]
+  torneos_por_bloque: 5000             # torneos por bloque de la simulación en segundo plano (réplicas por bloque = esto ÷ S): el progreso avanza por bloques, la memoria no crece con S y el resultado es EXACTAMENTE el mismo [D-084, D-095]
+  muestra_torneos: 10000               # torneos completos (153 marcadores) que se guardan para «Gira un torneo»; del resto solo quedan los resultados del América y los conteos [D-095]
+  duracion_medida: {rapido: 3.0, profundo: 55.0}   # SEGUNDOS por simulación medidos en el contenedor de pruebas (D-095); se multiplican por rendimiento.factor_nube para decirlo en pantalla
+  delta_equivalencia: 3.0              # puntos por torneo [spec 02]
+  nivel_equivalencia: 0.90             # [spec 04 §5]
+  nivel_superioridad: 0.95
+  nivel_rango_torneo: 0.80
+
+pesa_mas:                              # «¿Qué pesa más?» (D-074): umbrales de las frases, fracciones del mismo cálculo
+  parecidos: 0.75                      # dos barras son «parecidas» si la menor es al menos 75 % de la mayor
+  mucho_menos: 0.35                    # el técnico pesa «mucho menos» si es a lo más 35 % de la menor de las otras dos
+  mas_de_la_mitad: 0.55                # fracción de suerte (Var_azar / Var_real) para decir «más de la mitad»
+  casi_mitad: 0.40                     # ... «casi la mitad»
+  un_tercio: 0.25                      # ... «cerca de un tercio»; por debajo, «una parte menor»
+
+calificacion:                          # D-075: seguridad de la calificación por lo ancho de su rango probable (calificación de 0 a 10)
+  ancho_baja: 6.0                      # ancho > 6 → seguridad baja
+  ancho_alta: 3.0                      # ancho < 3 → seguridad alta; entre 3 y 6, media
+
+exigencia:                             # D-083: «Exigencia América» (el veredicto de si el resultado está a la altura del club)
+  top: 4                               # P(top N): probabilidad de terminar entre los N primeros
+  k_ee: 2.0                            # nivel «a la altura»: P(top N) ≥ la de Almada − k·EE combinado; «no da el ancho»: por debajo del peor técnico real − k·EE
+
+ficha_cambio:                          # D-091: cuándo la «Ficha completa» resalta un cambio contra el América de hoy (todo lo demás va en gris, «≈ igual»)
+  rel_min: 0.05                        # cantidades exactas del modelo: cambio relativo de al menos 5 % ...
+  abs_pp_min: 1.0                      # ... Y de al menos 1 punto porcentual (mezclas de jugadas)
+  abs_goles_min: 0.05                  # ... Y de al menos 0.05 por partido (remates y goles)
+  abs_minutos_min: 1.0                 # ... Y de al menos 1 minuto (minuto del primer cambio)
+  k_ee: 2.0                            # cantidades de Monte Carlo (puntos, P(liguilla), P(top N)): |Δ| de al menos 2 errores estándar combinados
+  barra_max_rel: 0.5                   # la mini-barra de «Cambio» se llena con un cambio relativo de 50 % o más
+
+rendimiento:                           # D-084: la nube es una máquina chica
+  factor_nube: 2.0                     # SUPUESTO (no medido): Streamlit Community Cloud tarda este múltiplo de lo medido en el contenedor de pruebas [D-095]
+  hilos_numba: 2                       # hilos de numba de la recursión del marcador (la variable SIMDT_HILOS lo cambia; nunca más que los procesadores)
+
+emojis:                                # D-099: la ÚNICA lista de emojis permitidos (tono académico: solo donde informan). Una prueba revisa textos, código y pantalla
+  pestanas: ["👀", "🎮", "🔍"]          # uno por nombre de pestaña
+  validacion: ["✅", "⚠️"]             # veredicto de cada tarjeta de «¿Le podemos creer?» y su resumen
+  exigencia: ["🏆", "😬", "🚨"]        # veredicto de exigencia (y la guía de «Antes de jugar» que lo explica)
+  goles: ["⚽"]                         # momentum y lista de goles
+  bloqueado: ["🔒"]                     # aviso de técnicos fijos
+  tope_por_pestana: {antes: 3, simulador: 6, creer: 10}   # sin contar los ⚽ de los goles
+
+paleta:                                # D-097: la ÚNICA fuente de color de la app. Genera las variables CSS (estilos.css, las animaciones) y la plantilla de Plotly; el tema de Streamlit (.streamlit/config.toml) debe coincidir (prueba)
+  fondo: "#0B1230"                     # fondo de la página: azul marino muy oscuro y SÓLIDO
+  superficie: "#121C45"                # tarjetas
+  borde: "#24306B"
+  elevada: "#16215A"                   # barra lateral y tarjetas héroe
+  texto: "#FFFFFF"
+  texto2: "#C9D0E6"
+  texto3: "#8E98B8"
+  amarillo: "#FFD100"                  # América: acento, «bueno», «pasa», 🏆, botón principal (con texto = fondo)
+  azul: "#5266E6"                      # el rival e «información», datos sobre oscuro (el azul del club #2B3FBF no da 3:1 sobre la tarjeta)
+  azul_club: "#2B3FBF"                 # el azul del club, solo para rellenos con texto blanco encima (escudos de iniciales)
+  rojo: "#DE2F28"                      # «malo», «alerta», ⚠️ «Ojo», 🚨, ▼ (rellenos y datos)
+  rojo_texto: "#FF4A40"                # el mismo rojo, un tono más claro para TEXTO (AA ≥ 4.5:1)
+  gris: "#6F7BA0"                      # neutro: «≈ igual», lo que no clasifica
+  gris_tipo: "#939CB8"                 # el gris del «Toque sin profundidad»: mismo tono con más luminosidad para que se distinga del azul con deuteranopía y protanopía (ΔE2000 ≥ 20)
+  sombra: "#060A1E"                    # color de las sombras (más oscuro que el fondo)
+  rival_opacidad: 0.55                 # el rival usa el mismo color del tipo de jugada al 55 %, sólido, sin rayas
+
+enlaces:                               # la pestaña «¿Le podemos creer?» y el README apuntan aquí [D-072]
+  validacion: "https://github.com/MrFett22/historia-de-un-entrenador-final/blob/main/docs/VALIDACION.md"
+  estudio_original: "https://github.com/MrFett22/historia-de-un-entrenador-final/blob/main/docs/MODELO.md"   # enlace principal «📚 Ver la documentación del modelo» (D-079)
+
+perillas:
+  reactividad: {Nunca: 0.0, Poco: 0.5, "Como la mayoría": 1.0, Bastante: 1.5, Mucho: 2.0}  # [spec 04 §6]
+  x0: [1, 0, 0, 0, 1, 0]               # empate, no tramo final, local, ΔElo = 0 [spec 04 §6]
+  tipo_cambio_percentil: {"Cuidar el resultado": 15, "Mismo puesto": 50, "Buscar el gol": 85}  # [D-020]
+  coherencia_nivel: 0.95
+
+sintetico:                             # verdad conocida [spec 07]
+  clubes: 18
+  temporadas: 6
+  tecnicos: 30
+  min_cambian_club: 8
+  min_cambios_mitad: 4
+  secuencias_por_minuto: 1.47          # 467,327 secuencias / (1,767 × 2 × 90) [ctx]
+  xg_por_remate: [0.085, 0.06, 0.075]  # elegido para ~1.06 goles de juego abierto por equipo [D-013]
+  saques_por_partido: [5.0, 3.0, 1.5, 0.8, 0.15]
+  q_capa1: [0.25, 0.20, 0.15, 1.0, 1.0]
+  kappa: [0.08, 0.08, 0.07, 0.06, 0.78]
+  # b_liga sintético: filas = familias ≠ ref (Directa, Ataque elaborado);
+  # columnas = (pierde, gana, tramo_final, local, ΔElo/100)
+  b_liga: [[0.15, 0.10, 0.10, 0.05, -0.05], [0.20, -0.15, -0.05, 0.10, 0.10]]
+  ventaja_local_ritmo: 0.05
+  # desviaciones verdaderas: [sigma_theta, sigma_phi, sigma_int, sigma_delta]
+  sigmas:
+    defecto: [0.12, 0.15, 0.05, 0.05]
+    s_marcador: [0.30, 0.10, 0.05, 0.03]
+    s_rival: [0.30, 0.10, 0.05, 0.03]
+    w_at: [0.0, 0.12, 0.03, 0.04]       # componente SOLO del plantel (T-A3)
+    alpha: [0.30, 0.10, 0.05, 0.03]
+    gamma: [0.40, 0.10, 0.05, 0.03]

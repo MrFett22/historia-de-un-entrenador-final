@@ -1,0 +1,19 @@
+# Los colores son los de `paleta` en config/simulador.yaml (D-097): una prueba comprueba que coinciden. Solo del América: amarillo, azul marino, rojo y blanco sobre oscuro.
+[theme]
+base = "dark"
+primaryColor = "#FFD100"
+backgroundColor = "#0B1230"
+secondaryBackgroundColor = "#121C45"
+textColor = "#FFFFFF"
+borderColor = "#24306B"
+font = "sans serif"
+
+[theme.sidebar]
+backgroundColor = "#16215A"
+secondaryBackgroundColor = "#121C45"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

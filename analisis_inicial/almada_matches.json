@@ -1,0 +1,1505 @@
+[
+  {
+    "match_id": 4063560,
+    "season": "2026/2027",
+    "team": "América",
+    "side": "away",
+    "status_360": "available",
+    "date": "2026-08-22",
+    "opponent": "Juárez"
+  },
+  {
+    "match_id": 4063549,
+    "season": "2026/2027",
+    "team": "América",
+    "side": "home",
+    "status_360": "available",
+    "date": "2026-08-02",
+    "opponent": "Santos Laguna"
+  },
+  {
+    "match_id": 4063590,
+    "season": "2026/2027",
+    "team": "América",
+    "side": "away",
+    "status_360": "available",
+    "date": "2026-09-13",
+    "opponent": "Cruz Azul"
+  },
+  {
+    "match_id": 4063597,
+    "season": "2026/2027",
+    "team": "América",
+    "side": "home",
+    "status_360": "available",
+    "date": "2026-09-20",
+    "opponent": "Guadalajara"
+  },
+  {
+    "match_id": 4063534,
+    "season": "2026/2027",
+    "team": "América",
+    "side": "away",
+    "status_360": "available",
+    "date": "2026-07-25",
+    "opponent": "Atlante"
+  },
+  {
+    "match_id": 4063531,
+    "season": "2026/2027",
+    "team": "América",
+    "side": "away",
+    "status_360": "available",
+    "date": "2026-07-19",
+    "opponent": "Querétaro"
+  },
+  {
+    "match_id": 4063574,
+    "season": "2026/2027",
+    "team": "América",
+    "side": "home",
+    "status_360": "available",
+    "date": "2026-08-30",
+    "opponent": "Puebla"
+  },
+  {
+    "match_id": 4063555,
+    "season": "2026/2027",
+    "team": "América",
+    "side": "home",
+    "status_360": "available",
+    "date": "2026-08-16",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3972142,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-04-12",
+    "opponent": "Necaxa"
+  },
+  {
+    "match_id": 3939824,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-07-08",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3972064,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-02-09",
+    "opponent": "Cruz Azul"
+  },
+  {
+    "match_id": 3939964,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-11-10",
+    "opponent": "Juárez"
+  },
+  {
+    "match_id": 3972038,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-01-26",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3972099,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-03-01",
+    "opponent": "Juárez"
+  },
+  {
+    "match_id": 3972167,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-04-21",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3972094,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-02-27",
+    "opponent": "Puebla"
+  },
+  {
+    "match_id": 3972052,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-02-02",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3972110,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-03-09",
+    "opponent": "Mazatlán"
+  },
+  {
+    "match_id": 3972122,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-03-17",
+    "opponent": "Tijuana"
+  },
+  {
+    "match_id": 3939830,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-07-13",
+    "opponent": "León"
+  },
+  {
+    "match_id": 3939837,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-07-17",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3939864,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-08-31",
+    "opponent": "Querétaro"
+  },
+  {
+    "match_id": 3939907,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-10-05",
+    "opponent": "Tijuana"
+  },
+  {
+    "match_id": 3939959,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-11-07",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3939871,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-09-14",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3972046,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-01-30",
+    "opponent": "Querétaro"
+  },
+  {
+    "match_id": 3972031,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-01-21",
+    "opponent": "Santos Laguna"
+  },
+  {
+    "match_id": 3939850,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-07-21",
+    "opponent": "Pumas UNAM"
+  },
+  {
+    "match_id": 3972085,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-02-23",
+    "opponent": "Guadalajara"
+  },
+  {
+    "match_id": 3972077,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-02-17",
+    "opponent": "Pumas UNAM"
+  },
+  {
+    "match_id": 3939853,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-08-24",
+    "opponent": "Mazatlán"
+  },
+  {
+    "match_id": 3972150,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-04-16",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3992815,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-04-28",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3939902,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-09-29",
+    "opponent": "Cruz Azul"
+  },
+  {
+    "match_id": 3972136,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-04-05",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3939949,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-11-03",
+    "opponent": "Necaxa"
+  },
+  {
+    "match_id": 3939880,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-09-18",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3939889,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-09-21",
+    "opponent": "Puebla"
+  },
+  {
+    "match_id": 3972059,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-02-06",
+    "opponent": "León"
+  },
+  {
+    "match_id": 3939936,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-10-27",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3939925,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-10-23",
+    "opponent": "Santos Laguna"
+  },
+  {
+    "match_id": 3993383,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-05-11",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3993382,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2025-05-08",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3939921,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-10-19",
+    "opponent": "Guadalajara"
+  },
+  {
+    "match_id": 3972126,
+    "season": "2024/2025",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2025-03-29",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3936618,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-05-12",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3936617,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-05-09",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3919043,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-03-10",
+    "opponent": "Querétaro"
+  },
+  {
+    "match_id": 3889671,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-08-21",
+    "opponent": "Querétaro"
+  },
+  {
+    "match_id": 3889767,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-11-02",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3889723,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-09-30",
+    "opponent": "Necaxa"
+  },
+  {
+    "match_id": 3919003,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-02-11",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3889756,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-10-29",
+    "opponent": "Puebla"
+  },
+  {
+    "match_id": 3919061,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-03-31",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3918965,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-02-08",
+    "opponent": "León"
+  },
+  {
+    "match_id": 3936495,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-05-06",
+    "opponent": "Necaxa"
+  },
+  {
+    "match_id": 3919100,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-04-28",
+    "opponent": "Mazatlán"
+  },
+  {
+    "match_id": 3889654,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-07-11",
+    "opponent": "León"
+  },
+  {
+    "match_id": 3889708,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-09-19",
+    "opponent": "Santos Laguna"
+  },
+  {
+    "match_id": 3919080,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-04-13",
+    "opponent": "Guadalajara"
+  },
+  {
+    "match_id": 3919093,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-04-21",
+    "opponent": "Santos Laguna"
+  },
+  {
+    "match_id": 3918984,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-02-01",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3918954,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-01-14",
+    "opponent": "Cruz Azul"
+  },
+  {
+    "match_id": 3889783,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-11-11",
+    "opponent": "Tijuana"
+  },
+  {
+    "match_id": 3919014,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-02-21",
+    "opponent": "Puebla"
+  },
+  {
+    "match_id": 3889777,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-11-05",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3889743,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-10-21",
+    "opponent": "Juárez"
+  },
+  {
+    "match_id": 3918979,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-01-28",
+    "opponent": "Pumas UNAM"
+  },
+  {
+    "match_id": 3889733,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-10-08",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3919071,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-04-07",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3918988,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-02-04",
+    "opponent": "Tijuana"
+  },
+  {
+    "match_id": 3919056,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-03-18",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3889638,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-07-01",
+    "opponent": "Mazatlán"
+  },
+  {
+    "match_id": 3889713,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-09-24",
+    "opponent": "Guadalajara"
+  },
+  {
+    "match_id": 3889690,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-08-29",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3919019,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2024-02-24",
+    "opponent": "Necaxa"
+  },
+  {
+    "match_id": 3919035,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-03-03",
+    "opponent": "Juárez"
+  },
+  {
+    "match_id": 3889663,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-07-17",
+    "opponent": "Pumas UNAM"
+  },
+  {
+    "match_id": 3889677,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-08-24",
+    "opponent": "Cruz Azul"
+  },
+  {
+    "match_id": 3936265,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-05-03",
+    "opponent": "Pumas UNAM"
+  },
+  {
+    "match_id": 3919008,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2024-02-18",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3889694,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-09-03",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3889728,
+    "season": "2023/2024",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-10-04",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3835232,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-09-12",
+    "opponent": "Tijuana"
+  },
+  {
+    "match_id": 3870410,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-01-30",
+    "opponent": "Necaxa"
+  },
+  {
+    "match_id": 3870400,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-01-23",
+    "opponent": "Juárez"
+  },
+  {
+    "match_id": 3835136,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-07-25",
+    "opponent": "Pumas UNAM"
+  },
+  {
+    "match_id": 3870435,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-02-17",
+    "opponent": "Mazatlán"
+  },
+  {
+    "match_id": 3835195,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-08-26",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3866629,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-10-31",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3835210,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-09-03",
+    "opponent": "Santos Laguna"
+  },
+  {
+    "match_id": 3870472,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-03-13",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3835251,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-10-01",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3835146,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-07-31",
+    "opponent": "Guadalajara"
+  },
+  {
+    "match_id": 3835222,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-09-08",
+    "opponent": "Puebla"
+  },
+  {
+    "match_id": 3870391,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-01-16",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3866628,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-10-28",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3835164,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-08-07",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3835116,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-07-10",
+    "opponent": "Cruz Azul"
+  },
+  {
+    "match_id": 3870505,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-04-15",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3835239,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-09-19",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3835189,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-08-22",
+    "opponent": "León"
+  },
+  {
+    "match_id": 3870488,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-04-01",
+    "opponent": "Cruz Azul"
+  },
+  {
+    "match_id": 3870480,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-03-19",
+    "opponent": "Pumas UNAM"
+  },
+  {
+    "match_id": 3865778,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-10-24",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3865779,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-10-21",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3864714,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-10-17",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3870442,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-02-20",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3835177,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-08-18",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3864709,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-10-14",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3870499,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-04-10",
+    "opponent": "Santos Laguna"
+  },
+  {
+    "match_id": 3835168,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-09-15",
+    "opponent": "Juárez"
+  },
+  {
+    "match_id": 3870454,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-02-27",
+    "opponent": "Tijuana"
+  },
+  {
+    "match_id": 3870527,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-04-30",
+    "opponent": "Querétaro"
+  },
+  {
+    "match_id": 3835127,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-07-19",
+    "opponent": "Mazatlán"
+  },
+  {
+    "match_id": 3870417,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-02-04",
+    "opponent": "León"
+  },
+  {
+    "match_id": 3870514,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-04-22",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3870383,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-01-10",
+    "opponent": "Puebla"
+  },
+  {
+    "match_id": 3835144,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-07-28",
+    "opponent": "Necaxa"
+  },
+  {
+    "match_id": 3870424,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-02-12",
+    "opponent": "Guadalajara"
+  },
+  {
+    "match_id": 3870462,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2023-03-05",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3885770,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2023-05-07",
+    "opponent": "Santos Laguna"
+  },
+  {
+    "match_id": 3835200,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-08-28",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3835109,
+    "season": "2022/2023",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-07-05",
+    "opponent": "Querétaro"
+  },
+  {
+    "match_id": 3799451,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-08-01",
+    "opponent": "Cruz Azul"
+  },
+  {
+    "match_id": 3799394,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "away",
+    "status_360": "available",
+    "date": "2021-07-24",
+    "opponent": "Necaxa"
+  },
+  {
+    "match_id": 3799385,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-10-03",
+    "opponent": "Mazatlán"
+  },
+  {
+    "match_id": 3831923,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-05-15",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3833794,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-05-27",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3815230,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "away",
+    "status_360": "available",
+    "date": "2021-11-29",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3799356,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-11-08",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3816669,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-01-07",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3832382,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-05-20",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3816749,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-02-20",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3816684,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-01-23",
+    "opponent": "León"
+  },
+  {
+    "match_id": 3816696,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-02-05",
+    "opponent": "Necaxa"
+  },
+  {
+    "match_id": 3799407,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-09-20",
+    "opponent": "Puebla"
+  },
+  {
+    "match_id": 3816736,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-04-20",
+    "opponent": "Puebla"
+  },
+  {
+    "match_id": 3799393,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "away",
+    "status_360": "available",
+    "date": "2021-08-22",
+    "opponent": "León"
+  },
+  {
+    "match_id": 3799444,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "away",
+    "status_360": "available",
+    "date": "2021-10-20",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3799372,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-08-19",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3831919,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-05-12",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3799445,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "away",
+    "status_360": "available",
+    "date": "2021-10-30",
+    "opponent": "Querétaro"
+  },
+  {
+    "match_id": 3799501,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-08-16",
+    "opponent": "Guadalajara"
+  },
+  {
+    "match_id": 3816667,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-04-23",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3815232,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-11-26",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3799367,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-08-29",
+    "opponent": "Juárez"
+  },
+  {
+    "match_id": 3814882,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-11-21",
+    "opponent": "Atlético San Luis"
+  },
+  {
+    "match_id": 3816716,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-03-20",
+    "opponent": "Cruz Azul"
+  },
+  {
+    "match_id": 3816763,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-03-13",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3816727,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-05-01",
+    "opponent": "Pumas UNAM"
+  },
+  {
+    "match_id": 3799369,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "away",
+    "status_360": "available",
+    "date": "2021-09-11",
+    "opponent": "Tijuana"
+  },
+  {
+    "match_id": 3799477,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "away",
+    "status_360": "available",
+    "date": "2021-11-05",
+    "opponent": "Pumas UNAM"
+  },
+  {
+    "match_id": 3799389,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "away",
+    "status_360": "available",
+    "date": "2021-08-08",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3799461,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-09-27",
+    "opponent": "Monterrey"
+  },
+  {
+    "match_id": 3816789,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-04-12",
+    "opponent": "Tijuana"
+  },
+  {
+    "match_id": 3816776,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-04-04",
+    "opponent": "Santos Laguna"
+  },
+  {
+    "match_id": 3799375,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "home",
+    "status_360": "available",
+    "date": "2021-10-25",
+    "opponent": "Toluca"
+  },
+  {
+    "match_id": 3816677,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-04-08",
+    "opponent": "Tigres UANL"
+  },
+  {
+    "match_id": 3816766,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-03-03",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3833795,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-05-30",
+    "opponent": "Atlas"
+  },
+  {
+    "match_id": 3816741,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-02-25",
+    "opponent": "Mazatlán"
+  },
+  {
+    "match_id": 3816772,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-01-17",
+    "opponent": "Guadalajara"
+  },
+  {
+    "match_id": 3816795,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-02-15",
+    "opponent": "Querétaro"
+  },
+  {
+    "match_id": 3816728,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "away",
+    "status_360": "available",
+    "date": "2022-04-16",
+    "opponent": "Juárez"
+  },
+  {
+    "match_id": 3832384,
+    "season": "2021/2022",
+    "team": "Pachuca",
+    "side": "home",
+    "status_360": "available",
+    "date": "2022-05-23",
+    "opponent": "América"
+  },
+  {
+    "match_id": 3799373,
+    "season": "2021/2022",
+    "team": "Santos Laguna",
+    "side": "away",
+    "status_360": "available",
+    "date": "2021-10-17",
+    "opponent": "Pachuca"
+  }
+]

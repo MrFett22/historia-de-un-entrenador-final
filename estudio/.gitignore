@@ -1,0 +1,34 @@
+# datos licenciados de StatsBomb: NUNCA se versionan
+data/raw/
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.parquet
+*.json.gz
+# entorno y credenciales
+.venv*/
+.env
+# basura
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+*.anterior_*
+_cuarentena/
+reports/*
+!reports/.gitkeep
+# las figuras que enlazan los documentos SÍ se versionan (copia de reports/ con scripts/publicar_figuras.sh)
+!docs/figuras/
+!docs/figuras/**
+.venv/
+.venv-sb/
+data/interim/
+data/processed/
+.kit_backup_*/
+reports/mezcla/*.png
+*.egg-info/
+# paquetes de revisión (scripts/empaquetar_revision.sh): se comparten fuera de git
+dtcoach_revision_*.zip
+*.zip
+*.tar.gz

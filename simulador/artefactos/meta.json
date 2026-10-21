@@ -1,0 +1,1054 @@
+{
+ "modo": "MODO_REAL_PIPELINE",
+ "equipos": [
+  "América",
+  "Atlante",
+  "Atlas",
+  "Atlético San Luis",
+  "Cruz Azul",
+  "Guadalajara",
+  "Juárez",
+  "León",
+  "Monterrey",
+  "Necaxa",
+  "Pachuca",
+  "Puebla",
+  "Pumas UNAM",
+  "Querétaro",
+  "Santos Laguna",
+  "Tigres UANL",
+  "Tijuana",
+  "Toluca"
+ ],
+ "calendario": [
+  [
+   16,
+   15
+  ],
+  [
+   9,
+   1
+  ],
+  [
+   3,
+   4
+  ],
+  [
+   7,
+   2
+  ],
+  [
+   6,
+   11
+  ],
+  [
+   12,
+   10
+  ],
+  [
+   8,
+   14
+  ],
+  [
+   5,
+   17
+  ],
+  [
+   13,
+   0
+  ],
+  [
+   4,
+   11
+  ],
+  [
+   17,
+   12
+  ],
+  [
+   1,
+   0
+  ],
+  [
+   16,
+   7
+  ],
+  [
+   5,
+   6
+  ],
+  [
+   15,
+   3
+  ],
+  [
+   14,
+   2
+  ],
+  [
+   9,
+   8
+  ],
+  [
+   10,
+   13
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   3,
+   16
+  ],
+  [
+   11,
+   5
+  ],
+  [
+   13,
+   15
+  ],
+  [
+   2,
+   8
+  ],
+  [
+   4,
+   1
+  ],
+  [
+   7,
+   10
+  ],
+  [
+   0,
+   14
+  ],
+  [
+   17,
+   9
+  ],
+  [
+   1,
+   17
+  ],
+  [
+   12,
+   13
+  ],
+  [
+   2,
+   15
+  ],
+  [
+   8,
+   6
+  ],
+  [
+   0,
+   3
+  ],
+  [
+   16,
+   4
+  ],
+  [
+   14,
+   5
+  ],
+  [
+   9,
+   7
+  ],
+  [
+   10,
+   11
+  ],
+  [
+   6,
+   0
+  ],
+  [
+   7,
+   8
+  ],
+  [
+   5,
+   16
+  ],
+  [
+   15,
+   1
+  ],
+  [
+   13,
+   17
+  ],
+  [
+   11,
+   14
+  ],
+  [
+   4,
+   2
+  ],
+  [
+   3,
+   10
+  ],
+  [
+   12,
+   9
+  ],
+  [
+   9,
+   4
+  ],
+  [
+   16,
+   12
+  ],
+  [
+   1,
+   7
+  ],
+  [
+   2,
+   13
+  ],
+  [
+   10,
+   5
+  ],
+  [
+   14,
+   15
+  ],
+  [
+   0,
+   11
+  ],
+  [
+   17,
+   6
+  ],
+  [
+   8,
+   3
+  ],
+  [
+   6,
+   10
+  ],
+  [
+   3,
+   5
+  ],
+  [
+   2,
+   1
+  ],
+  [
+   15,
+   9
+  ],
+  [
+   4,
+   14
+  ],
+  [
+   12,
+   7
+  ],
+  [
+   11,
+   17
+  ],
+  [
+   0,
+   16
+  ],
+  [
+   13,
+   8
+  ],
+  [
+   1,
+   10
+  ],
+  [
+   9,
+   11
+  ],
+  [
+   16,
+   13
+  ],
+  [
+   17,
+   2
+  ],
+  [
+   4,
+   0
+  ],
+  [
+   8,
+   15
+  ],
+  [
+   5,
+   12
+  ],
+  [
+   14,
+   6
+  ],
+  [
+   7,
+   3
+  ],
+  [
+   6,
+   15
+  ],
+  [
+   11,
+   1
+  ],
+  [
+   2,
+   12
+  ],
+  [
+   3,
+   9
+  ],
+  [
+   0,
+   5
+  ],
+  [
+   8,
+   4
+  ],
+  [
+   17,
+   14
+  ],
+  [
+   13,
+   7
+  ],
+  [
+   10,
+   16
+  ],
+  [
+   1,
+   8
+  ],
+  [
+   16,
+   2
+  ],
+  [
+   4,
+   17
+  ],
+  [
+   5,
+   13
+  ],
+  [
+   15,
+   11
+  ],
+  [
+   12,
+   3
+  ],
+  [
+   14,
+   10
+  ],
+  [
+   9,
+   0
+  ],
+  [
+   7,
+   6
+  ],
+  [
+   15,
+   17
+  ],
+  [
+   11,
+   7
+  ],
+  [
+   13,
+   1
+  ],
+  [
+   6,
+   16
+  ],
+  [
+   0,
+   8
+  ],
+  [
+   2,
+   5
+  ],
+  [
+   3,
+   14
+  ],
+  [
+   10,
+   9
+  ],
+  [
+   12,
+   4
+  ],
+  [
+   16,
+   11
+  ],
+  [
+   1,
+   12
+  ],
+  [
+   9,
+   2
+  ],
+  [
+   14,
+   13
+  ],
+  [
+   5,
+   15
+  ],
+  [
+   4,
+   6
+  ],
+  [
+   7,
+   0
+  ],
+  [
+   17,
+   3
+  ],
+  [
+   8,
+   10
+  ],
+  [
+   15,
+   7
+  ],
+  [
+   3,
+   13
+  ],
+  [
+   6,
+   1
+  ],
+  [
+   5,
+   9
+  ],
+  [
+   17,
+   16
+  ],
+  [
+   2,
+   0
+  ],
+  [
+   11,
+   8
+  ],
+  [
+   10,
+   4
+  ],
+  [
+   14,
+   12
+  ],
+  [
+   1,
+   3
+  ],
+  [
+   9,
+   6
+  ],
+  [
+   7,
+   17
+  ],
+  [
+   0,
+   10
+  ],
+  [
+   8,
+   5
+  ],
+  [
+   12,
+   15
+  ],
+  [
+   2,
+   11
+  ],
+  [
+   13,
+   4
+  ],
+  [
+   16,
+   14
+  ],
+  [
+   3,
+   2
+  ],
+  [
+   6,
+   13
+  ],
+  [
+   11,
+   12
+  ],
+  [
+   10,
+   15
+  ],
+  [
+   8,
+   16
+  ],
+  [
+   5,
+   1
+  ],
+  [
+   0,
+   17
+  ],
+  [
+   14,
+   9
+  ],
+  [
+   4,
+   7
+  ],
+  [
+   3,
+   6
+  ],
+  [
+   1,
+   14
+  ],
+  [
+   9,
+   16
+  ],
+  [
+   2,
+   10
+  ],
+  [
+   15,
+   4
+  ],
+  [
+   17,
+   8
+  ],
+  [
+   12,
+   0
+  ],
+  [
+   7,
+   5
+  ],
+  [
+   13,
+   11
+  ],
+  [
+   11,
+   3
+  ],
+  [
+   6,
+   2
+  ],
+  [
+   16,
+   1
+  ],
+  [
+   10,
+   17
+  ],
+  [
+   14,
+   7
+  ],
+  [
+   15,
+   0
+  ],
+  [
+   12,
+   8
+  ],
+  [
+   5,
+   4
+  ],
+  [
+   13,
+   9
+  ]
+ ],
+ "jornada": [
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  1,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  3,
+  4,
+  4,
+  4,
+  4,
+  4,
+  4,
+  4,
+  4,
+  4,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  7,
+  7,
+  7,
+  7,
+  7,
+  7,
+  7,
+  7,
+  7,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  8,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  10,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  13,
+  13,
+  13,
+  13,
+  13,
+  13,
+  13,
+  13,
+  13,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  16,
+  16,
+  16,
+  16,
+  16,
+  16,
+  16,
+  16,
+  16,
+  17,
+  17,
+  17,
+  17,
+  17,
+  17,
+  17,
+  17,
+  17
+ ],
+ "elo": [
+  1599.0926391296514,
+  1500.0,
+  1463.5117434227357,
+  1425.7708100375582,
+  1674.7695239996522,
+  1578.850587182172,
+  1453.4996227533973,
+  1445.7115774824604,
+  1524.6727984685274,
+  1448.0346740409325,
+  1563.6060134512782,
+  1331.085208307018,
+  1567.2972354928552,
+  1457.5582800686755,
+  1356.7105832134687,
+  1588.1982170176711,
+  1515.9082381143292,
+  1612.6866823995108
+ ],
+ "temp_obj": 10,
+ "torneo": "Apertura 2026",
+ "corte_fecha": "2026-07-17",
+ "mezcla": {
+  "pi": [
+   0.3543113159675108,
+   0.2631046121154509,
+   0.3825840719170383
+  ],
+  "resumen": [
+   {
+    "pi": 0.3543113159675108,
+    "E_T": 3.47038356198135,
+    "p_remate": 0.14020551288935068,
+    "p_gol": 0.013744618759869381,
+    "rho_Q": 0.66593269801008
+   },
+   {
+    "pi": 0.2631046121154509,
+    "E_T": 6.703407852382309,
+    "p_remate": 0.025505815188527556,
+    "p_gol": 0.0037135172327270377,
+    "rho_Q": 0.853971674244603
+   },
+   {
+    "pi": 0.3825840719170383,
+    "E_T": 9.172047178737884,
+    "p_remate": 0.12236439317687671,
+    "p_gol": 0.01195824415960486,
+    "rho_Q": 0.889776064746427
+   }
+  ],
+  "fuente_dtcoach": {
+   "npz": "estudio: data/processed/mezcla/mezcla_K3.npz",
+   "n_absorbentes": 5,
+   "lam": 100.0,
+   "a0": 1.0,
+   "tiene_P0": true,
+   "ordenado_por_E_T": true,
+   "pi": [
+    0.3543113159675108,
+    0.2631046121154509,
+    0.3825840719170383
+   ],
+   "E_T": [
+    3.47038356198135,
+    6.703407852382309,
+    9.172047178737884
+   ],
+   "p_remate": [
+    0.14020551288935068,
+    0.025505815188527556,
+    0.12236439317687671
+   ],
+   "pi_en_secuencias_simdt": [
+    0.35428988516599147,
+    0.2631015281077802,
+    0.3826085867263495
+   ],
+   "modo_r_pedido": "parquet",
+   "modo_r_usado": "parquet",
+   "emparejamiento": {
+    "n_simdt": 466879,
+    "n_fuente": 467327,
+    "emparejadas": 466879,
+    "pct_emparejadas": 1.0,
+    "pct_fuente_emparejada": 0.99904135648058,
+    "sin_par_simdt": 0,
+    "sin_par_fuente": 448,
+    "partidos_con_mas_sin_par": {}
+   },
+   "r_fuente_vs_modelo": {
+    "dif_abs_media": 0.002453411819533627,
+    "dif_abs_p99": 0.08748460038539041,
+    "acuerdo_tipo": 0.9952750070146654
+   },
+   "parquet": "r de la fuente en las emparejadas, r del modelo en el resto"
+  }
+ },
+ "corte": {
+  "fecha_corte": "2026-07-17",
+  "partidos_antes": 1789,
+  "partidos_quitados": 88,
+  "partidos_despues": 1701,
+  "temporadas_quitadas": [
+   10
+  ],
+  "fechas_quitadas": [
+   "2026-07-17",
+   "2026-09-28"
+  ]
+ },
+ "fecha_calibracion": "2026-10-16",
+ "mezcla_liga": [
+  0.3450175406578327,
+  0.27876697691743796,
+  0.3762154824247294
+ ],
+ "n_celdas": 190,
+ "tecnicos_vigentes": {
+  "América": "Jorge Guillermo Almada Alves",
+  "Atlante": "Miguel Ernesto Herrera Aguirre",
+  "Atlas": "Hernan Jorge Crespo",
+  "Atlético San Luis": "Diego Andrei Mejia Campo",
+  "Cruz Azul": "Joel Huiqui",
+  "Guadalajara": "Gabriel Alejandro Milito",
+  "Juárez": "Gustavo Alberto Lema",
+  "León": "Javier Marcelo Gandolfi",
+  "Monterrey": "Matias Jesus Almeyda",
+  "Necaxa": "Juan Maximo Reynoso Guzman",
+  "Pachuca": "Benjamin Mora Mendivil",
+  "Puebla": "Gerardo Espinoza Ahumada",
+  "Pumas UNAM": "Esteban Andres Solari Poggio",
+  "Querétaro": "Esteban Gonzalez",
+  "Santos Laguna": "Renato Paiva",
+  "Tigres UANL": "Victor Manuel Vucetich Rojas",
+  "Tijuana": "Washington Sebastian Abreu Gallo",
+  "Toluca": "Antonio Ricardo Mohamed Matijevich"
+ },
+ "etiqueta_global": "descriptivo",
+ "perillas_solo_estilo": [
+  "cambios_momento",
+  "cambios_tipo",
+  "reaccion_marcador",
+  "reaccion_rival"
+ ],
+ "factor_gol": 1.0625997192708325,
+ "diag_liga": {
+  "b_liga_se": [
+   0.005249793739916384,
+   0.007424222066467834,
+   0.007143226708644354,
+   0.006786999874724354,
+   0.0060321213788583,
+   0.002999925162173303,
+   0.006656769378736178,
+   0.009093860697448455,
+   0.008919023171262445,
+   0.00698264136433373,
+   0.00984425677087041,
+   0.004955825611052382
+  ],
+  "b_convergio": true,
+  "xg_total_obs": 4384.529673315797,
+  "goles_total_obs": 4659.0,
+  "factor_gol": 1.0625997192708325
+ },
+ "foco": "América",
+ "tecnico_actual_foco": "Jorge Guillermo Almada Alves",
+ "decisiones": {
+  "int_at[Directa]": "plantel",
+  "int_at[Ataque elaborado]": "plantel",
+  "int_co[Directa]": "plantel",
+  "int_co[Ataque elaborado]": "plantel",
+  "s_marcador": "plantel",
+  "s_rival": "plantel",
+  "l_at": "plantel",
+  "l_co": "plantel",
+  "u_at[Directa]": "plantel",
+  "u_at[Circulación estéril]": "plantel",
+  "u_at[Ataque elaborado]": "plantel",
+  "u_co[Directa]": "plantel",
+  "u_co[Circulación estéril]": "plantel",
+  "u_co[Ataque elaborado]": "plantel",
+  "w_at[Directa]": "plantel",
+  "w_at[Circulación estéril]": "plantel",
+  "w_at[Ataque elaborado]": "plantel",
+  "w_co[Directa]": "plantel",
+  "w_co[Circulación estéril]": "plantel",
+  "w_co[Ataque elaborado]": "plantel",
+  "rho[corner]": "plantel",
+  "rho[tiro_libre_area]": "plantel",
+  "rho[lateral_largo]": "plantel",
+  "rho[tiro_libre_directo]": "plantel",
+  "nu_at[corner]": "plantel",
+  "nu_at[tiro_libre_area]": "plantel",
+  "nu_at[lateral_largo]": "plantel",
+  "nu_co[corner]": "plantel",
+  "nu_co[tiro_libre_area]": "plantel",
+  "nu_co[lateral_largo]": "plantel",
+  "alpha": "plantel",
+  "gamma": "plantel"
+ },
+ "n_muestras": 1000,
+ "atribucion": "continua",
+ "lista_corta": {
+  "parametros": {
+   "min_partidos": 60,
+   "min_celdas": 3,
+   "n_medoides": 4,
+   "semilla": 20261008,
+   "n_rasgos": 2,
+   "min_partidos_antecesor": 10
+  },
+  "vigente": "Jorge Guillermo Almada Alves",
+  "antecesor": "Andre Jardine",
+  "n_elegibles": 16,
+  "silueta": 0.07142311217918279,
+  "medoides": [
+   {
+    "nombre": "Mauro Nestor Gerk Larrea",
+    "representa": 7,
+    "representados": [
+     "Diego Martin Cocca Pera",
+     "Eduardo Fentanes Orozco",
+     "Robert Dante Siboldi Badiola",
+     "Benjamin Mora Mendivil",
+     "Domenec Torrent",
+     "Benat San Jose"
+    ]
+   },
+   {
+    "nombre": "Antonio Ricardo Mohamed Matijevich",
+    "representa": 4,
+    "representados": [
+     "Nicolas Ricardo Larcamon",
+     "Victor Manuel Vucetich Rojas",
+     "Veljko Paunovic"
+    ]
+   },
+   {
+    "nombre": "Miguel Ernesto Herrera Aguirre",
+    "representa": 4,
+    "representados": [
+     "Fernando Ortiz",
+     "Rolando Hernan Cristante Mandarino",
+     "Andres Luciano Lillini"
+    ]
+   },
+   {
+    "nombre": "Marcos Ignacio Ambriz Espinoza",
+    "representa": 1,
+    "representados": []
+   }
+  ],
+  "celdas_exigidas": true,
+  "n_lista": 6
+ },
+ "validacion": {
+  "fecha": "2026-10-16",
+  "archivo": "reportes/validacion/validacion.json"
+ }
+}

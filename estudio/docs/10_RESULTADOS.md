@@ -1,0 +1,738 @@
+# 10 — Resultados, Fase 1 (el vocabulario)
+
+> Cada hallazgo lleva etiqueta: 🟢 probado (contraste con su nula) · 🟡 medido
+> (número con su incertidumbre o validación cruzada) · ⚪ descriptivo ·
+> 🔴 refutado. **Ningún número se cita sin leer su fila.**
+> Corrida de referencia: 2026-09-24, `dtcoach fase0` + `cv-k` + `mezcla` + `bondad`.
+
+---
+
+## 1. El dataset
+
+| cantidad | valor |
+|---|---|
+| partidos | 1,767 (6 temporadas, 19 equipos) |
+| eventos aplanados | 5,744,380 |
+| transiciones | 3,003,495 |
+| posesiones StatsBomb | 388,115 |
+| **secuencias** (unidad de la cadena, ADR-v2-14) | **461,454** |
+| estados | 20 zonas (malla 5×4) + 4 absorbentes |
+| cobertura 360 | > 99 % en los técnicos candidatos |
+
+⚪ `coordinate_sanity` = 0.723: la tasa de gol crece hacia x = 120, así que el
+marco de coordenadas y el espejo del rival están bien orientados.
+
+---
+
+## 2. 🟢 Una posesión de StatsBomb no es una secuencia de la cadena
+
+**60,447 posesiones (15.6 %) contienen más de una absorción**: 65,667 pérdidas y
+7,668 remates ocurren *a mitad* de posesión, y el mismo equipo sigue con el
+balón (rebote, córner a favor, recuperación inmediata).
+
+Evidencia de que importa, midiendo E[T] de la liga contra el modelo:
+
+| unidad | E[T] modelo | E[T] empírico | error |
+|---|---|---|---|
+| posesión StatsBomb | 5.48 | 7.12 (sintético equivalente) | −23 % |
+| **secuencia** | **6.502** | **6.509** | **−0.1 %** |
+
+Con secuencias, el modelo reproduce además el xG por secuencia de **cada tipo**
+hasta el tercer decimal. El test `test_cierre_de_flujo_K1` falla si esto se
+rompe. Definición en el framework (§1 de `03_FRAMEWORK.md`).
+
+---
+
+## 3. 🟡 La sobredispersión que rechazó a Markov es, sobre todo, heterogeneidad
+
+> **Corregido por ADR-v2-33.** La versión original decía "es heterogeneidad, no memoria". La mezcla reproduce la cola, pero no el arranque: queda un efecto de primer paso. La fase 1 v3 lo mide (memoria explicada por los tipos) y lo modela (P⁰).
+
+El proyecto anterior rechazó la cadena de orden 1 porque la cola de la duración
+era más pesada que la predicha, y concluyó "hace falta memoria". Con secuencias
+y una mezcla, la cola se reproduce **sin memoria**:
+
+| P(T > t) | t = 10 | t = 15 | t = 20 | KS |
+|---|---|---|---|---|
+| datos | 0.1825 | 0.0950 | 0.0509 | — |
+| una cadena (K = 1) | 0.1911 | 0.0807 | 0.0336 | 0.0591 |
+| mezcla K = 5 | 0.1838 | 0.0951 | 0.0508 | 0.0355 |
+| **mezcla K = 3** (elegida) | 0.1857 | 0.0944 | **0.0492** | **0.0378** |
+
+**Lectura:** Markov de primer orden falla *sobre la liga* porque promedia
+jugadas de naturaleza distinta; **dentro de cada tipo de secuencia, Markov
+basta**. Es el resultado que cierra la pregunta abierta de la versión anterior
+y la razón de que no haga falta M2 (memoria) ni un HMM (ADR-v2-02).
+
+🟡 **Residuo declarado:** el desajuste que queda se concentra en t = 1–3 (el
+modelo predice 0.823 y se observa 0.859 en P(T > 1)). El primer paso de una
+secuencia absorbe menos que una acción cualquiera desde la misma zona: un
+"efecto primer toque". Se reporta como límite; extensión candidata, no
+obligatoria: una fila de transición propia para el primer paso.
+
+---
+
+## 4. 🟡 K: la verosimilitud no lo elige sola
+
+Validación cruzada por partido, 5 pliegues, diferencias **pareadas** (ADR-v2-10):
+
+| K | nats/transición | mejora vs K−1 | t pareado | ganancia acumulada |
+|---|---|---|---|---|
+| 1 | −2.3224 | — | — | 0 % |
+| 3 | −2.3072 | 0.0152 | 90.9 | 73 % |
+| 4 | −2.3049 | 0.0024 | 34.9 | 84 % |
+| 5 | −2.3032 | 0.0016 | 7.1 | 92 % |
+| 6 | −2.3020 | 0.0012 | 5.6 | 98 % |
+| 7 | −2.3015 | 0.0005 | 7.8 | 100 % |
+
+Todas las mejoras son positivas en los 5 pliegues: con 461 mil secuencias
+siempre paga añadir un tipo. El KS tampoco separa (0.0363 / 0.0355 / 0.0342
+para K = 4 / 5 / 6). **K se decide por reproducibilidad e interpretabilidad**
+(ADR-v2-17), no por ajuste.
+
+---
+
+## 5. 🔴 → 🟢 Reproducibilidad: solo K ≤ 3 da tipos identificables
+
+k-means dio 9 óptimos para K = 5 (se descartó, ADR-v2-17). Con la escalera y 3
+semillas por K:
+
+| K | rango de J | acuerdo mínimo | ¿reproducible? |
+|---|---|---|---|
+| 2 | 0.1 | 1.000 | ✅ |
+| **3** | **7.8** | **0.993** | ✅ |
+| 4 | 1,815.6 | 0.582 | ❌ |
+| 5 | 1,225.0 | 0.567 | ❌ |
+| 6 | 1,073.3 | 0.539 | ❌ |
+
+Desde K = 4, soluciones que asignan distinto a más del 40 % de las secuencias
+difieren en unos 0.003 nats por secuencia: los datos no las distinguen. **Se
+fija K = 3** (ADR-v2-19). Ajusta casi igual que K = 5: KS 0.0378 contra 0.0355.
+
+---
+
+## 6. 🟡 El vocabulario: tres familias de secuencia (K = 3, reproducible)
+
+| familia | π | E[T] modelo | E[T] empírico | P(remate) | xG/secuencia |
+|---|---|---|---|---|---|
+| 1 · **Directa** | 0.323 | 3.26 | 3.25 | 0.111 | **0.0143** |
+| 2 · **Circulación estéril** | 0.266 | 6.63 | 6.61 | 0.031 | 0.0033 |
+| 3 · **Ataque elaborado** | 0.411 | 8.97 | 9.00 | **0.144** | 0.0115 |
+
+Nombres fijados al ver las figuras (ADR-v2-20):
+
+- **Directa.** Nace en la salida propia y también en recuperaciones en el
+  último tercio. Dura 3 acciones. Tiene el **mayor valor de zona frente al
+  área** (0.13 xG) y el mayor xG por secuencia de la liga.
+- **Circulación estéril.** Nace en medio campo y **retrocede**: visita campo
+  propio y el centro, casi nunca el último tercio. El 90 % termina en pérdida.
+- **Ataque elaborado.** Progresa **por las bandas**: sus zonas más visitadas son
+  los carriles exteriores del tercio 72-96. Es la que más remata.
+
+La lectura: dos ejes, duración y peligro, que no van juntos. La secuencia de
+duración media es la más estéril, y la más corta es la más peligrosa por
+secuencia.
+
+**Curva de K (K = 2 a 9):** solo K = 2 y K = 3 son reproducibles; el KS no mejora
+al subir K (0.033 a 0.038); el peso del tipo más chico cae de 0.30 (K = 3) a
+0.07 (K = 9). Figura: `reports/mezcla/curva_k.png`.
+
+---
+
+## 7. 🟡 Las eras: de 2,916 discrepancias a 1
+
+Contraste de las eras verificadas contra `managers` del API, por partido:
+
+| causa | antes | ahora | qué es |
+|---|---|---|---|
+| formato de nombre | 2,521 | **0** | el API da el nombre legal; las eras, el de uso (ADR-v2-13) |
+| A_borde | 151 | 151 | la era corta al acabar la fase regular; faltan liguilla y 2026/27 |
+| A_sin_era | 74 | 74 | técnicos nuevos de 2026/27 e interinos |
+| AB (sin dato en ninguna fuente) | 170 | 170 | el API no trae DT |
+| **C (personas distintas)** | 395 | **1** | Mazatlán, 2022-03-13 |
+
+⚠️ **Estado: las correcciones existen en `eras_api_v2` pero el pipeline todavía
+usa `eras_api`.** Falta apuntar `rutas.eras_dir` y `rutas.exclusiones` en el
+config (§ pasos pendientes de `02_ESTADO.md`).
+
+---
+
+## 8. 🟡 Técnico focal: André Jardine
+
+> **Nota 2026-09-27:** el foco expuesto es ahora Guillermo Almada (§19 y
+> `RESULTADOS_ALMADA.md`). Las secciones de Jardine se conservan como contraste.
+
+| dt | partidos | clubes | fase regular | 360 |
+|---|---|---|---|---|
+| **Andre Jardine** | **178** | **2** (América 127, San Luis 51) | 148 | 0.994 |
+| Guillermo Almada | 153 | 2 (Pachuca 136, Santos 17) | 136 | 1.00 |
+| Nicolas Larcamon | 146 | 4 | 135 | 0.993 |
+
+Jardine cumple los cuatro criterios del roadmap y es **mover**, así que habilita
+el capítulo "¿es él o es el plantel?". Bono: **Almada dirige al América en
+2026/27**, lo que da el contraste inverso (mismo plantel, otro técnico) y un
+segundo mover de primer nivel para comparar.
+
+---
+
+## 9. Fase 2 — André Jardine contra la liga (hipótesis pre-registradas en `11_HIPOTESIS.md`)
+
+Corrida del 2026-09-24. 461,454 secuencias; las de Jardine son 22,562 de ataque
+y 22,526 de sus rivales, en 183 partidos (América 129, San Luis 54). Elo:
+K = 20, h = 60, calibrado (E contra S dentro de 3 pp en cada quintil).
+Ninguna columna del modelo resultó no estimable.
+
+| id | pregunta | resultado | q (BH) | evidencia |
+|---|---|---|---|---|
+| H1 | identidad ofensiva | W = 11.2, gl 2 | 0.011 | 🟢 pero **pequeña** |
+| H2 | identidad defensiva | W = 30.8, gl 2 | < 0.001 | 🟢 |
+| H3 | reacción al marcador | W = 5.5, gl 4 | 0.315 | ⚪ |
+| H4 | final del partido | W = 0.1, gl 2 | 0.939 | ⚪ |
+| H5 | localía | W = 0.7, gl 2 | 0.770 | ⚪ |
+| H6 | fuerza del rival | W = 2.3, gl 2 | 0.373 | ⚪ |
+| H7.1 | eficiencia ofensiva · Directa | +0.0018 [−0.0005, +0.0040] | 0.169 | ⚪ |
+| H7.2 | eficiencia ofensiva · Circulación estéril | +0.0015 [+0.0007, +0.0023] | 0.002 | 🟢 |
+| H7.3 | eficiencia ofensiva · Ataque elaborado | +0.0020 [+0.0009, +0.0032] | 0.002 | 🟢 |
+| H8.1 | eficiencia defensiva · Directa | −0.0018 [−0.0039, −0.0000] | 0.107 | ⚪ |
+| H8.2 | eficiencia defensiva · Circulación estéril | −0.0004 [−0.0009, −0.0000] | 0.107 | ⚪ |
+| H8.3 | eficiencia defensiva · Ataque elaborado | −0.0012 [−0.0021, −0.0004] | 0.013 | 🟢 |
+
+### En la cancha
+
+**Qué elige (H1, 🟢 pero pequeño).** En sus mismas situaciones, su equipo usa
++1.0 pp de *Directa* [+0.2, +1.8] y −0.7 pp de *Circulación estéril*
+[−1.3, −0.2]. Es estadísticamente distinto de la liga, pero **su identidad no
+está en qué tipo de jugada elige**. Para saber si 1 pp es mucho o poco para la
+Liga MX, ver el atlas (fase 3, exploratorio).
+
+**Qué le hacen (H2 🟢 + H8.3 🟢): la historia defensiva.** Contra Jardine, los
+rivales juegan **−2.1 pp de *Directa*** [−2.9, −1.3] y **+2.7 pp de *Ataque
+elaborado*** [+1.6, +3.6] que contra el resto de la liga, con la fuerza del
+rival ya descontada por el Elo. Y cuando elaboran, generan **10 % menos xG**
+(0.0102 contra 0.0113). Lectura: *le quita al rival la jugada directa, lo
+obliga a elaborar y defiende bien esa elaboración.*
+
+**Qué tan bien lo hace (H7 🟢).** Con las mismas jugadas genera más peligro:
+**+18 % de xG** en *Ataque elaborado* (0.0134 contra 0.0113) y **+47 %** en
+*Circulación estéril* (0.0048 contra 0.0032). ⚠ Es el rasgo más expuesto al
+plantel: el América es de los planteles más caros de la liga. La fase 3 lo
+contrasta con San Luis.
+
+**Cuándo cambia (H3–H6 ⚪).** No detectamos que reaccione al marcador, al
+minuto, a la localía ni al rival de forma distinta que la liga
+(`reports/fase2/contexto_andre_jardine.png` tiene las cotas por familia).
+
+**Combinación pre-registrada que aplica:** *identidad por encima de
+reactividad* (H3–H6 ⚪), con la diferencia puesta en **cómo ejecuta y cómo
+defiende**, no en qué elige.
+
+---
+
+## 10. Fase 3a — ¿Es él o es el plantel? (H9–H12 pre-registradas)
+
+El mismo modelo de la fase 2, por separado para cada club de Jardine, contra la
+misma liga y sin su otra etapa en la referencia.
+
+| rasgo | América (129 p.) | San Luis (54 p.) | ¿viaja? |
+|---|---|---|---|
+| **defensa (H2):** rivales con menos *Directa* | −2.3 pp 🟢 | −1.9 pp | ✅ **H9: viaja** |
+| **defensa (H2):** rivales con más *Ataque elaborado* | +2.6 pp 🟢 | +2.7 pp | ✅ **H9: viaja** |
+| eficiencia ofensiva en *Ataque elaborado* (H7.3) | +0.0028 🟢 | −0.0001 [−0.0016, +0.0013] ⚪ | ❌ H10 |
+| eficiencia defensiva en *Ataque elaborado* (H8.3) | −0.0020 🟢 | +0.0003 [−0.0015, +0.0020] ⚪ | ❌ H11 |
+| identidad ofensiva (H1) | ⚪ (0.6 pp) | 🟢 (2.5 pp) | mezcla distinta: H12 en *Directa*, −2.2 pp [−3.8, −0.5] |
+| adaptación a la fuerza del rival (H6) | ⚪ | 🟢 | solo en San Luis (exploratorio) |
+
+**Atlas (exploratorio, 15 eras con ≥ 50 partidos).** Medida: distancia de
+variación total entre la mezcla del técnico y la de la liga en sus mismas
+situaciones.
+
+- **Defensa:** sus dos etapas están entre las 4 más altas de 15 (América
+  2.6 pp, San Luis 2.7 pp; solo Efraín Valdez las supera con 2.9 pp). Es su
+  rasgo distintivo en la Liga MX.
+- **Ataque:** América 0.6 pp, puesto 14 de 15 (de las más parecidas a la liga);
+  San Luis 2.5 pp, puesto 4 de 15. Mediana de la liga: 1.3 pp.
+
+### La historia
+
+> **Su firma es defensiva y viaja con él.** Con dos planteles muy distintos, sus
+> rivales renuncian a la jugada directa y tienen que elaborar. **En ataque se
+> adapta a lo que tiene:** con un plantel modesto jugó más directo, más distinto
+> a la liga y ajustándose al rival; con el América juega lo que juega la liga,
+> pero lo ejecuta mejor, y esa ventaja de ejecución **no aparece** en San Luis,
+> lo que es compatible con que la aporte el plantel.
+
+Matices: la lectura de "se adaptó" (H6 y la magnitud de H12) es exploratoria.
+El H1 🟢 del conjunto (fase 2) lo empuja San Luis: el América solo da ⚪. El H3
+🟡 del América (reacción al marcador) no sobrevive a BH.
+
+---
+
+## 11. Fase 3b — Sus decisiones desde la banca (H13–H17 pre-registradas)
+
+Datos: 136,740 equipo-minutos, 14,757 sustituciones (821 de Jardine) y 3,351
+equipos-partido, siempre contra la liga sin el foco.
+
+| id | pregunta | resultado | q (BH) | evidencia |
+|---|---|---|---|---|
+| **H13** | ¿cuándo cambia? | su primer cambio del 2º tiempo llega **~3 min después** que el de la liga | 0.005 | 🟢 |
+| H14 | ¿su banca reacciona al marcador distinto? | adelanta sus cambios al perder, **igual que la liga** | 0.605 | ⚪ |
+| H15 | ¿qué tipo de cambio hace? | misma mezcla que la liga (~70 % del mismo puesto) | 0.479 | ⚪ |
+| H16 | ¿reacomoda más la formación? | 1.72 contra 1.80 reacomodos por partido | 0.479 | ⚪ |
+| **H17** | ¿rota más su once? | 1 − Jaccard 0.398 contra 0.335: **~2.7 titulares distintos por partido contra ~2.2** | 0.003 | 🟢 |
+
+**Primer cambio del 2º tiempo:** empatando, minuto 60.8 contra 58.0 (+2.9
+[+1.2, +4.5]); perdiendo, 57.0 contra 55.0 (+2.1 [+0.4, +3.8]); ganando, 60.4
+contra 57.3 (+3.1 [+1.2, +4.9]).
+
+**Formación base:** 4-2-3-1 en el América (57 partidos), con 8 sistemas
+distintos en total (4-4-2, 3-4-3, 4-3-3, 3-4-2-1…).
+
+⚠ **H17 no controla el calendario.** El América juega Concachampions y Leagues
+Cup, que no están en los datos. Más rotación puede ser una respuesta a más
+partidos, no una idea del técnico.
+
+## 12. Simulador (exploratorio)
+
+**Validación de xPts:** en toda la liga, 4,833 puntos reales contra 4,856
+esperados (error del 0.48 %). El método está bien calibrado.
+
+**Jardine:** 306 puntos en 183 partidos contra 296.1 esperados (**+9.9**,
+z = +0.68, p = 0.49). **Es azar**: sus equipos sacaron los puntos que su xG y el
+de sus rivales merecían. La curva acumulada nunca sale de la banda de ±1.96 DE.
+
+**Escenarios:** en las 54 combinaciones de marcador, minuto, localía y rival, su
+equipo produce unos +0.002 xG por secuencia más que la liga en el mismo
+escenario, **casi constante**. No es un defecto: con H3–H6 ⚪ su mezcla no
+responde al contexto distinto que la liga, así que toda la diferencia viene de
+la eficiencia (H7), que la fase 3a mostró que es del América y no viaja.
+
+**Calibración del modelo de contexto:** error medio de 2.01 pp (distancia de
+variación total, predicha contra observada) en 28 celdas con ≥ 300 secuencias
+de Jardine. Ver `SIMULADOR_andre_jardine.md` para el ruido de muestreo esperado
+con esos tamaños de celda.
+
+## 13. El retrato completo de André Jardine
+
+> Escrito con el vocabulario v2. Con el v3 se sostiene (§16), con un matiz en el punto 4: en San Luis sí reaccionaba al marcador y al rival (H3 🟢, H6 🟢); en el América, no.
+
+1. **Su firma es defensiva y viaja con él** (H2 🟢, H9 ✅). Contra sus
+   equipos, los rivales renuncian a la jugada directa y tienen que elaborar,
+   y el atlas lo pone entre las etapas más distintas de la liga en ese rasgo.
+2. **En ataque, se adapta a lo que tiene** (H1, H12, atlas). En San Luis jugó
+   más directo y distinto a la liga; en el América juega lo que juega la liga.
+3. **La ejecución superior es del América** (H7, H8 🟢 en el América; H10,
+   H11 ❌). Compatible con el plantel, no con el técnico.
+4. **No negocia su idea con el partido** (H3–H6, H14 ⚪) y **es paciente con la
+   banca** (H13 🟢: tarda ~3 min más en su primer cambio). Rota más su once
+   (H17 🟢), con la advertencia del calendario.
+5. **Sus resultados son los que merecía** (xPts: +9.9, dentro del azar).
+
+---
+
+## 14. Lo que este bloque NO dice
+
+- Nada sobre el estilo de ningún técnico: la Fase 1 construye el vocabulario de
+  la liga, no describe a nadie. Eso es la Fase 2.
+- Nada causal. π, δ y las tarjetas describen lo que hizo un equipo; no aíslan
+  decisiones del técnico del plantel ni del calendario.
+- Los nombres de los tipos (*Directa*, *Circulación estéril*, *Ataque
+  elaborado*) resumen sus figuras y sus secuencias típicas con el ajuste
+  reproducible (ADR-v2-06, ADR-v2-20); son etiquetas, no definiciones.
+
+---
+
+## 15. Fase 1 v3 — corrida con malla 12×8 (2026-09-25)
+
+**Válido y citable:**
+- 🟢 **Paso inicial (P⁰):** validación cruzada pareada t = 13.2; KS de la duración 0.043 → 0.007; P(T > 1) modelado 0.8589 contra 0.8589 observado. Con K = 2 y P⁰, la supervivencia coincide con lo observado dentro de ~0.01 en todos los t (KS 0.011; K = 1: 0.056).
+- 🟢 **Verificación formal:** ρ(Q) = 0.835 (vida media 3.85 acciones); irreducible y aperiódica sobre lo observado; estacionaria de la cadena reiniciada = visitas μᵀN (error 6·10⁻¹⁷).
+- 🟢 **Irreversibilidad:** lejos del balance detallado (G² = 304 mil, 4,200 gl); σ = 0.244 nats por transición y avance neto de +2.7 m por acción en la liga.
+- 🟡 **Llegada (primer paso):** último tercio, P = 0.501 modelado (K = 1) contra 0.488 observado; frente al área, P = 0.127 contra 0.127, pero **E[acciones | llega] = 5.36 contra 6.02** (no cumple la tolerancia de 0.2). Combinando los dos tipos de la mezcla, P(último tercio) = 0.489 y E(área) = 5.72: la heterogeneidad reduce la brecha.
+- ⚪ **Resolución espacial:** la log-densidad predictiva crece de forma monótona hasta 12×8 y la agregación contigua no fusiona ninguna celda: la ubicación de la siguiente acción es predecible al menos a 10 m. No se encontró un óptimo (el candidato más fino ganó).
+
+**No válido (retirado):**
+- 🔴 Memoria por información mutua plug-in (sesgo de muestra finita; ADR-v2-34).
+- 🔴 K = 2 con 12×8 como vocabulario: ningún K cumplió la regla y el script eligió por defecto (ADR-v2-35).
+- 🔴 Los nombres "Directa" y "Circulación estéril" en `MARKOV.md` de esa corrida: eran de otro K.
+
+---
+
+## 16. Vocabulario v3 (malla 5×4, K = 3, paso inicial) y réplica de las fases 2 y 3 (2026-09-25)
+
+### El vocabulario
+
+Elegido por la regla enmendada (ADR-v2-35): 8×5 sin K reproducible, 6×4 con K = 2, **5×4 con K = 3** (acuerdo suave 0.997; rango de J 1.9, es decir 4·10⁻⁶ por secuencia). Paso inicial adoptado (t = 13.2). Duración: **KS 0.0051** (con una sola cadena, 0.0597).
+
+| familia | % | acciones | P(remate) | xG/sec | vida media | avance por acción | llega frente al área |
+|---|---|---|---|---|---|---|---|
+| **Directa** | 36 % | 3.5 | 0.140 | **0.0144** | 1.7 | **+3.4 m** | 17 % en 2.2 acciones |
+| **Circulación estéril** | 26 % | 6.7 | **0.025** | 0.0026 | 4.4 | +2.9 m | 5 % |
+| **Ataque elaborado** | 38 % | 9.2 | 0.122 | 0.0114 | 5.9 | +2.3 m | 22 % en 8.4 acciones (82 % llega al último tercio) |
+
+Nombres confirmados con `tipos_K3_inicio.png` y `tipos_K3_visitas.png`: la *Directa* nace en el área propia y en las esquinas del último tercio; la *Circulación estéril* vive entre los metros 24 y 72 y casi no inicia en el último tercio; el *Ataque elaborado* concentra sus visitas en los carriles exteriores del tercio 72–96.
+
+**Propiedades de la cadena (5×4):** termina con probabilidad 1 (ρ = 0.838), irreducible y aperiódica sobre lo observado, estacionaria = μᵀN (error 2·10⁻¹⁶), fuertemente irreversible (G² = 164 mil, 190 gl). La llegada modelada con la mezcla cumple la tolerancia pre-registrada (frente al área: 5.75 acciones contra 5.88 observadas); con una sola cadena, no (5.21).
+
+**Memoria (fuera de muestra):** conocer la zona anterior mejora la predicción de la siguiente en +0.058 nats por acción (≈ 3 % de la incertidumbre), y **los tipos explican solo el 4.5 %**. 🟢 La duración la explica la heterogeneidad; **hacia dónde va el balón tiene memoria real dentro de cada tipo**. Corrige la lectura original de ADR-v2-16 (ver ADR-v2-33).
+
+### Robustez: las conclusiones de las fases 2 y 3 no cambian con el vocabulario
+
+| conclusión | v2 (5×4, K = 3, sin P⁰) | v3 |
+|---|---|---|
+| Jardine: rivales con menos *Directa* y más *Elaborado* (H2) | 🟢 −2.1 / +2.7 pp | 🟢 −2.0 / +2.4 pp |
+| Jardine: ese rasgo viaja entre clubes (H9) | ✅ | ✅ |
+| Jardine: eficiencia ofensiva en *Circulación* y *Elaborado* (H7) | 🟢 | 🟢 |
+| Jardine: la eficiencia no viaja a San Luis (H10, H11) | ❌ | ❌ |
+| Jardine: atlas, separación defensiva | top 4 de 15 | **1.º (San Luis) y 3.º (América)** |
+| Almada: rivales rinden menos en *Directa* y *Elaborado* (H8.1, H8.3) | 🟢 | 🟢 |
+| Almada: amortigua la reacción de la liga al marcador y al rival (H3, H6) | 🟢 | 🟢 |
+| Almada: cambios del mismo puesto y pocos reacomodos (H15, H16) | 🟢 | 🟢 |
+| xPts de ambos | dentro del azar | idéntico |
+
+**Cambios y novedades:**
+- El H1 conjunto de Jardine pasa a ⚪ (W = 2.5). En San Luis salen además H3 🟢 y H6 🟢: allí reaccionaba al marcador y al rival; en el América, no.
+- Almada en el América (7 partidos): exploratorio, sin 🟢 (regla pre-registrada). El W = 61 de H3 ilustra el problema de pocos conglomerados. Indicio: +2.6 pp de *Directa* respecto a Pachuca [+0.3, +4.9].
+- Banca: Jardine abre su primer cambio ~3 min después que la liga (H13 🟢); Almada ~2 min antes empatando o perdiendo, pero su prueba conjunta no sobrevive a BH (q = 0.106; 0.085 en la corrida del 2026-09-27, §19): indicio, no conclusión.
+
+---
+
+## 17. Experimento dirección: zona × dirección de llegada (ADR-v2-37, 2026-09-26)
+
+**Regla 1 (predicción), 🟢 cumplida.** Densidad predictiva de la siguiente acción en partidos no vistos (nats por transición, sobre la malla 5×4 sola):
+
+| estado | estados | ganancia | EE pareado |
+|---|---|---|---|
+| zona anterior completa (la memoria de la v3, referencia) | 420 | +0.0547 | 0.0003 |
+| adelante / lateral / atrás, ε = 5 m | 80 | +0.0444 | 0.0001 |
+| 4 sectores | 100 | +0.0554 | 0.0003 |
+| **8 sectores (elegido)** | **180** | **+0.0660** | 0.0004 |
+
+La dirección de llegada predice mejor que la zona anterior con menos de la mitad de estados. Sabida la dirección, la zona anterior aún agrega +0.039: queda memoria que no es dirección (hipótesis no medida: la distancia de la acción).
+
+**Regla 2 (vocabulario), 🔴 no cumplida.** Con 180 estados ningún K es reproducible:
+
+| K | acuerdo suave | acuerdo duro | rango de J | KS | π mínimo |
+|---|---|---|---|---|---|
+| 2 | ≈ 0.94 | 0.883 | 902 | 0.0174 | 0.483 |
+| 3 | ≈ 0.92 | 0.828 | 590 | 0.0137 | 0.297 |
+| 4 | ≈ 0.84 | 0.767 | 398 | 0.0108 | 0.178 |
+| 5 | ≈ 0.77 | 0.680 | 298 | 0.0063 | 0.132 |
+
+El rango de J por secuencia (902 / 461 mil ≈ 2·10⁻³) es ~18 veces el umbral de ADR-v2-35. **El vocabulario oficial sigue siendo 5×4, K = 3.** Es el mismo patrón que las mallas finas de la v3: más estados por tipo, menos identificabilidad. Las 8 direcciones se eligieron porque, con 3 millones de transiciones, 1 EE pareado casi no penaliza la complejidad.
+
+---
+
+## 18. Experimento 360: zona × nivel de presión (ADR-v2-36, 2026-09-26)
+
+**Datos.** 5,085,117 freeze frames de 1,755 partidos; el actor del frame coincide con la ubicación del evento (mediana 0 m; 3.6 % a más de 2 m). Distancia al rival más cercano: p10 1.1 m, mediana 4.3 m, p90 13.7 m. Solo **649 de 1,767 partidos** pasan el umbral de cobertura (≥ 90 % de las acciones de la cadena con rasgos): 160 mil secuencias, un tercio de la muestra oficial.
+
+**Regla 1 (predicción), 🟢 cumplida.** Todos los candidatos mejoran; se eligió k-means con 5 niveles (100 estados), +0.031 nats por transición (EE 0.0001). Los niveles se leen en la cancha:
+
+| nivel | % acciones | rival más cercano | rivales a 5 m | área local | P(remate) | P(pérdida) |
+|---|---|---|---|---|---|---|
+| p0 | 27 % | 12.6 m | 0.0 | 232 m² | 0.2 % | 3.3 % |
+| p1 | 25 % | 6.9 m | 0.0 | 128 m² | 0.8 % | 6.7 % |
+| p2 | 21 % | 3.6 m | 1.0 | 123 m² | 1.7 % | 10.3 % |
+| p4 | 17 % | 1.9 m | 1.0 | 56 m² | 1.4 % | 11.5 % |
+| p3 | 10 % | 1.9 m | 2.2 | 34 m² | 7.4 % | 14.5 % |
+
+La pérdida crece de forma monótona con la presión (3 % → 15 %); p3 (dos rivales encima, 34 m²) es sobre todo el área rival, donde también se remata.
+
+**Regla 2 (vocabulario), 🔴 no cumplida.** Mayor K reproducible: control 2, presión 2.
+
+| K | control: acuerdo duro · rango J | presión: acuerdo duro · rango J |
+|---|---|---|
+| 2 | 0.999 · 3.3 | 0.987 · 3.9 |
+| 3 | 0.864 · 427 | 0.898 · 46 |
+| 4 | 0.761 · 102 | 0.661 · 155 |
+| 5 | 0.714 · 298 | 0.514 · 606 |
+
+**Dos lecturas, sin sobreinterpretar:**
+1. En esta submuestra ni la malla sola sostiene K = 3: la reproducibilidad del vocabulario oficial **depende del tamaño de muestra** (461 mil secuencias sí, 160 mil no).
+2. Con presión, K = 3 queda más cerca del umbral que el control (rango de J 46 contra 427), pero no lo cumple. Es un indicio, no un resultado.
+
+**Conclusión de los dos experimentos (§17 y §18):** estados más ricos (dirección, presión) **predicen mejor** la siguiente acción, pero **no sostienen más tipos reproducibles**. El vocabulario oficial sigue siendo 5×4, K = 3.
+
+---
+
+## 19. Capa de fútbol: Jardine y Almada (2026-09-26)
+
+Reglas de lectura pre-registradas en `11_HIPOTESIS.md` ("Capa de fútbol"). **Rasgo del técnico** =
+🟢 contra la liga + percentil ≤ 20 o ≥ 80 entre las 45 etapas + fiabilidad entre mitades ≥ 0.5.
+**Viaja** = mismo signo (🟢/🟡) en sus clubes.
+
+**Datos 360.** 3.66 M frames con bloque medible (≥ 6 defensores visibles; mediana 8) y 20,883 saques
+con marcaje. Altura del bloque: p10 20 m, mediana 48 m, p90 85 m. Distancia de marca en corners: mediana 2.5 m.
+
+### Guillermo Almada: la identidad más reconocible de la liga
+
+- **Identidad (5.2):** AUC fuera de muestra 0.887 contra la liga (2.º de 45 etapas; 4.º con la huella de la fase G, §20) y 0.857 contra
+  el MISMO club con otros técnicos (nulas por permutación ≈ 0.50, p95 ≈ 0.55). No es Pachuca: es él.
+- **Rasgos que cumplen las tres condiciones (Pachuca):** presiona encima (acciones del rival con un
+  jugador suyo a ≤ 2 m: 0.208 contra 0.172, percentil 94) y antes (PPDA 8.5 contra 10.3, percentil
+  17); bloque estrecho y compacto (anchura percentil 1, área percentil 3); saques de meta largos (en
+  corto 32 % contra 47 %, percentil 8); conducciones progresivas (+6.2 por partido, percentil 99);
+  volumen de remate (16.1 contra 13.3, percentil 92) con menos xG por remate; remata tras recuperar
+  (percentil 90); juega en espacios cerrados (área de Voronoi propia, percentil 8); concede pocas
+  entradas al área (percentil 14).
+- **Viajan a Santos Laguna (20 partidos):** PPDA (6.5), presión a ≤ 2 m (0.243), saques largos
+  (22 %), bloque estrecho y contrapresión. En el América (7 partidos) solo es exploratorio.
+- **Cadena:** llega al último tercio más y en menos acciones (2.5 contra 2.8): vertical. Sus rivales
+  llegan menos (−4.5 pp) al último tercio y (−3.5 pp) frente al área.
+- **Balón parado defensivo:** concede 26 % menos remates por corner (razón 0.74 [0.65, 0.84]; con la jugada de 15 s de la fase G, 0.86 [0.76, 0.97], §20); marca
+  más cerca (2.45 contra 2.83 m) y con menos defensores sobrantes (2.3 contra 2.9): marca al hombre.
+- **Blindaje:** la eficiencia coincide en signo con xG, OBV y tasa de remate; H3 y H6 se sostienen
+  con bootstrap de score (p = 0.003 y 0.001; en Pachuca 0.018 y 0.001). En el América (7 partidos)
+  el Wald de H3 daba p ≈ 0 y el bootstrap p = 0.80: el sobre-rechazo con pocos partidos, visible.
+
+### André Jardine: se adapta al plantel; lo que viaja es poco y defensivo
+
+- **Identidad (5.2):** AUC 0.726 contra la liga y 0.624 contra su mismo club (ambos sobre el p95 de
+  la nula). En el América, puesto 13 de 45; en San Luis, 44 de 45: allí casi no se distinguía.
+- **Casi todo cambia de signo entre clubes:** posesión, field tilt, entradas, progresión, altura de
+  recuperación y del bloque son BAJOS en San Luis y ALTOS en el América (p. ej. field tilt 0.41 contra
+  0.61). Es la misma conclusión de la fase 3: el estilo ofensivo es del plantel.
+- **Lo que viaja:** presiona MENOS encima que la liga en los dos clubes (acciones del rival con un
+  jugador suyo a ≤ 2 m: −0.013 y −0.015, ambos 🟢; percentiles 26 y 17), y la firma de H2 (sus
+  rivales juegan menos *Directa*).
+- **Cadena:** llega más frente al área (18.2 % contra 15.7 %) pero con más acciones (6.6 contra 5.5):
+  construye con paciencia.
+- **Balón parado:** nada distinto de la liga (solo 🟡 menos goles concedidos).
+- **Blindaje:** la eficiencia del América coincide en xG, OBV y remate. **Corrección a §16:** en San
+  Luis, H3 (reacción al marcador) pasa de p = 0.016 (Wald) a 0.058 (bootstrap): ya no se afirma; H6
+  (reacción al rival) se sostiene (p = 0.019).
+
+### Transversal
+
+- **Simulador:** habilidad del 5 % sobre las frecuencias base (Brier 0.627 contra 0.660, dejando cada
+  partido fuera). Exploratorio: explica, no predice. Jardine sumó 306 puntos contra 296 esperados por
+  estilo; Almada, 276 contra 257.
+- **Calibración:** los splines de minuto y Elo no la mejoran (1.21 → 1.28; 1.36 → 1.38): el error
+  restante no está en la forma del minuto. Se queda el diseño con tramos.
+- **Impacto de los cambios:** ninguno en xG; el OBV de Jardine tras su primer cambio (+0.10
+  [+0.02, +0.18]) es exploratorio según la regla 7.
+
+### Correcciones de código hechas al leer estos resultados
+
+1. **Evolución (Kalman):** el ruido de las familias se tomaba como var(r)/n, que ignora que las
+   secuencias de un partido comparten rival y marcador; salía q/r ≈ 3–7 (falso "estilo cambiante").
+   Ahora el ruido se estima por máxima verosimilitud y el cambio de club es una **intervención** (sin
+   ella, el salto de club se diluía en q y salía z ≈ 0). Resultado corregido abajo.
+2. **BH global:** subía a 🟢 hipótesis de muestras con < 20 partidos (Almada en el América). Ahora
+   respeta la regla: con Almada ninguna etiqueta cambia; con Jardine, América/H8.2 baja a 🟡.
+3. **Atlas:** reutilizaba un `atlas.csv` guardado con los nombres "Tipo k"; ahora detecta el desfase
+   y se recalcula.
+4. **Estabilidad del once:** es la misma medida que H17 y tiene la misma confusión con el calendario:
+   exploratoria (🔎).
+5. **Figura de decisiones:** faltaba la etiqueta 🔎 y la corrida se cortaba; corregido con prueba.
+
+### Evolución (corregida: ruido por máxima verosimilitud, cambio de club como intervención)
+
+**Dentro de cada club, las dos identidades son estables:** q/r < 0.006 en todas las series (familias
+en ataque y de sus rivales, PPDA, field tilt, altura de recuperación y del bloque, presión 360).
+
+**Jardine, San Luis → América: cambio claro (|z| > 2), en bloque.** Field tilt +0.18 (z = +7.1),
+*Directa* −5.5 pp (z = −6.5) y *Ataque elaborado* +6.5 pp (z = +3.3); bloque 4.0 m más arriba
+(z = +3.3); recupera 3.8 m más arriba (z = +2.7); PPDA +2.8 (z = +2.5: presiona menos). Lo único que
+NO salta es la presión encima (z = +0.2): el rasgo que viaja. Coincide con H12 (mezcla distinta entre
+clubes) y con las tablas por club.
+
+**Almada, Santos → Pachuca → América: nada salta** (todas |z| < 2 salvo *Directa* de sus rivales en
+Santos → Pachuca, z = −2.6). Su estilo llega igual a cada club.
+
+### Almada: decisiones, puntos y blindaje (corrida del 2026-09-27)
+
+Corrida completa tras corregir la figura de decisiones. H17 ya es exploratoria, así que BH de la
+familia de decisiones cubre H13–H16.
+
+| id | qué se prueba | resultado | p | q (BH) | evidencia |
+|---|---|---|---|---|---|
+| H13 | tiempo de los cambios | W = 5.1 (gl 2) | 0.076 | 0.085 | ⚪ |
+| H14 | banca contra el marcador | W = 4.9 (gl 2) | 0.085 | 0.085 | ⚪ |
+| H15 | tipo de cambio | W = 44.6 (gl 4) | < 0.001 | < 0.001 | 🟢 |
+| H16 | reacomodos por partido | 1.40 contra 1.81 (−0.41 [−0.57, −0.24]) | 0.0005 | 0.001 | 🟢 |
+| H17 | rotación del once | 0.358 contra 0.339 (+0.019 [−0.019, +0.060]) | 0.34 | — | 🔎 |
+
+- **En la cancha:** perdiendo, 82 % de cambios del mismo puesto (liga 72 %, +9.4 pp [+2.1, +14.8]) y
+  11 % ofensivos (liga 20 %, −9.0 pp [−12.9, −3.9]). Primer cambio del 2º tiempo: −2.2 min perdiendo
+  [−3.5, −0.8], −1.7 empatando [−3.4, −0.1], −0.5 ganando [−2.0, +1.0].
+- **Formaciones iniciales:** 4-2-3-1 en los tres clubes (Pachuca 66 %, Santos 60 %, América 100 % de 7).
+- **xPts (Poisson-binomial exacta):** 276 puntos contra 262.6 esperados por xG (+13.4, z = +0.95,
+  p = 0.34): dentro del azar. Validación en la liga: 4,833 reales contra 4,856 esperados (0.48 %).
+  El simulador de estilo (fase F) esperaba 257: las dos lecturas coinciden.
+- **Eficiencia con tres medidas:** en ataque, xG y OBV por secuencia iguales a la liga en las tres
+  familias, pero **más secuencias terminan en remate** (Directa +1.0 pp [+0.1, +1.8], Circulación
+  +0.3 [+0.1, +0.6], Elaborado +1.3 [+0.7, +2.0]): volumen, no calidad (H7 ⚪ se sostiene). En defensa,
+  las tres medidas bajan en las tres familias (H8.1 y H8.3 🟢 se sostienen; en Circulación, OBV y
+  remate bajan aunque el xG no alcanza).
+- **Bootstrap de score:** H3 y H6 se sostienen en todos (0.003, 0.001) y en Pachuca (0.018, 0.001).
+  En Santos (20 partidos) H3 pasa de 0.0005 (Wald) a **0.052**: al borde, no se afirma por club. En el
+  América (7), H3 pasa de < 0.001 a 0.80: el caso de libro de pocos conglomerados.
+- **Sensibilidad del diseño:** con splines de minuto y Elo, H4 (final del partido) baja a p = 0.021;
+  con el diseño pre-registrado (tramos) es 0.096. Se reporta ⚪ por la regla; es una pista.
+- **BH global** (52 hipótesis en una familia): ninguna etiqueta cambia.
+
+### La historia en dos líneas (para el informe)
+
+- **Almada impone:** la misma idea en tres clubes (presión encima, bloque estrecho, salida larga,
+  verticalidad), la más reconocible de la liga.
+- **Jardine se adapta:** su equipo juega como el plantel le permite (cambio en bloque al llegar al
+  América); lo que conserva es cómo le cambia el partido al rival (H2) y una presión menos agresiva.
+
+---
+
+## 20. Fase G — las secciones nuevas (corrida del 2026-09-30)
+
+Hipótesis H18–H26 pre-registradas en `11_HIPOTESIS.md` antes de correr. Salidas en
+`reports/historia/guillermo_almada/<sección>/`; figuras en `docs/figuras/<sección>/`.
+
+**Insumos.**
+- Tabla extra: 1,890,911 filas (43,532 centros, 5,046 filtrados, 3,340 pases atrás).
+- 360: 3,664,104 frames de bloque; 26,570 de 40,216 saques con frame; ancho visible mediano 72.9 m.
+- Tabla de la liga: 3,534 filas × 113 métricas.
+
+### Tabla de hipótesis (BH global sobre 61 hipótesis)
+
+| H | pregunta | resultado | veredicto |
+|---|---|---|---|
+| H18 | verticalidad | directness 0.281 contra 0.248 (p88); velocidad de avance 2.78 contra 2.48 m/s (p81) | 🟢 |
+| H19 | carriles de progresión | interiores 40.8 % contra 39.5 % | 🟢 en la sección, **🟡 en el global** (q = 0.073) |
+| H20 | entrada al área y asistencia | conduciendo 47.4 % contra 37.3 % (p99); con centro 15.1 % contra 20.0 % (p12); asistido por centro 12.1 % contra 15.1 % (p6) | 🟢 |
+| H21 | motivos de pase | ABCD 62.4 % contra 59.6 % (p90); ABCA 7.7 % contra 8.6 % (p1) | 🟢 |
+| H22 | ajuste al rival distinto de la liga | todos los Δ(fuertes − débiles) ⚪ | ⚪ |
+| H23 | efecto de sus cambios (xG, OBV, xG rival, tilt) | prueba conjunta p = 0.954 | ⚪ |
+| H24 | prevención (capa 1) | +0.0142 [−0.011, +0.040] remates evitados por centro | ⚪ |
+| H25 | supresión (capa 2) | **−0.0048 [−0.008, −0.002]** xG por remate: concede remates algo *más* limpios | 🟢 en sentido contrario |
+| H26 | organización a balón parado | defensores en el área 6.65 contra 8.66 (p3); al hombre 52.5 % contra 38.6 % (p99); distancia de marca 2.21 contra 2.71 m (p1) | 🟢 |
+
+### Identidad
+- **Reconocimiento:**
+  - AUC 0.886 contra la liga (nula p95 0.544) y 0.857 contra el club.
+  - En el ranking de 45 queda **4.º** (AUC 0.896 con la huella nueva; en §19 era 2.º con la huella anterior).
+- **Rival por Elo** (cortes: débil ≤ 1456, fuerte ≥ 1557):
+
+  | rival | puntos Almada | puntos liga | diferencia [IC 95 %] |
+  |---|---|---|---|
+  | fuerte | 1.19 | 0.98 | [−0.21, +0.63] |
+  | medio | 1.70 | 1.39 | +0.31 [+0.05, +0.58] |
+  | débil | 2.03 | 1.67 | — |
+
+  No hay ajuste diferencial al rival (H22 ⚪).
+- **Evolución:** ningún cambio de nivel al cambiar de club.
+
+### Ofensiva
+- **Salida:**
+  - pase largo de juego igual que la liga (0.199);
+  - completa menos pases bajo presión (0.687 contra 0.715, 🟢).
+- **Progresión:**
+  - con conducción 39.3 % contra 32.2 % (p99);
+  - zona 14: 21.4 contra 16.8 por partido (p81).
+- **Ocasión:**
+  - remata desde más lejos: 21.2 contra 19.8 m (p97);
+  - menos remates dentro del área (51.1 % contra 58.1 %, p3);
+  - menos de cabeza (14.9 % contra 19.7 %, p3);
+  - menos de primera (29.7 % contra 33.1 %).
+  - Esto explica el menor xG por remate de §19.
+  - xG de juego abierto: 0.71 contra 0.63 (🟡).
+- **Camino típico por familia** (zonas de la malla 5×4):
+
+  | familia | Almada | liga |
+  |---|---|---|
+  | Directa | [1, 17] | [1, 13] |
+  | Circulación estéril | [11, 18] (empieza en la banda del medio campo) | [2, 14, 18] |
+  | Ataque elaborado | [15, 18] | [15, 18] |
+
+  La probabilidad del camino exacto es < 1 %: se reporta como ruta modal, no como jugada.
+
+### Defensa
+- **Presión a ≤ 2 m por tercio** donde recibe el rival:
+
+  | tercio | Almada | liga | percentil |
+  |---|---|---|---|
+  | alto | 0.153 | 0.123 | p99 |
+  | medio | 0.207 | 0.162 | p97 |
+  | bajo | 0.265 | 0.244 | p81 |
+
+- **Control de cámara del bloque** (ancho visible ≥ 70 m):
+  - anchura 38.2 contra 40.1 m (**p1**): el rasgo sobrevive;
+  - el ancho visible difiere solo 0.6 m (69.7 contra 70.3).
+- **Concedido:**
+  - la velocidad de avance del rival sube: 2.76 contra 2.48 m/s (🟢). Es el costo de la presión alta;
+  - remates 11.9 contra 13.3; entradas al área 9.5 contra 11.5.
+
+### Jugadores
+- **Diferencia en diferencias** emparejada por minuto y marcador (489 cambios suyos contra 8,638 de la liga):
+  - xG ⚪;
+  - Directa −2.3 pp [−3.8, −0.9]; Elaborado +1.9 pp [+0.4, +3.5];
+  - field tilt +0.031 [−0.005, +0.067].
+- **Reacomodo de formación tras el cambio:** 37 % contra 52 % (−14.6 pp [−19.7, −9.4]).
+- **Entran más:** J. E. López 46, I. Hernández 38, R. de la Rosa 31, M. Hinestroza 31.
+
+### Balón parado
+- **A favor:**
+  - corners por partido 6.15 contra 4.93 (p90);
+  - cortos 34.5 % contra 20.7 %; cerrados 58.7 % contra 43.5 %;
+  - atacantes en el área 5.15 contra 5.48; encima del portero 0.05 contra 0.13;
+  - corners con remate 0.323 contra 0.366; xG por corner 0.029 contra 0.035 (🟡);
+  - razón de remates por corner 0.88 [0.80, 0.97].
+- **En contra:**
+  - corners con remate 0.327 contra 0.366;
+  - **razón de remates por corner 0.86 [0.76, 0.97]**. Con la jugada de 15 s cortada en la siguiente reanudación reemplaza el 0.74 de §19, que solo contaba el primer remate;
+  - primer palo cubierto 7.5 % contra 15.2 %; segundo 0.5 % contra 2.5 %;
+  - defensores sobrantes 2.21 contra 2.96.
+- **Tiros libres en contra** (línea *táctica*: sin los defensores con x ≥ 118):
+  - altura 14.9 contra 14.2 m (⚪);
+  - defensores en la línea 4.70 contra 5.28 (🟢);
+  - fuera de lugar provocado ⚪.
+- **xDefense:**
+  - **Capa 1:**
+    - 28,216 centros, 31.5 % con remate;
+    - AUC fuera de muestra 0.632, calibración 1.000.
+  - **Capa 2:**
+    - 46,641 remates (14,731 a balón parado, 1,061 goles);
+    - AUC 0.758 → 0.785 con la geometría defensiva (ΔAUC +0.027 [+0.022, +0.031]);
+    - goal_open +0.40, gk_prof +0.27.
+  - **Contracción entre 45 técnicos-club** (puesto 1 = mejor defensa):
+
+    | métrica | τ² | contraído | puesto |
+    |---|---|---|---|
+    | prevención | 3.0e-4 | +0.0099 | 17 de 45 |
+    | supresión | 2.85e-6 ≈ 0 | −0.0021 | 45 de 45 |
+
+    En la supresión no se detecta variación real entre equipos, así que su puesto no significa nada.
+  - **Lectura:** marca al hombre con pocos defensores y concede algo menos de remates (0.86), pero más limpios. En la liga, lo que separa equipos es la capa 1, no la 2.
+- **Rutinas y receta Arsenal:**
+  - la rutina más productiva es cerrado (inswinging) → punto penal (0.045 xG por corner; media 0.035);
+  - receta Arsenal (cerrado al área chica o primer palo, con atacantes a ≤ 2 m del portero): 0.036 contra 0.035 (+0.001 [−0.007, +0.012], p = 0.75), **sin ventaja en la Liga MX**;
+  - Almada la usa en el 1 % de sus corners; la liga, en el 3 %.
+
+### Simulación y proyección en el América
+- **Puntos:**
+  - xPts 262.6 contra 276 reales (p = 0.34); por estilo, 257.1;
+  - Brier 0.628 contra 0.659 (−4.8 %).
+- **Proyección** (llegó el 2026-07-19):
+  - **Plantel que encontró:** ataque 1.11, defensa 0.78.
+  - **Efecto de llegada** (1 llegada propia, Pachuca, contraída hacia 69 llegadas de la liga):
+    - ataque +1 % (liga +5 %);
+    - lo concedido −10 % (liga −2 %).
+  - **Con Almada:** 1.48–0.97 xG por partido; 29.6 puntos en 17 partidos [23, 36]; posición media 5.0; liguilla directa 73 %, play-in 19 %.
+  - **Inercia:** 29.2 puntos, posición 5.3, 70 % / 21 %.
+  - **Primeros 7 partidos:** proyectado 12.8 [9, 17] contra 16 reales (xG real 11.1–8.6).
+- **Validación con las 69 llegadas:**
+  - error 0.30 puntos por partido contra 0.31 de la inercia: **casi no le gana**;
+  - correlación 0.61;
+  - **cobertura del intervalo del 80 %: 67 %**. Los intervalos son demasiado estrechos porque no incluyen la incertidumbre de la fuerza de los rivales ni del efecto del plantel;
+  - se reporta como exploratoria.
+
+### Balón parado por familias (ADR-v2-49, exploratorio; ⏳ pendiente de corrida)
+Agregado después de esta corrida:
+- la cadena completa del xDefense por familia (corners, tiros libres, laterales), para el foco atacando (xO) y
+  defendiendo (xD) y para la liga, con los cuatro términos exactos de 04 §16.6;
+- tiros libres (peligrosos a ≤ 30 m, barrera, arco libre);
+- laterales del último cuarto y octavo, con cuántos intervienen hasta el remate.
+
+Se llena con `reports/historia/guillermo_almada/balon_parado/BALON_PARADO.md` (secciones 5.1–5.4). La
+capa 1 de H24 no cambia, así que H24–H26 deben salir iguales; si no, es un error.
+
+### Blindaje
+- BH global sobre 61 hipótesis: el único cambio de veredicto es H19 (🟢 → 🟡).
+- Las de fases anteriores no cambian.

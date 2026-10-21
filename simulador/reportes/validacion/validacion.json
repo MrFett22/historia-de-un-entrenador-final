@@ -1,0 +1,644 @@
+{
+ "modo": "MODO_REAL_PIPELINE",
+ "calibracion": {
+  "n_partidos": 1701,
+  "dentro_de_muestra": true,
+  "rps_motor": 0.2119077178300809,
+  "rps_base": 0.22562168188923695,
+  "rps_vigente": 0.20376867637045648,
+  "dif_motor_base_ic95": [
+   -0.018473462991198272,
+   -0.00907329449626596
+  ],
+  "dif_motor_vigente_ic95": [
+   0.0049160000296746,
+   0.011456456139324661
+  ],
+  "puntos_reales": 4651,
+  "xpts_motor": 4670.900795126343,
+  "error_xpts": 0.004278820710888587,
+  "goles_reales": 4659.0,
+  "goles_esperados": 4618.681624453191,
+  "empates_reales": 0.2657260435038213,
+  "empates_motor": 0.2540265752188596,
+  "cumple_rps": false,
+  "cumple_xpts": true
+ },
+ "independencia": {
+  "autocorrelacion_lag1": -0.008967545646663076,
+  "autocorrelacion_ic95": [
+   -0.05002634748789878,
+   0.030323960153207066
+  ],
+  "pendiente_descanso_por_dia": -0.014553171361855008,
+  "pendiente_ic95": [
+   -0.029075532659406288,
+   0.0003531487436535675
+  ],
+  "n_pares": 3222,
+  "n_descanso": 3384
+ },
+ "recuperacion": {
+  "n_pares": 15,
+  "fraccion_dentro": 0.9333333333333333,
+  "detalle": [
+   {
+    "tecnico": "Andre Jardine",
+    "club": "América",
+    "partidos": 129,
+    "simulada": [
+     0.3284,
+     0.2636,
+     0.4079
+    ],
+    "observada": [
+     0.3195,
+     0.2638,
+     0.4166
+    ],
+    "rango95": [
+     [
+      0.3108,
+      0.2576,
+      0.4041
+     ],
+     [
+      0.3289,
+      0.2701,
+      0.4287
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Andre Jardine",
+    "club": "Atlético San Luis",
+    "partidos": 54,
+    "simulada": [
+     0.3676,
+     0.2787,
+     0.3537
+    ],
+    "observada": [
+     0.3765,
+     0.2738,
+     0.3497
+    ],
+    "rango95": [
+     [
+      0.3625,
+      0.2662,
+      0.3356
+     ],
+     [
+      0.3908,
+      0.2824,
+      0.3647
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Andres Luciano Lillini",
+    "club": "Pumas UNAM",
+    "partidos": 57,
+    "simulada": [
+     0.3562,
+     0.2829,
+     0.3609
+    ],
+    "observada": [
+     0.3481,
+     0.2781,
+     0.3739
+    ],
+    "rango95": [
+     [
+      0.3343,
+      0.2717,
+      0.3601
+     ],
+     [
+      0.3595,
+      0.2841,
+      0.3891
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Antonio Ricardo Mohamed Matijevich",
+    "club": "Toluca",
+    "partidos": 65,
+    "simulada": [
+     0.3267,
+     0.2694,
+     0.4039
+    ],
+    "observada": [
+     0.3286,
+     0.2716,
+     0.3998
+    ],
+    "rango95": [
+     [
+      0.3146,
+      0.2635,
+      0.3845
+     ],
+     [
+      0.3413,
+      0.2797,
+      0.4166
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Diego Martin Cocca Pera",
+    "club": "Atlas",
+    "partidos": 95,
+    "simulada": [
+     0.3511,
+     0.2961,
+     0.3529
+    ],
+    "observada": [
+     0.3443,
+     0.2938,
+     0.3619
+    ],
+    "rango95": [
+     [
+      0.3357,
+      0.2867,
+      0.3507
+     ],
+     [
+      0.3529,
+      0.3014,
+      0.3735
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Efrain Valdez",
+    "club": "Pumas UNAM",
+    "partidos": 50,
+    "simulada": [
+     0.3437,
+     0.27,
+     0.3863
+    ],
+    "observada": [
+     0.3443,
+     0.2658,
+     0.3899
+    ],
+    "rango95": [
+     [
+      0.3274,
+      0.2574,
+      0.3676
+     ],
+     [
+      0.3627,
+      0.2749,
+      0.4105
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Fernando Ortiz",
+    "club": "América",
+    "partidos": 55,
+    "simulada": [
+     0.3369,
+     0.2589,
+     0.4041
+    ],
+    "observada": [
+     0.3343,
+     0.2493,
+     0.4165
+    ],
+    "rango95": [
+     [
+      0.3234,
+      0.2394,
+      0.4012
+     ],
+     [
+      0.3459,
+      0.259,
+      0.432
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Guido Hernan Pizarro Demestri",
+    "club": "Tigres UANL",
+    "partidos": 52,
+    "simulada": [
+     0.32,
+     0.265,
+     0.415
+    ],
+    "observada": [
+     0.3216,
+     0.2674,
+     0.411
+    ],
+    "rango95": [
+     [
+      0.3071,
+      0.2548,
+      0.3877
+     ],
+     [
+      0.337,
+      0.2811,
+      0.4342
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Jorge Guillermo Almada Alves",
+    "club": "Pachuca",
+    "partidos": 139,
+    "simulada": [
+     0.3473,
+     0.2728,
+     0.38
+    ],
+    "observada": [
+     0.3471,
+     0.2713,
+     0.3816
+    ],
+    "rango95": [
+     [
+      0.34,
+      0.2662,
+      0.3719
+     ],
+     [
+      0.3544,
+      0.2768,
+      0.3899
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Marcos Ignacio Ambriz Espinoza",
+    "club": "Toluca",
+    "partidos": 73,
+    "simulada": [
+     0.3248,
+     0.2923,
+     0.3829
+    ],
+    "observada": [
+     0.3138,
+     0.2918,
+     0.3943
+    ],
+    "rango95": [
+     [
+      0.3019,
+      0.2818,
+      0.3758
+     ],
+     [
+      0.3262,
+      0.3019,
+      0.4124
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Mauro Nestor Gerk Larrea",
+    "club": "Querétaro",
+    "partidos": 86,
+    "simulada": [
+     0.3734,
+     0.2928,
+     0.3338
+    ],
+    "observada": [
+     0.3664,
+     0.2921,
+     0.3416
+    ],
+    "rango95": [
+     [
+      0.3567,
+      0.2863,
+      0.3308
+     ],
+     [
+      0.3761,
+      0.298,
+      0.3521
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Miguel Ernesto Herrera Aguirre",
+    "club": "Tigres UANL",
+    "partidos": 62,
+    "simulada": [
+     0.3323,
+     0.2781,
+     0.3895
+    ],
+    "observada": [
+     0.3211,
+     0.2724,
+     0.4065
+    ],
+    "rango95": [
+     [
+      0.3108,
+      0.2647,
+      0.3921
+     ],
+     [
+      0.332,
+      0.2801,
+      0.4199
+     ]
+    ],
+    "dentro": false
+   },
+   {
+    "tecnico": "Nicolas Ricardo Larcamon",
+    "club": "Puebla",
+    "partidos": 60,
+    "simulada": [
+     0.3674,
+     0.2946,
+     0.338
+    ],
+    "observada": [
+     0.3635,
+     0.2894,
+     0.3471
+    ],
+    "rango95": [
+     [
+      0.3539,
+      0.2811,
+      0.3344
+     ],
+     [
+      0.3726,
+      0.2966,
+      0.3613
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Robert Dante Siboldi Badiola",
+    "club": "Tigres UANL",
+    "partidos": 51,
+    "simulada": [
+     0.3308,
+     0.2728,
+     0.3964
+    ],
+    "observada": [
+     0.3305,
+     0.2766,
+     0.3929
+    ],
+    "rango95": [
+     [
+      0.3182,
+      0.2661,
+      0.3749
+     ],
+     [
+      0.3441,
+      0.286,
+      0.4126
+     ]
+    ],
+    "dentro": true
+   },
+   {
+    "tecnico": "Victor Manuel Vucetich Rojas",
+    "club": "Monterrey",
+    "partidos": 54,
+    "simulada": [
+     0.3463,
+     0.2753,
+     0.3784
+    ],
+    "observada": [
+     0.3509,
+     0.2774,
+     0.3718
+    ],
+    "rango95": [
+     [
+      0.3409,
+      0.2693,
+      0.3586
+     ],
+     [
+      0.3605,
+      0.2854,
+      0.3855
+     ]
+    ],
+    "dentro": true
+   }
+  ]
+ },
+ "sobol": {
+  "N": 1024,
+  "evaluaciones": 11264,
+  "puntos_media": 25.85277317165463,
+  "puntos_sd": 0.1683744092900863,
+  "puntos_rango": [
+   25.36267806760597,
+   26.347843378571618
+  ],
+  "tabla": [
+   {
+    "perilla": "balon_parado",
+    "S1": 0.6039840831160471,
+    "S1_ic": 0.05942276402220072,
+    "ST": 0.6094157711873144,
+    "ST_ic": 0.048092917231383
+   },
+   {
+    "perilla": "rival_elaborada",
+    "S1": 0.1623110074120749,
+    "S1_ic": 0.0350488753916975,
+    "ST": 0.18489438820273293,
+    "ST_ic": 0.017040654822909583
+   },
+   {
+    "perilla": "mezcla_elaborada",
+    "S1": 0.06720388956857355,
+    "S1_ic": 0.02269713790401618,
+    "ST": 0.08753277456025405,
+    "ST_ic": 0.008714184739027934
+   },
+   {
+    "perilla": "rival_directa",
+    "S1": 0.05640791145703526,
+    "S1_ic": 0.02204688870941385,
+    "ST": 0.07797299725784326,
+    "ST_ic": 0.008421980921877145
+   },
+   {
+    "perilla": "mezcla_directa",
+    "S1": 0.03751932663689241,
+    "S1_ic": 0.020680836930793423,
+    "ST": 0.0523380374856279,
+    "ST_ic": 0.005775496611465856
+   },
+   {
+    "perilla": "reaccion_rival",
+    "S1": 0.02284694006563501,
+    "S1_ic": 0.013708280415855829,
+    "ST": 0.028296996671755364,
+    "ST_ic": 0.002573545279292283
+   },
+   {
+    "perilla": "reaccion_marcador",
+    "S1": 0.002063662859725778,
+    "S1_ic": 0.0036825582283558224,
+    "ST": 0.0018178633919593214,
+    "ST_ic": 0.000160657637548336
+   },
+   {
+    "perilla": "cambios_momento",
+    "S1": 0.0,
+    "S1_ic": 0.0,
+    "ST": 0.0,
+    "ST_ic": 0.0
+   },
+   {
+    "perilla": "cambios_tipo",
+    "S1": 0.0,
+    "S1_ic": 0.0,
+    "ST": 0.0,
+    "ST_ic": 0.0
+   }
+  ],
+  "solo_estilo": [
+   "cambios_momento",
+   "cambios_tipo",
+   "reaccion_marcador",
+   "reaccion_rival"
+  ],
+  "umbral_ST": 0.05
+ },
+ "placebo": {
+  "componentes_tecnico": [
+   "int_at[Directa]",
+   "int_at[Ataque elaborado]",
+   "int_co[Directa]",
+   "int_co[Ataque elaborado]",
+   "s_marcador",
+   "s_rival",
+   "l_at",
+   "l_co",
+   "u_at[Directa]",
+   "u_at[Circulación estéril]",
+   "u_at[Ataque elaborado]",
+   "u_co[Directa]",
+   "u_co[Circulación estéril]",
+   "u_co[Ataque elaborado]",
+   "w_at[Directa]",
+   "w_at[Circulación estéril]",
+   "w_at[Ataque elaborado]",
+   "w_co[Directa]",
+   "w_co[Circulación estéril]",
+   "w_co[Ataque elaborado]",
+   "rho[corner]",
+   "rho[tiro_libre_area]",
+   "rho[lateral_largo]",
+   "rho[tiro_libre_directo]",
+   "nu_at[corner]",
+   "nu_at[tiro_libre_area]",
+   "nu_at[lateral_largo]",
+   "nu_co[corner]",
+   "nu_co[tiro_libre_area]",
+   "nu_co[lateral_largo]",
+   "alpha",
+   "gamma"
+  ],
+  "placebos": [
+   {
+    "placebo": "Andre Jardine",
+    "celdas": 9,
+    "media": 0.11412856247250602,
+    "int95": [
+     -0.740728505821572,
+     0.9514895230883621
+    ],
+    "contiene_cero": true,
+    "veredicto": "igual"
+   },
+   {
+    "placebo": "Nicolas Ricardo Larcamon",
+    "celdas": 8,
+    "media": 0.10887145886973147,
+    "int95": [
+     -0.5924875754939917,
+     0.7942119497394032
+    ],
+    "contiene_cero": true,
+    "veredicto": "igual"
+   },
+   {
+    "placebo": "Jorge Guillermo Almada Alves",
+    "celdas": 8,
+    "media": 0.18359052301273646,
+    "int95": [
+     -0.5541028336068685,
+     0.9448056326697675
+    ],
+    "contiene_cero": true,
+    "veredicto": "igual"
+   }
+  ],
+  "todos_contienen_cero": true
+ },
+ "retroprueba": {
+  "n": 35,
+  "mae_simulador": 0.3712869107847463,
+  "mae_inercia": 0.3805651365323885,
+  "rmse_simulador": 0.4578118081621197,
+  "rmse_inercia": 0.5164653906831748,
+  "dm_estadistico": 0.8703059317155943,
+  "dm_p": 0.19511828046275737,
+  "cobertura_conforme80": 0.8,
+  "etiqueta": "descriptivo"
+ },
+ "rendimiento": {
+  "partido_ms": 0.30051001899846597,
+  "torneo_rapido_s": 1.0793032430010499,
+  "torneo_preciso_s": 10.38378008500149,
+  "costo_replica_s": 0.00498823526944187,
+  "costo_torneo_interno_s": 5.235461805262419e-05,
+  "sigma_b2_liguilla": 0.01803003436373788,
+  "sigma_w2_liguilla": 0.22201080402010048,
+  "S_optimo": 34.25190605349132,
+  "arranque_servicio_s": 0.14357927499804646,
+  "replica_s": 0.005511781449968112
+ }
+}

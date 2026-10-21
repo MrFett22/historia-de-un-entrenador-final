@@ -1,0 +1,1820 @@
+{
+ "version": 2,
+ "generado": "2026-10-17 09:32",
+ "dentro_de_muestra": true,
+ "artefactos": "artefactos_E",
+ "n_partidos": 1701,
+ "temporadas": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "torneos": [
+  "Apertura 2021",
+  "Apertura 2022",
+  "Apertura 2023",
+  "Apertura 2024",
+  "Apertura 2025",
+  "Clausura 2022",
+  "Clausura 2023",
+  "Clausura 2024",
+  "Clausura 2025",
+  "Clausura 2026"
+ ],
+ "puntos": [
+  {
+   "equipo": "América",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 24.590092909186573,
+   "reales": 35.0
+  },
+  {
+   "equipo": "América",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 30.17264562276967,
+   "reales": 38.0
+  },
+  {
+   "equipo": "América",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 29.61667523124315,
+   "reales": 40.0
+  },
+  {
+   "equipo": "América",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 29.983644388566145,
+   "reales": 27.0
+  },
+  {
+   "equipo": "América",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 28.35887676553555,
+   "reales": 34.0
+  },
+  {
+   "equipo": "América",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 27.696816205921213,
+   "reales": 26.0
+  },
+  {
+   "equipo": "América",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 30.41231576680076,
+   "reales": 34.0
+  },
+  {
+   "equipo": "América",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 29.56239598170194,
+   "reales": 35.0
+  },
+  {
+   "equipo": "América",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 29.503133376020486,
+   "reales": 34.0
+  },
+  {
+   "equipo": "América",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 27.20386334294115,
+   "reales": 25.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 23.969146572551598,
+   "reales": 29.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 22.26104812313484,
+   "reales": 13.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 23.456494406062134,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 21.813119768495774,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 19.88754066623263,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 22.914705941275983,
+   "reales": 27.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 23.503644562895126,
+   "reales": 21.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 22.372728465020533,
+   "reales": 14.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 20.82037447780123,
+   "reales": 18.0
+  },
+  {
+   "equipo": "Atlas",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 20.041449881994676,
+   "reales": 26.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 22.284337071984424,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 19.657145335303465,
+   "reales": 18.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 20.581342731824584,
+   "reales": 23.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 19.168007301292413,
+   "reales": 30.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 20.73908816257711,
+   "reales": 16.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 21.660651108462154,
+   "reales": 23.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 19.430222245123126,
+   "reales": 19.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 20.29859645982813,
+   "reales": 16.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 18.7824990312188,
+   "reales": 18.0
+  },
+  {
+   "equipo": "Atlético San Luis",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 20.626411100636354,
+   "reales": 18.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 22.76853854852282,
+   "reales": 23.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 23.6788215493368,
+   "reales": 24.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 26.829650989446925,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 31.686049831865347,
+   "reales": 42.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 28.697889085293184,
+   "reales": 35.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 23.155149782296434,
+   "reales": 25.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 25.295074917337253,
+   "reales": 24.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 30.857242585089,
+   "reales": 33.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 28.886430097128855,
+   "reales": 33.0
+  },
+  {
+   "equipo": "Cruz Azul",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 28.659976800297468,
+   "reales": 33.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 24.882350416691914,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 25.09246293367734,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 24.69510581368732,
+   "reales": 27.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 27.95365084848127,
+   "reales": 25.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 31.644585916036036,
+   "reales": 29.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 24.818993954023586,
+   "reales": 26.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 23.917264722494494,
+   "reales": 34.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 25.88233700017908,
+   "reales": 31.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 28.596787755531313,
+   "reales": 21.0
+  },
+  {
+   "equipo": "Guadalajara",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 32.31166648395194,
+   "reales": 36.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 19.265231363072825,
+   "reales": 16.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 20.981083147250835,
+   "reales": 19.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 18.95503657043093,
+   "reales": 18.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 19.43032614107406,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 19.690332620610004,
+   "reales": 23.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 18.699425632358473,
+   "reales": 11.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 20.006675964636095,
+   "reales": 15.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 19.46775364077728,
+   "reales": 16.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 18.946959474040202,
+   "reales": 24.0
+  },
+  {
+   "equipo": "Juárez",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 21.461778493563592,
+   "reales": 19.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 22.678716927228624,
+   "reales": 29.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 22.61995122900782,
+   "reales": 22.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 24.01774078069178,
+   "reales": 23.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 20.91957918395155,
+   "reales": 18.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 19.085778188339823,
+   "reales": 13.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 22.047042475749127,
+   "reales": 21.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 24.05107434496129,
+   "reales": 30.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 22.432485305139373,
+   "reales": 24.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 20.099701139757006,
+   "reales": 30.0
+  },
+  {
+   "equipo": "León",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 20.155102349768107,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 19.242659120060694,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 17.97847266217617,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 19.69489526634891,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 20.918099172795472,
+   "reales": 14.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 18.180906912636566,
+   "reales": 14.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 19.301705383063922,
+   "reales": 21.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 17.57279790745478,
+   "reales": 7.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 20.431837256327714,
+   "reales": 16.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 20.47002650619139,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Mazatlán",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 18.227754339335466,
+   "reales": 15.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 24.459481923240748,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 28.958386088374137,
+   "reales": 35.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 26.39771895826427,
+   "reales": 33.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 26.263706035493783,
+   "reales": 31.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 24.92581508563253,
+   "reales": 31.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 27.353725074249173,
+   "reales": 26.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 29.84517902877966,
+   "reales": 40.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 25.98023761233597,
+   "reales": 32.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 26.632107982703506,
+   "reales": 28.0
+  },
+  {
+   "equipo": "Monterrey",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 24.09597959025348,
+   "reales": 18.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 23.256730656989745,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 21.136456609682426,
+   "reales": 19.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 20.437922331676404,
+   "reales": 15.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 21.56172690644746,
+   "reales": 15.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 24.97648084597231,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 22.024957976937674,
+   "reales": 23.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 19.80185405023957,
+   "reales": 14.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 21.302457176025463,
+   "reales": 27.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 24.115068242786315,
+   "reales": 31.0
+  },
+  {
+   "equipo": "Necaxa",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 21.113925626934915,
+   "reales": 18.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 25.892531946215925,
+   "reales": 18.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 28.396045573897425,
+   "reales": 32.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 27.154296610601946,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 27.203735113092776,
+   "reales": 13.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 26.231060837135207,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 27.89184837344552,
+   "reales": 38.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 28.16466419146212,
+   "reales": 31.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 27.610218738578855,
+   "reales": 29.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 27.383625178913253,
+   "reales": 28.0
+  },
+  {
+   "equipo": "Pachuca",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 25.38605621209904,
+   "reales": 31.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 23.941287558322664,
+   "reales": 24.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 21.74347194611506,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 19.50704689065018,
+   "reales": 25.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 19.574773860277745,
+   "reales": 14.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 19.91567572203892,
+   "reales": 12.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 23.159864392691873,
+   "reales": 26.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 19.964262805620862,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 19.424471320149475,
+   "reales": 5.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 19.467347435530254,
+   "reales": 9.0
+  },
+  {
+   "equipo": "Puebla",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 20.278722913726035,
+   "reales": 13.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 23.22136140151453,
+   "reales": 21.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 24.247291766635936,
+   "reales": 14.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 26.129513116662352,
+   "reales": 28.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 25.643879464727462,
+   "reales": 31.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 22.639841917305148,
+   "reales": 21.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 23.787337729770762,
+   "reales": 22.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 24.750454979814442,
+   "reales": 18.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 24.689519544142353,
+   "reales": 27.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 23.918014550655407,
+   "reales": 21.0
+  },
+  {
+   "equipo": "Pumas UNAM",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 22.037055994737997,
+   "reales": 36.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 21.946334648381818,
+   "reales": 15.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 20.690410563561823,
+   "reales": 9.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 18.96226013632233,
+   "reales": 19.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 17.714271057462984,
+   "reales": 12.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 17.803664157466123,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 22.86186184874451,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 19.586294399701323,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 18.13476561502754,
+   "reales": 24.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 17.240020215310114,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Querétaro",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 21.86758150231036,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 23.451896237861934,
+   "reales": 24.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 22.70486589498089,
+   "reales": 33.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 22.7103410194529,
+   "reales": 23.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 15.809106128537412,
+   "reales": 10.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 17.78635504071168,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 21.920310842168757,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 23.41240753610611,
+   "reales": 19.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 18.54841244246538,
+   "reales": 15.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 18.36632218173304,
+   "reales": 7.0
+  },
+  {
+   "equipo": "Santos Laguna",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 18.693002573523355,
+   "reales": 12.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 25.83887268163205,
+   "reales": 28.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 26.83194151130698,
+   "reales": 30.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 24.82167230087058,
+   "reales": 30.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 27.310964865368987,
+   "reales": 34.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 27.787872513166153,
+   "reales": 36.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 26.591618179845646,
+   "reales": 33.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 25.651211425665895,
+   "reales": 25.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 24.360844352715546,
+   "reales": 31.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 26.900334928589203,
+   "reales": 33.0
+  },
+  {
+   "equipo": "Tigres UANL",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 27.269526778924583,
+   "reales": 25.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 22.048061111569687,
+   "reales": 15.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 21.808334188829924,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 22.007889608429345,
+   "reales": 20.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 20.41476190959127,
+   "reales": 29.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 20.641427272345837,
+   "reales": 24.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 22.00557622169643,
+   "reales": 17.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 22.20311022182598,
+   "reales": 16.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 21.852976207826792,
+   "reales": 14.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 20.06845722348006,
+   "reales": 19.0
+  },
+  {
+   "equipo": "Tijuana",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 20.109197209744107,
+   "reales": 23.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Apertura 2021",
+   "partidos": 17,
+   "predichos": 22.93701388500659,
+   "reales": 24.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Apertura 2022",
+   "partidos": 17,
+   "predichos": 21.059792470070658,
+   "reales": 27.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Apertura 2023",
+   "partidos": 17,
+   "predichos": 24.85674459841376,
+   "reales": 21.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Apertura 2024",
+   "partidos": 17,
+   "predichos": 28.534505126490128,
+   "reales": 35.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Apertura 2025",
+   "partidos": 17,
+   "predichos": 31.303912251090427,
+   "reales": 37.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Clausura 2022",
+   "partidos": 17,
+   "predichos": 20.327541709719718,
+   "reales": 19.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Clausura 2023",
+   "partidos": 17,
+   "predichos": 23.229826454184973,
+   "reales": 32.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Clausura 2024",
+   "partidos": 17,
+   "predichos": 28.17201281208106,
+   "reales": 32.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Clausura 2025",
+   "partidos": 17,
+   "predichos": 30.64372169332788,
+   "reales": 37.0
+  },
+  {
+   "equipo": "Toluca",
+   "torneo": "Clausura 2026",
+   "partidos": 17,
+   "predichos": 31.212452422212664,
+   "reales": 30.0
+  }
+ ],
+ "goles": {
+  "bins": [
+   "0",
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6+"
+  ],
+  "simulado": [
+   0.26460975999279557,
+   0.344994599853506,
+   0.231085390826298,
+   0.10639312509837782,
+   0.03799225387563063,
+   0.011240212661192203,
+   0.003684657692199856
+  ],
+  "real": [
+   0.2586713697824809,
+   0.345679012345679,
+   0.23221634332745444,
+   0.1111111111111111,
+   0.03850676072898295,
+   0.01146384479717813,
+   0.0023515579071134627
+  ],
+  "media_simulada": 1.3576371610905458,
+  "media_real": 1.3694885361552027
+ },
+ "calibracion": {
+  "ganar": [
+   {
+    "desde": 0.1527573257471737,
+    "hasta": 0.3030402547869489,
+    "n": 341,
+    "predicha": 0.25127179015682666,
+    "observada": 0.23460410557184752,
+    "ic95": [
+     0.1927373547824688,
+     0.2823839762866366
+    ]
+   },
+   {
+    "desde": 0.3030402547869489,
+    "hasta": 0.3595713886713003,
+    "n": 340,
+    "predicha": 0.3327818972309023,
+    "observada": 0.3558823529411765,
+    "ic95": [
+     0.3068596669555194,
+     0.40812537266737675
+    ]
+   },
+   {
+    "desde": 0.3595713886713003,
+    "hasta": 0.40410539120885824,
+    "n": 340,
+    "predicha": 0.3830569440267278,
+    "observada": 0.4235294117647059,
+    "ic95": [
+     0.3721483376658607,
+     0.4766192343789413
+    ]
+   },
+   {
+    "desde": 0.40410539120885824,
+    "hasta": 0.4718101399743616,
+    "n": 340,
+    "predicha": 0.4352750484868763,
+    "observada": 0.55,
+    "ic95": [
+     0.4968530904975825,
+     0.6020296508577395
+    ]
+   },
+   {
+    "desde": 0.4718101399743616,
+    "hasta": 0.7120796254031315,
+    "n": 340,
+    "predicha": 0.5343934925669243,
+    "observada": 0.6823529411764706,
+    "ic95": [
+     0.6310633798252304,
+     0.7295677945294724
+    ]
+   }
+  ],
+  "empatar": [
+   {
+    "desde": 0.16986501036620572,
+    "hasta": 0.23865355907975971,
+    "n": 341,
+    "predicha": 0.2257409346354634,
+    "observada": 0.1935483870967742,
+    "ic95": [
+     0.1551233638409874,
+     0.23880126706201266
+    ]
+   },
+   {
+    "desde": 0.23865355907975971,
+    "hasta": 0.2509791194792556,
+    "n": 340,
+    "predicha": 0.2455751483600265,
+    "observada": 0.2411764705882353,
+    "ic95": [
+     0.19875747836436783,
+     0.28937891932573134
+    ]
+   },
+   {
+    "desde": 0.2509791194792556,
+    "hasta": 0.2591459229723285,
+    "n": 340,
+    "predicha": 0.2551155308034928,
+    "observada": 0.31176470588235294,
+    "ic95": [
+     0.26486067356171317,
+     0.3628748883947226
+    ]
+   },
+   {
+    "desde": 0.2591459229723285,
+    "hasta": 0.26980782356341426,
+    "n": 340,
+    "predicha": 0.2642764800400124,
+    "observada": 0.2735294117647059,
+    "ic95": [
+     0.22887367114746074,
+     0.32324567683137617
+    ]
+   },
+   {
+    "desde": 0.26980782356341426,
+    "hasta": 0.30761213776869034,
+    "n": 340,
+    "predicha": 0.2795079753158421,
+    "observada": 0.3088235294117647,
+    "ic95": [
+     0.26207830104671415,
+     0.3598406290652909
+    ]
+   }
+  ],
+  "perder": [
+   {
+    "desde": 0.11805535678131553,
+    "hasta": 0.2735262331180134,
+    "n": 341,
+    "predicha": 0.22751263868861274,
+    "observada": 0.12023460410557185,
+    "ic95": [
+     0.08987786646494508,
+     0.15905265699858134
+    ]
+   },
+   {
+    "desde": 0.2735262331180134,
+    "hasta": 0.3282901141873791,
+    "n": 340,
+    "predicha": 0.30442599573005663,
+    "observada": 0.19705882352941176,
+    "ic95": [
+     0.1582622246350808,
+     0.24262469538855794
+    ]
+   },
+   {
+    "desde": 0.3282901141873791,
+    "hasta": 0.3760205856055323,
+    "n": 340,
+    "predicha": 0.3524492641660582,
+    "observada": 0.3058823529411765,
+    "ic95": [
+     0.2592982140963869,
+     0.35680408417118753
+    ]
+   },
+   {
+    "desde": 0.3760205856055323,
+    "hasta": 0.43784563266260196,
+    "n": 340,
+    "predicha": 0.4045814958776289,
+    "observada": 0.3235294117647059,
+    "ic95": [
+     0.2760126750239859,
+     0.3749894143101727
+    ]
+   },
+   {
+    "desde": 0.43784563266260196,
+    "hasta": 0.6585111604629637,
+    "n": 340,
+    "predicha": 0.5049044065451185,
+    "observada": 0.47941176470588237,
+    "ic95": [
+     0.4268358822673593,
+     0.5324476948216258
+    ]
+   }
+  ]
+ },
+ "calibracion_info": {
+  "ganar": {
+   "casi_constante": false,
+   "rango_p5_p95": [
+    0.22666774009924465,
+    0.5642860406656369
+   ],
+   "n_partidos": 1701
+  },
+  "empatar": {
+   "casi_constante": false,
+   "rango_p5_p95": [
+    0.220343364445586,
+    0.283740975717651
+   ],
+   "n_partidos": 1701
+  },
+  "perder": {
+   "casi_constante": false,
+   "rango_p5_p95": [
+    0.20505944952940575,
+    0.5360903188725076
+   ],
+   "n_partidos": 1701
+  }
+ },
+ "retroprueba": {
+  "n": 35,
+  "mae_simulador": 0.3712869107847463,
+  "mae_inercia": 0.3805651365323885,
+  "rmse_simulador": 0.4578118081621197,
+  "rmse_inercia": 0.5164653906831748,
+  "dm_p": 0.19511828046275737,
+  "etiqueta": "descriptivo",
+  "llegadas": [
+   {
+    "tecnico": "Antonio Ricardo Mohamed Matijevich",
+    "club": "Toluca",
+    "corte": 7,
+    "real": 2.0869565217391304,
+    "simulador": 1.4851641581858095,
+    "inercia": 2.0588235294117645
+   },
+   {
+    "tecnico": "Nicolas Ricardo Larcamon",
+    "club": "Necaxa",
+    "corte": 7,
+    "real": 1.736842105263158,
+    "simulador": 1.2340619434571882,
+    "inercia": 0.8823529411764706
+   },
+   {
+    "tecnico": "Martin Varini Di Zioli",
+    "club": "Juárez",
+    "corte": 7,
+    "real": 1.3888888888888888,
+    "simulador": 1.0974577013240978,
+    "inercia": 1.0
+   },
+   {
+    "tecnico": "Vicente Sanchez",
+    "club": "Cruz Azul",
+    "corte": 7,
+    "real": 2.2222222222222223,
+    "simulador": 1.6713277936803834,
+    "inercia": 2.4705882352941178
+   },
+   {
+    "tecnico": "Benjamin Mora Mendivil",
+    "club": "Querétaro",
+    "corte": 7,
+    "real": 1.1764705882352942,
+    "simulador": 1.1377946059843926,
+    "inercia": 0.7058823529411765
+   },
+   {
+    "tecnico": "Pablo Adrian Guede Barriero",
+    "club": "Puebla",
+    "corte": 7,
+    "real": 0.5294117647058824,
+    "simulador": 1.107302753321066,
+    "inercia": 0.8235294117647058
+   },
+   {
+    "tecnico": "Gonzalo Pineda Reyes",
+    "club": "Atlas",
+    "corte": 7,
+    "real": 1.0588235294117647,
+    "simulador": 1.354922219893499,
+    "inercia": 1.2941176470588236
+   },
+   {
+    "tecnico": "Fernando Ortiz",
+    "club": "Santos Laguna",
+    "corte": 7,
+    "real": 0.4117647058823529,
+    "simulador": 1.1907650968687336,
+    "inercia": 0.5882352941176471
+   },
+   {
+    "tecnico": "Guido Hernan Pizarro Demestri",
+    "club": "Tigres UANL",
+    "corte": 7,
+    "real": 1.5454545454545454,
+    "simulador": 1.4548565705924306,
+    "inercia": 2.0
+   },
+   {
+    "tecnico": "Efrain Valdez",
+    "club": "Pumas UNAM",
+    "corte": 7,
+    "real": 1.2222222222222223,
+    "simulador": 1.595704580054914,
+    "inercia": 1.8235294117647056
+   },
+   {
+    "tecnico": "Oscar Garcia",
+    "club": "Guadalajara",
+    "corte": 7,
+    "real": 1.375,
+    "simulador": 1.5870772207997437,
+    "inercia": 1.4705882352941178
+   },
+   {
+    "tecnico": "Gerardo Espinoza Ahumada",
+    "club": "Guadalajara",
+    "corte": 7,
+    "real": 1.0,
+    "simulador": 1.41178329436761,
+    "inercia": 1.4705882352941178
+   },
+   {
+    "tecnico": "Cirilo Saucedo Najera",
+    "club": "Tijuana",
+    "corte": 7,
+    "real": 2.0,
+    "simulador": 1.2791515211037792,
+    "inercia": 1.7058823529411764
+   },
+   {
+    "tecnico": "Nicolas Ricardo Larcamon",
+    "club": "Cruz Azul",
+    "corte": 8,
+    "real": 1.9523809523809523,
+    "simulador": 1.7131011616150371,
+    "inercia": 1.9411764705882355
+   },
+   {
+    "tecnico": "Domenec Torrent",
+    "club": "Monterrey",
+    "corte": 8,
+    "real": 1.761904761904762,
+    "simulador": 1.495518864633034,
+    "inercia": 1.6470588235294117
+   },
+   {
+    "tecnico": "Washington Sebastian Abreu Gallo",
+    "club": "Tijuana",
+    "corte": 8,
+    "real": 1.5,
+    "simulador": 1.184316428413717,
+    "inercia": 1.1176470588235294
+   },
+   {
+    "tecnico": "Gabriel Alejandro Milito",
+    "club": "Guadalajara",
+    "corte": 8,
+    "real": 1.5789473684210529,
+    "simulador": 1.5600016968499026,
+    "inercia": 1.2352941176470589
+   },
+   {
+    "tecnico": "Francisco",
+    "club": "Santos Laguna",
+    "corte": 8,
+    "real": 1.1764705882352942,
+    "simulador": 1.0788047415979474,
+    "inercia": 0.4117647058823529
+   },
+   {
+    "tecnico": "Jaime Arturo Lozano Espin",
+    "club": "Pachuca",
+    "corte": 8,
+    "real": 1.2941176470588236,
+    "simulador": 1.4976345943120903,
+    "inercia": 1.6470588235294117
+   },
+   {
+    "tecnico": "Fernando Ruben Gago",
+    "club": "Necaxa",
+    "corte": 8,
+    "real": 1.0,
+    "simulador": 1.317713575624298,
+    "inercia": 1.8235294117647056
+   },
+   {
+    "tecnico": "Guillermo Abascal",
+    "club": "Atlético San Luis",
+    "corte": 8,
+    "real": 0.9411764705882352,
+    "simulador": 1.1016808563465317,
+    "inercia": 1.0588235294117647
+   },
+   {
+    "tecnico": "Robert Dante Siboldi Badiola",
+    "club": "Mazatlán",
+    "corte": 8,
+    "real": 0.8235294117647058,
+    "simulador": 1.17210210472257,
+    "inercia": 1.0
+   },
+   {
+    "tecnico": "Diego Martin Cocca Pera",
+    "club": "Atlas",
+    "corte": 8,
+    "real": 1.0,
+    "simulador": 1.3829769826740377,
+    "inercia": 1.0588235294117647
+   },
+   {
+    "tecnico": "Rolando Hernan Cristante Mandarino",
+    "club": "Puebla",
+    "corte": 8,
+    "real": 0.75,
+    "simulador": 1.1370710035901357,
+    "inercia": 0.5294117647058824
+   },
+   {
+    "tecnico": "Marcos Ignacio Ambriz Espinoza",
+    "club": "León",
+    "corte": 8,
+    "real": 0.2,
+    "simulador": 1.257791130570595,
+    "inercia": 1.7647058823529411
+   },
+   {
+    "tecnico": "Albert Espigares",
+    "club": "Puebla",
+    "corte": 9,
+    "real": 0.7647058823529411,
+    "simulador": 1.2610955660763892,
+    "inercia": 0.7058823529411765
+   },
+   {
+    "tecnico": "Pedro Caixinha",
+    "club": "Juárez",
+    "corte": 9,
+    "real": 1.1176470588235294,
+    "simulador": 1.2101587444652298,
+    "inercia": 1.3529411764705883
+   },
+   {
+    "tecnico": "Martin Varini Di Zioli",
+    "club": "Necaxa",
+    "corte": 9,
+    "real": 1.0588235294117647,
+    "simulador": 1.356515625642098,
+    "inercia": 1.0
+   },
+   {
+    "tecnico": "Esteban Gonzalez",
+    "club": "Querétaro",
+    "corte": 9,
+    "real": 1.1764705882352942,
+    "simulador": 1.1586706429559224,
+    "inercia": 1.1764705882352942
+   },
+   {
+    "tecnico": "Sergio Rodriguez",
+    "club": "Mazatlán",
+    "corte": 9,
+    "real": 1.0714285714285714,
+    "simulador": 1.1989928065652973,
+    "inercia": 0.8235294117647058
+   },
+   {
+    "tecnico": "Roberto Jaramillo",
+    "club": "Santos Laguna",
+    "corte": 9,
+    "real": 1.0,
+    "simulador": 1.108803677563725,
+    "inercia": 1.1764705882352942
+   },
+   {
+    "tecnico": "Nicolas Gabriel Sanchez",
+    "club": "Monterrey",
+    "corte": 9,
+    "real": 0.8888888888888888,
+    "simulador": 1.5392659288125048,
+    "inercia": 1.8235294117647056
+   },
+   {
+    "tecnico": "Joel Huiqui",
+    "club": "Cruz Azul",
+    "corte": 9,
+    "real": 2.4285714285714284,
+    "simulador": 1.4832862544241563,
+    "inercia": 2.0588235294117645
+   },
+   {
+    "tecnico": "Javier Marcelo Gandolfi",
+    "club": "León",
+    "corte": 9,
+    "real": 2.0,
+    "simulador": 1.1223751237365676,
+    "inercia": 0.7647058823529411
+   },
+   {
+    "tecnico": "Raul Chabrand Manrique",
+    "club": "Atlético San Luis",
+    "corte": 9,
+    "real": 1.4,
+    "simulador": 1.2624675532629233,
+    "inercia": 0.9411764705882352
+   }
+  ]
+ },
+ "rps": {
+  "motor": 0.2119077178300809,
+  "base": 0.22562168188923695,
+  "vigente": 0.20376867637045648
+ },
+ "reporte": "VALIDACION.md"
+}
