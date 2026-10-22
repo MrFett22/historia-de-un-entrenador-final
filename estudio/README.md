@@ -1,12 +1,15 @@
-# dtcoach — La historia de Guillermo Almada a través de los datos
+# `estudio/` — La historia de Guillermo Almada a través de los datos
 
-Proyecto para el **Hackathon ISAC 2026 — "La Historia de un Entrenador a través de los Datos"**.
+Esta carpeta es el **estudio completo de la liga**, el núcleo del repositorio
+[Historia de un entrenador](../). Aquí vive el paquete `dtcoach`, con el que respondemos, con
+datos, **quién es un entrenador**: cómo juega, qué decide y si su huella es suya o de sus
+jugadores. Lo hacemos para **Guillermo Almada** (Santos Laguna → Pachuca → América, 168
+partidos) con los eventos y el tracking 360 de StatsBomb de **toda la Liga MX** (1,789 partidos).
+Toda comparación se hace **contra la liga completa** y contra los otros 44 técnicos, no contra
+una opinión.
 
-El reto pide contar, con datos, **quién es un entrenador**: cómo juega, qué decide y si su
-huella es suya o de sus jugadores. Este repositorio lo hace para **Guillermo Almada**
-(Santos Laguna → Pachuca → América, 166 partidos) con los eventos y el tracking 360 de
-StatsBomb de **toda la Liga MX** (1,767 partidos, 5.7 millones de eventos). Toda comparación
-se hace **contra la liga completa** y contra los otros 44 técnicos, no contra una opinión.
+Para instalar y correr todo el proyecto a la vez, parte del [README principal](../README.md).
+Esta página documenta el estudio por dentro.
 
 | Si buscas… | Abre |
 |---|---|
@@ -15,20 +18,20 @@ se hace **contra la liga completa** y contra los otros 44 técnicos, no contra u
 | La matemática del modelo, con proposiciones y demostraciones | [`docs/04_MODELO_MATEMATICO.md`](docs/04_MODELO_MATEMATICO.md) |
 | Qué hace cada archivo y cómo fluyen los datos | [`docs/01_ARQUITECTURA.md`](docs/01_ARQUITECTURA.md) |
 | Las hipótesis, escritas **antes** de ver los resultados | [`docs/11_HIPOTESIS.md`](docs/11_HIPOTESIS.md) |
-| Un simulador para probar técnicos (la app y sus pruebas) | [Sección 9. Simulador](#9-simulador) |
+| El simulador (la app y sus pruebas) | [`../simulador/`](../simulador/) |
 
 ---
 
 ## 1. La pregunta y cómo se responde
 
-El proyecto contesta cuatro preguntas, en este orden:
+El estudio contesta cuatro preguntas, en este orden:
 
 1. **¿Almada tiene un estilo propio?** ¿Se distinguen sus partidos de los del resto de la liga?
 2. **¿Cómo es ese estilo?** Ataque, defensa, transiciones, presión, bloque, balón parado, red de pases.
 3. **¿Cambia con el partido?** Marcador, minuto, localía, fuerza del rival, decisiones desde la banca.
 4. **¿Es suyo o del plantel?** ¿Su estilo se mantiene cuando cambia de club?
 
-Para eso el proyecto tiene tres capas, cada una construida sobre la anterior.
+Para eso hay tres capas, cada una construida sobre la anterior.
 
 **Capa 1 — Un idioma común para toda la liga (cadenas de Markov).** Cada jugada se modela
 como un recorrido del balón por una malla de 5×4 zonas de la cancha que termina en remate,
@@ -54,7 +57,7 @@ logit multinomial fraccional, con errores agrupados por partido y bootstrap, y s
 tasa de falsos positivos con Benjamini-Hochberg. Son las hipótesis H1–H17.
 
 **Capa 3 — La historia, sección por sección.** Las métricas que pide el reto, todas medidas
-como "Almada contra la liga", con su percentil entre los 45 técnicos y su fiabilidad entre
+como "Almada contra la liga", con su percentil entre los técnicos y su fiabilidad entre
 mitades de la muestra, organizadas como el reto:
 
 | sección | qué contesta | cómo |
@@ -81,46 +84,61 @@ local, envolvente convexa, algoritmo húngaro, visibilidad del arco).
 
 | | resultado | evidencia |
 |---|---|---|
-| **Se le reconoce** | un clasificador distingue sus partidos con AUC 0.882 (4.º de 45 técnicos), y de los de Pachuca con otros técnicos con 0.857 | 🟢 contra permutación |
-| **Presiona encima** | presión a ≤2 m del poseedor en el percentil 94; PPDA 8.5 contra 10.3 de la liga | 🟢 |
+| **Se le reconoce** | un clasificador distingue sus partidos con AUC 0.882 (4.º de 45 técnicos), y de los de Pachuca con otros técnicos con 0.848 | 🟢 contra permutación |
+| **Presiona encima** | presión a ≤2 m del poseedor en el percentil 94; PPDA 8.50 contra 10.29 de la liga | 🟢 |
 | **Bloque estrecho** | anchura del bloque en el percentil 1 y área en el percentil 3 | 🟢 |
-| **Ataque vertical** | saca largo (31.5 % en corto contra 47.1 %), conduce hacia adelante (percentil 99), remata 16.1 contra 13.3 por partido | 🟢 |
+| **Ataque vertical** | saca largo (31.5 % en corto contra 47.2 %), conduce hacia adelante (percentil 99), remata 16.2 contra 13.3 por partido | 🟢 |
 | **Su rival sufre** | le rematan 11.9 veces por partido contra 13.3; el rival rinde menos en *Directa* y *Ataque elaborado* (H8) | 🟢 |
-| **Ataque** | vertical (28 cm de cada metro hacia el arco, p88), entra al área conduciendo (47 % contra 37 %) y casi sin centros; remata de más lejos | 🟢 (H18, H20, H21) |
+| **Ataque** | vertical (28 cm de cada metro hacia el arco), entra al área conduciendo (47 % contra 37 %) y casi sin centros; remata de más lejos | 🟢 (H18, H20, H21) |
 | **Balón parado** | marca al hombre, pegado y con menos gente en el área (H26); le rematan 15 % menos por córner, pero esos remates llegan algo más limpios (xDefense, H25). La "receta Arsenal" no da ventaja en la Liga MX | 🟢 / ⚪ |
-| **Banca** | sus cambios no mueven el xG (H23 ⚪), pero su equipo juega menos Directa tras ellos | ⚪ |
-| **En el América** | proyección de 29.6 puntos en 17 partidos (conforme 80 %: 21–38) y liguilla directa en 73 % de los torneos; la receta no le gana a la inercia (p = 0.32) | 🔎 exploratorio |
+| **Banca** | sus cambios no mueven el xG (H23 ⚪), pero reacomoda menos la formación (H16) | 🟢 / ⚪ |
+| **En el América** | proyección del estudio (un modelo distinto al del simulador): 29.5 puntos en 17 partidos (conforme 80 %: 21–38) y liguilla directa en 72 % de los torneos; no le gana a la inercia (Diebold-Mariano p = 0.27) | 🔎 exploratorio |
 | **No se altera** | su mezcla reacciona menos que la de la liga al marcador y al rival (H3, H6) | 🟢 |
 | **Banca conservadora** | cambios del mismo puesto y pocos reacomodos de formación (H15, H16) | 🟢 |
-| **Viaja con él** | ningún rasgo suyo salta al cambiar de club | 🔎 descriptivo |
-| **Puntos** | 276 reales contra 263 esperados por xG y 257 por estilo | dentro del azar |
+| **Viaja con él** | H1 y H3 se sostienen en Pachuca y Santos Laguna; en América (9 partidos) nada es demostrable por sí solo | 🔎 descriptivo |
+| **Puntos** | 280 reales contra 266 esperados por xG y 260 por estilo | dentro del azar |
 
 **En una frase:** Almada impone la misma idea en cada club (aprieta encima, defiende
-estrecho, sale largo y remata mucho). Es el segundo técnico más reconocible de la Liga MX y
-su estilo no cambia ni con el marcador ni con el club.
+estrecho, sale largo y remata mucho). Es uno de los técnicos más reconocibles de la Liga MX y
+su estilo cambia poco con el marcador y con el rival.
 
 <p align="center">
   <img src="docs/figuras/ofensiva/percentiles.png" width="85%" alt="Percentiles de Almada frente a los técnicos de la liga"><br>
-  <em>Dónde queda Almada contra los 45 técnicos en cada rasgo.</em>
+  <em>Dónde queda Almada contra los técnicos de la liga en cada rasgo.</em>
 </p>
 <p align="center">
-  <img src="docs/figuras/identidad/familias.png" width="49%" alt="Mezcla de familias de Almada contra la liga">
-  <img src="docs/figuras/identidad/evolucion.png" width="49%" alt="Evolución de sus rasgos a través de sus clubes">
+  <img src="docs/figuras/identidad/contexto.png" width="49%" alt="Cuánto cambia Almada con el marcador y el rival">
+  <img src="docs/figuras/identidad/evolucion.png" width="49%" alt="La receta de Almada partido a partido">
 </p>
 
 **Lo que no se afirma:**
 
 - Nada de esto es causal.
-- En el América solo hay 7 partidos, así que todo lo de ese club es exploratorio.
+- En el América solo hay 9 partidos, así que todo lo de ese club es exploratorio.
 - El 360 solo ve a los jugadores que están en cámara.
 - xG y OBV son modelos del proveedor; por eso la eficiencia se revisa también con la tasa de
   remate, que no depende de ningún modelo.
 
 ---
 
-## 3. Requisitos
+## 3. Instalación
 
-**Software**
+La forma recomendada es instalar todo el proyecto desde la raíz del repositorio, como indica el
+[README principal](../README.md). Para trabajar solo con el estudio:
+
+```bash
+# desde la raíz del repositorio, con el entorno ya creado:
+.venv/Scripts/python -m pip install -e "./estudio[dev]"   # Windows
+# .venv/bin/python -m pip install -e "./estudio[dev]"      # macOS / Linux
+
+cd estudio
+.venv/Scripts/python -m pytest -q    # 129 pruebas; si alguna falla, no sigas
+```
+
+El paquete instala el comando `dtcoach`. El análisis no usa GPU, redes neuronales ni servicios
+externos; la única conexión es la descarga del 360.
+
+**Requisitos de software**
 
 | qué | versión | para qué |
 |---|---|---|
@@ -135,8 +153,7 @@ su estilo no cambia ni con el marcador ni con el club.
 | `requests` | cualquiera | **solo** el descargador del 360, en un entorno aparte |
 
 Las dependencias del paquete están declaradas en `pyproject.toml`; `requests` se instala
-aparte, solo en el entorno de descarga. El análisis no usa GPU, redes neuronales ni servicios
-externos; la única conexión es la descarga del 360.
+aparte, solo en el entorno de descarga.
 
 **Datos** (licenciados, no están en el repo)
 
@@ -149,32 +166,20 @@ externos; la única conexión es la descarga del 360.
 ⚠️ `data/raw`, `data/interim`, `data/processed` y `reports/` están en `.gitignore`: los datos de
 StatsBomb **nunca** se suben. Lo único publicado son las eras y figuras agregadas (`docs/figuras/`).
 
-## 4. Instalación
+Para descargar el 360 se usa un entorno aparte con credenciales en variables de entorno. Escribe
+cada línea por separado (no se ve lo que tecleas):
 
 ```bash
-git clone https://github.com/MrFett22/historia-de-un-entrenador-final.git
-cd historia-de-un-entrenador-final/estudio
-
-python3.12 -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"          # instala el paquete y el comando `dtcoach`
-pytest -q                        # 129 pruebas; si alguna falla, no sigas
-
-# entorno aparte, solo para descargar el 360
 python3.12 -m venv .venv-sb && .venv-sb/bin/pip install requests
-```
-
-La descarga del 360 se puede reanudar: si se corta, se vuelve a lanzar y sigue donde iba.
-Las credenciales se leen de variables de entorno. Escribe cada línea por separado (no se ve
-lo que tecleas):
-
-```bash
 read -rs SB_USERNAME; export SB_USERNAME
 read -rs SB_PASSWORD; export SB_PASSWORD
 .venv-sb/bin/python scripts/descargar/descargar_360.py --dry-run   # comprueba sin descargar
 .venv-sb/bin/python scripts/descargar/descargar_360.py
 ```
 
-## 5. Correr el análisis
+La descarga del 360 se puede reanudar: si se corta, se vuelve a lanzar y sigue donde iba.
+
+## 4. Correr el análisis
 
 Cada paso escribe lo que el siguiente lee. Lo de la liga se calcula **una vez** y se reutiliza.
 
@@ -224,7 +229,7 @@ las eras. Todos los parámetros (malla, K, encogimiento, semillas, umbrales) est
 
 Cada `.md` viene acompañado de sus `.json` (cifras exactas) y sus `.png`.
 
-## 6. Mapa del repositorio
+## 5. Mapa de la carpeta
 
 ```
 config/default.yaml        todos los parámetros; foco.coach = técnico que se analiza
@@ -256,7 +261,7 @@ docs/                      documentación; docs/figuras/<sección>/
 | 6. Simulación | `simulador.py` (xPts), `simulacion.py` (partido), `proyeccion.py` (club actual) |
 | Robustez y salida | `blindaje.py`, `graficas.py`, `graficas_historia.py`, `graficas_secciones.py`, `cli.py`, `cli_historia.py` |
 
-## 7. Documentación
+## 6. Documentación
 
 Orden de lectura recomendado:
 
@@ -270,7 +275,7 @@ Orden de lectura recomendado:
 
 [`12_NARRATIVA.md`](docs/12_NARRATIVA.md) es el guion para la presentación.
 
-## 8. Cómo se sabe que funciona
+## 7. Cómo se sabe que funciona
 
 - **Pruebas contra verdades conocidas:**
   - cuentas exactas en partidos armados a mano;
@@ -284,22 +289,35 @@ Orden de lectura recomendado:
   - duración esperada de la cadena contra la observada;
   - llegada al área modelada contra la observada;
   - validación del simulador dejando cada partido fuera;
-  - xPts de toda la liga contra sus puntos reales (error del 0.48 %).
+  - xPts de toda la liga contra sus puntos reales (error del 0.43 %).
 - **Robustez:**
   - eficiencia medida con xG, OBV y tasa de remate;
   - bootstrap de score donde hay pocos partidos;
-  - control de falsos positivos sobre las 52 hipótesis juntas (ninguna etiqueta cambia).
+  - control de falsos positivos sobre todas las hipótesis juntas (ninguna etiqueta cambia).
 
-## 9. Simulador
+## 8. El simulador
 
-**¿Cómo le iría al América con otro técnico?** Una app que simula el torneo del América con el estilo de cada técnico real (o de uno inventado) y lo compara con el América de hoy. Se construyó con las definiciones de este estudio (el vocabulario de jugadas, PPDA, la recuperación en 10 s y los cuadros 360).
+**¿Cómo le iría al América con otro técnico?** En [`../simulador/`](../simulador/) hay una app
+que simula el torneo del América con el estilo de cada técnico real (o de uno inventado) y lo
+compara con el América de hoy. Se construyó con las definiciones de este estudio (el vocabulario
+de jugadas, PPDA, la recuperación en 10 s y los cuadros 360).
 
 - 🎮 **La app:** https://simulador-america.streamlit.app
-- 📦 **El código y las pruebas:** [`../simulador/`](../simulador/) (lo que corre la app)
+- 📦 **El código y las pruebas:** [`../simulador/`](../simulador/)
 - 🔍 **¿Le podemos creer?** Ocho pruebas en la pestaña de validación de la app; el detalle está en [`../docs/VALIDACION.md`](../docs/VALIDACION.md).
 
 Tres hallazgos, en lenguaje simple:
 
-1. **Técnico, jugadores o suerte.** En un torneo de 17 jornadas, lo típico que varían los puntos de un equipo es de unos **5.3** por pura suerte de los partidos, de unos **5.8** (rango probable 4.5 a 6.3) por la fuerza de sus jugadores (medida directo de las tablas reales) y de unos **0.6** por el técnico (lo que se separan, entre 37 técnicos reales, del estilo neutro con el mismo plantel). Casi 46 % de lo que varían los puntos reales es suerte. El simulador acorta las diferencias entre equipos (los puntos reales se separan 1.52 veces más que los del simulador, rango probable 1.23 a 1.70); está anotado como pendiente de recalibrar.
-2. **Almada, a nivel liga.** A nivel liga (37 técnicos con al menos 30 partidos): presión (PPDA: pases del rival por acción defensiva; menos es más presión): 2.51 en promedio (lo típico que varía entre técnicos: 0.29); Almada 2.17, por encima del 93 % de los técnicos en esa dirección; recuperación del balón en 10 s: 0.219 en promedio (lo típico que varía entre técnicos: 0.017); Almada 0.230, por encima del 72 % de los técnicos en esa dirección; remates de pelota parada a favor por partido: 4.26 en promedio (lo típico que varía entre técnicos: 0.48); Almada 4.94, por encima del 88 % de los técnicos en esa dirección; remates de pelota parada en contra por partido: 4.26 en promedio (lo típico que varía entre técnicos: 0.65); Almada 3.73, por encima del 80 % de los técnicos en esa dirección. Lo que el simulador llama «presión» frente al PPDA medido en los partidos (correlación de Spearman entre técnicos): int_co[Directa]: ρ = -0.28, rango probable -0.59 a +0.08 (37 técnicos); u_co[Directa]: ρ = +0.60, rango probable +0.34 a +0.77 (37 técnicos). Decisión: la perilla se llama «¿Qué tanto presiona?» (relación clara).
-3. **Describe estilos, no predice.** En las pruebas con cambios de técnico reales, el simulador no acierta mejor que suponer que todo sigue igual; sirve para explorar qué jugadas haría el equipo y cuántos puntos suelen dar, no para pronosticar. No ve lesiones, fichajes ni vestidor.
+1. **Técnico, jugadores o suerte.** En un torneo de 17 jornadas, lo típico que varían los puntos
+   de un equipo es de unos **5.3** por pura suerte de los partidos, de unos **5.75** (rango
+   probable 4.5 a 6.3) por la fuerza de sus jugadores (medida directo de las tablas reales) y de
+   unos **0.6** por el técnico (lo que se separan, entre 37 técnicos reales, del estilo neutro con
+   el mismo plantel). Casi 46 % de lo que varían los puntos reales es suerte. El simulador acorta
+   las diferencias entre equipos (los puntos reales se separan 1.52 veces más que los del
+   simulador, rango probable 1.23 a 1.70); está anotado como pendiente de recalibrar.
+2. **Almada, a nivel liga.** Lo que el simulador llama «presión» se relaciona con el PPDA medido
+   de cada técnico (correlación de Spearman ρ = 0.60, rango probable 0.34 a 0.77, 37 técnicos),
+   así que la perilla de defensa se llama «¿Qué tanto presiona?».
+3. **Describe estilos, no predice.** En las pruebas con cambios de técnico reales, el simulador no
+   acierta mejor que suponer que todo sigue igual; sirve para explorar qué jugadas haría el equipo
+   y cuántos puntos suelen dar, no para pronosticar. No ve lesiones, fichajes ni vestidor.
