@@ -8,10 +8,11 @@ Apertura 2026?
 
 Este repositorio reúne **todo el entregable en un solo lugar**: el análisis inicial, el estudio
 completo de la liga, el simulador con su aplicación web y la documentación. Es un solo proyecto
-organizado en carpetas, no varios repositorios juntos.
+organizado en carpetas, no varios repositorios juntos. 
 
 ## Enlaces
 
+- **Video de presentación:** https://www.youtube.com/watch?v=xKYpLE7MCm8
 - **Aplicación en producción:** https://historia-de-un-entrenador-final-evvt6gu6etyfa7veza8clq.streamlit.app/
 - **Nuestro hallazgo principal, explicado con cifras:** [`estudio/docs/RESULTADOS_ALMADA.md`](estudio/docs/RESULTADOS_ALMADA.md)
 
