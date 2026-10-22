@@ -12,7 +12,7 @@ organizado en carpetas, no varios repositorios juntos.
 
 ## Enlaces
 
-- **Aplicación en producción:** https://simulador-america.streamlit.app
+- **Aplicación en producción:** https://historia-de-un-entrenador-final-evvt6gu6etyfa7veza8clq.streamlit.app/
 - **Nuestro hallazgo principal, explicado con cifras:** [`estudio/docs/RESULTADOS_ALMADA.md`](estudio/docs/RESULTADOS_ALMADA.md)
 
 ## Hallazgos principales
