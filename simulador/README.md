@@ -1,14 +1,17 @@
-# Simulador de técnico · Club América
+# `simulador/` — Simulador de técnico · Club América
 
 Responde: *si el América tuviera a este técnico, con su plantel actual y los demás equipos sin
 cambios, ¿cómo jugaría y cuántos puntos haría en el Apertura 2026?* Sirve para técnicos reales
 (con al menos 30 partidos en la Liga MX desde 2021) y para técnicos inventados.
 
-Todo el código del simulador vive en esta carpeta.
+Esta carpeta es parte del repositorio [Historia de un entrenador](../) y contiene todo el código
+del simulador y de su aplicación web. Para instalar y correr el proyecto completo de una vez,
+parte del [README principal](../README.md); esta página documenta el simulador por dentro.
 
 ## 1. Instalar
 
-Requiere Python 3.10 o más nuevo (se construyó con 3.14).
+Requiere Python 3.10 o más nuevo (se construyó con 3.14). Si ya instalaste el proyecto desde la
+raíz, el simulador ya quedó instalado. Para trabajar solo con esta carpeta:
 
 ```bash
 cd simulador
