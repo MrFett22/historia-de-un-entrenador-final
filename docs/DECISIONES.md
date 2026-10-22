@@ -13,4 +13,3 @@ decisiones, sus alternativas y sus fuentes, está en
 | D-074 | Medimos suerte, jugadores y técnico en la misma escala: cuánto varían típicamente los puntos de un equipo en un torneo (desviación estándar). | Antes se mezclaban escalas (la suerte como la mitad del rango del 80 %, ±7). Ahora: suerte ±5.3, jugadores ±5.75 y técnico ±0.6. |
 
 
-jajajaja
