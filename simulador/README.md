@@ -95,7 +95,7 @@ bash simulador/correr_app.sh              # macOS / Linux / Git Bash
 Usan el Python de `SIMDT_PYTHON` si está definido o, si no, el entorno `simulador/.venv` o
 `.venv` en la raíz (si no hay ninguno, dicen cómo crearlo). Abren la app con
 `simulador/artefactos/` en http://localhost:8501 (otro puerto con `PUERTO`) y no publican nada. La versión pública está en
-https://simulador-america.streamlit.app. Para desplegar una copia propia en Streamlit Community
+https://historia-de-un-entrenador-final-evvt6gu6etyfa7veza8clq.streamlit.app/. Para desplegar una copia propia en Streamlit Community
 Cloud, el archivo principal es `simulador/app.py` con Python 3.12; las dependencias salen de
 `simulador/requirements.txt` y el tema, de `.streamlit/config.toml` en la raíz del repositorio.
 

@@ -13,6 +13,7 @@ organizado en carpetas, no varios repositorios juntos.
 ## Enlaces
 
 - **Video de presentación:** https://www.youtube.com/watch?v=xKYpLE7MCm8
+- **Reporte (HTML):** [`REPORTE.html`](REPORTE.html): metodología, visualizaciones y resultados en un solo archivo, que se abre sin conexión.
 - **Aplicación en producción:** https://historia-de-un-entrenador-final-evvt6gu6etyfa7veza8clq.streamlit.app/
 - **Nuestro hallazgo principal, explicado con cifras:** [`estudio/docs/RESULTADOS_ALMADA.md`](estudio/docs/RESULTADOS_ALMADA.md)
 

@@ -302,7 +302,7 @@ que simula el torneo del América con el estilo de cada técnico real (o de uno 
 compara con el América de hoy. Se construyó con las definiciones de este estudio (el vocabulario
 de jugadas, PPDA, la recuperación en 10 s y los cuadros 360).
 
-- 🎮 **La app:** https://simulador-america.streamlit.app
+- 🎮 **La app:** https://historia-de-un-entrenador-final-evvt6gu6etyfa7veza8clq.streamlit.app/
 - 📦 **El código y las pruebas:** [`../simulador/`](../simulador/)
 - 🔍 **¿Le podemos creer?** Ocho pruebas en la pestaña de validación de la app; el detalle está en [`../docs/VALIDACION.md`](../docs/VALIDACION.md).
 
